@@ -299,13 +299,27 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   .logo-strip{grid-template-columns:repeat(2,1fr)}
 }
 
-/* Mobile/Tablet (≤991px): Portrait stackt unter Text, Hero darf wachsen */
+/* Mobile/Tablet (≤991px): Hero wächst natürlich, Portrait kommt zuerst und ist quadratisch */
 @media (max-width:991px){
   .hero{
     min-height:0;
     max-height:none;
-    padding:2.5rem 0 3rem;
+    padding:1.5rem 0 2rem;
+    display:block;
   }
+  .hero-grid{gap:1.6rem}
+  .hero-visual{
+    order:-1;
+    aspect-ratio:1/1;       /* quadratisch */
+    max-height:none;
+    max-width:380px;
+    margin:0 auto;
+  }
+}
+
+/* Utility: Auf Mobile komplett ausblenden */
+@media (max-width:767px){
+  .mobile-hide{display:none}
 }
 
 /* ---------- Comprehensive Mobile Spacing Pass ---------- */
@@ -324,7 +338,7 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   .subpage-hero .lead{font-size:.98rem}
 
   /* Alle Content-Sektionen kompakt */
-  section.topics{padding:2rem 0 2.5rem}
+  section.topics{padding:1.4rem 0 2rem}
   section.methode-teaser,
   section.services,
   section.about,
@@ -338,16 +352,16 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   section.compare,
   section.offer,
   section.story,
-  section.pull-quote{padding:4rem 0}
+  section.pull-quote{padding:2.8rem 0}
 
   /* H2 in Sektionen kleiner — mehr Platz für Body */
   h2{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:.8em}
 
   /* Eyebrows etwas dezenter */
-  .eyebrow{margin-bottom:1rem;font-size:.66rem}
+  .eyebrow{margin-bottom:.8rem;font-size:.66rem}
 
-  /* Container-Padding etwas erhöhen für Atemraum am Rand */
-  .container{padding:0 1.4rem}
+  /* Container-Padding für Atemraum am Rand */
+  .container{padding:0 1.6rem}
 
   /* Testimonials head + grids — weniger Margins */
   .testimonials-head{margin-bottom:2.5rem}
@@ -492,11 +506,22 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
 .form-success{text-align:center;padding:.6rem 0}
 .form-success-icon{width:48px;height:48px;border-radius:50%;background:var(--flieder);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--nachtflieder);font-size:1.5rem}
 @media (max-width:767px){
-  .modal-overlay{padding:1vh 1rem;align-items:flex-start}
-  .modal-card{padding:1.6rem 1.3rem 1.3rem;max-height:98vh}
-  .modal-card h3{font-size:1.2rem}
-  .form-field{margin-bottom:.5rem}
-  .form-field textarea{min-height:60px}
+  /* Modal füllt das ganze Viewport auf Mobile */
+  .modal-overlay{padding:0;align-items:stretch}
+  .modal-card{
+    max-width:100%;
+    width:100%;
+    border-radius:0;
+    padding:2rem 1.4rem 1.4rem;
+    min-height:100vh;
+    min-height:100dvh;
+    max-height:100vh;
+    max-height:100dvh;
+  }
+  .modal-close{top:.8rem;right:.8rem}
+  .modal-card h3{font-size:1.35rem}
+  .form-field{margin-bottom:.6rem}
+  .form-field textarea{min-height:80px}
 }
 
 
