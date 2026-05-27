@@ -45,22 +45,33 @@ h4{font-size:.95rem;font-weight:700;letter-spacing:-.005em}
 h1 strong,h2 strong,h1 em,h2 em{font-weight:800;color:var(--safran);font-style:normal;letter-spacing:-.03em}
 
 /* ---------- Bold-Typo Hero (Style-Anker: Visitenkarte V2) ---------- */
-/* Anwendung: Hero auf Landing + alle Subpage-Heros.
-   Beide Zeilen 800er Gewicht, gestapelt, sehr enges Tracking. */
-.hero h1,
-.subpage-hero h1{
+/* Landing-Hero: kräftiges Statement */
+.hero h1{
   font-weight:800;
   font-size:clamp(2.8rem,5.8vw,5rem);
   letter-spacing:-.04em;
   line-height:.97;
   color:var(--tinte);
 }
-.hero h1 strong,
-.subpage-hero h1 strong{
+.hero h1 strong{
   display:block;
   font-weight:800;
   color:var(--safran);
   letter-spacing:-.045em;
+}
+/* Subpage-Hero: dezenter, weniger heavy als Landing */
+.subpage-hero h1{
+  font-weight:700;
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  letter-spacing:-.03em;
+  line-height:1.02;
+  color:var(--tinte);
+}
+.subpage-hero h1 strong{
+  display:block;
+  font-weight:700;
+  color:var(--safran);
+  letter-spacing:-.035em;
 }
 /* Eyebrow ein Tick präsenter, in den smallcap-Mood der Karte */
 .hero .eyebrow,
@@ -113,6 +124,10 @@ nav a.is-active{opacity:1;color:var(--nachtflieder)}
 .nav-cta:hover{background:var(--nachtflieder)}
 
 /* ---------- Burger + Mobile Foldout ---------- */
+/* Mobile-Nav: zusätzliches Padding links/rechts auf kleinen Screens */
+@media (max-width:991px){
+  header.nav .container.inner{padding-left:1.8rem;padding-right:1.8rem}
+}
 .burger{display:none;background:transparent;border:0;padding:.4rem;width:44px;height:44px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;z-index:21;margin-left:auto}
 .burger span{display:block;width:22px;height:2px;background:var(--tinte);border-radius:1px;transition:transform .25s ease,opacity .2s ease}
 .burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -120,14 +135,15 @@ nav a.is-active{opacity:1;color:var(--nachtflieder)}
 .burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 .mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);max-height:0;overflow:hidden;transition:max-height .3s ease-out;border-bottom:1px solid var(--bg-hairline);box-shadow:0 12px 28px rgba(58,49,66,.08)}
-.mobile-nav.is-open{max-height:80vh}
-.mobile-nav .inner{padding:1.2rem clamp(1.2rem,4vw,3rem) 1.6rem;display:flex;flex-direction:column}
-.mobile-nav ul{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:1.2rem}
+.mobile-nav.is-open{max-height:90vh}
+.mobile-nav .inner{padding:1.6rem clamp(1.5rem,4vw,3rem) 2rem;display:flex;flex-direction:column}
+.mobile-nav ul{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:1.8rem}
 .mobile-nav li{border-bottom:1px solid var(--bg-hairline)}
 .mobile-nav li:last-child{border-bottom:0}
-.mobile-nav a{display:block;padding:.95rem 0;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--tinte);opacity:.85;transition:opacity .15s}
-.mobile-nav a:hover,.mobile-nav a.is-active{opacity:1;color:var(--nachtflieder)}
-.mobile-nav .btn{width:100%;justify-content:center;margin-top:.4rem}
+.mobile-nav ul a{display:block;padding:1.1rem 0;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--tinte);opacity:.85;transition:opacity .15s}
+.mobile-nav ul a:hover,.mobile-nav ul a.is-active{opacity:1;color:var(--nachtflieder)}
+.mobile-nav a.btn{width:calc(100% - 1.6rem);align-self:center;justify-content:center;margin:.8rem .8rem 0;color:#fff;opacity:1}
+.mobile-nav a.btn:hover{color:#fff;opacity:1}
 
 @media (max-width:991px){
   .burger{display:flex}
@@ -322,26 +338,6 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   }
 }
 
-/* Phone (≤767px): Portrait formatfüllend, edge-to-edge, quadratisch */
-@media (max-width:767px){
-  .mobile-hide{display:none}
-
-  .hero{padding:0 0 2.2rem}
-  .hero .container{padding:0;max-width:none}
-  .hero-grid{gap:1.6rem}
-  .hero-visual{
-    max-width:none;
-    width:100%;
-    border-radius:0;
-    margin:0;
-    justify-self:stretch;
-  }
-  /* Text-Spalte bekommt Container-Padding zurück */
-  .hero-grid > div:not(.hero-visual){
-    padding:0 1.6rem;
-  }
-}
-
 /* ---------- Comprehensive Mobile Spacing Pass ---------- */
 @media (max-width:767px){
   /* Hero — schlanker auf Phones */
@@ -357,8 +353,8 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   .subpage-hero h1{margin-bottom:.8rem}
   .subpage-hero .lead{font-size:.98rem}
 
-  /* Alle Content-Sektionen kompakt */
-  section.topics{padding:1.4rem 0 2rem}
+  /* Alle Sektionen — einheitlicher vertikaler Rhythmus */
+  section.topics,
   section.methode-teaser,
   section.services,
   section.about,
@@ -372,7 +368,7 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   section.compare,
   section.offer,
   section.story,
-  section.pull-quote{padding:2.8rem 0}
+  section.pull-quote{padding:1rem 0}
 
   /* H2 in Sektionen kleiner — mehr Platz für Body */
   h2{font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:.8em}
@@ -380,12 +376,12 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   /* Eyebrows etwas dezenter */
   .eyebrow{margin-bottom:.8rem;font-size:.66rem}
 
-  /* Container-Padding für Atemraum am Rand */
-  .container{padding:0 1.6rem}
+  /* Container-Padding: einheitlich knapper zum Rand */
+  .container{padding:0 1.2rem}
 
   /* Testimonials head + grids — weniger Margins */
   .testimonials-head{margin-bottom:2.5rem}
-  .testimonial{padding:2rem 1.6rem 1.6rem}
+  .testimonial{padding:1.8rem 1.4rem 1.4rem}
   .testimonial p{font-size:.96rem;margin-bottom:1.4rem}
   .logo-strip{margin-top:2.5rem;padding-top:2rem}
 
@@ -395,7 +391,7 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
 
   /* Services teaser cards */
   .services-head{margin-bottom:2.5rem}
-  .service{padding:1.8rem 1.6rem}
+  .service{padding:1.6rem 1.4rem}
 
   /* About-grid und CTA */
   .about-grid,.cta-grid,.faq-grid,.story-grid{gap:1.8rem}
@@ -406,32 +402,43 @@ footer .links a{font-size:.68rem;opacity:.7;letter-spacing:.22em;text-transform:
   .faq-item summary{font-size:.96rem}
 
   /* CTA-Card */
-  .cta-card{padding:1.6rem}
+  .cta-card{padding:1.4rem}
   .cta-card dl{gap:.7rem 1.2rem;font-size:.9rem}
 
   /* Image-Sections — kleinere Höhe */
   .image-section img{height:auto!important;max-height:380px;object-fit:cover}
 
-  .offer-detail{padding:1.8rem 1.4rem}
+  .offer-detail{padding:1.6rem 1.4rem}
 
-  /* Footer */
+  /* Footer — alles sauber zentriert */
   footer{padding:2.4rem 0 1.8rem}
-  footer .row{gap:1rem;flex-direction:column;text-align:center}
-  footer .links{gap:1.2rem}
+  footer .row{
+    gap:1.2rem;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+  }
+  footer .links{
+    gap:1.2rem;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  footer .small{text-align:center}
 
-  /* Nav — engere padding und gap */
-  header.nav .inner{padding:1rem 0;gap:1rem}
+  /* Nav — vertikal kompakter, horizontale Padding kommt aus späterer Regel */
+  header.nav .inner{padding-top:1rem;padding-bottom:1rem;gap:1rem}
   .nav-cta{padding:.6rem .95rem;font-size:.64rem}
 
   /* Methode tokens (Landing teaser) */
-  .method-token{padding:1.2rem 1.3rem;gap:1rem}
+  .method-token{padding:1.2rem 1.2rem;gap:1rem}
 
   /* Factors grid */
   .factors-head{margin-bottom:2rem}
-  .factor{padding:1.4rem 1.3rem}
+  .factor{padding:1.3rem 1.2rem}
 
   /* Compare cards */
-  .compare-card{padding:1.8rem 1.4rem}
+  .compare-card{padding:1.6rem 1.4rem}
 
   /* Prose padding */
   section.prose{padding:3.5rem 0}
@@ -577,7 +584,7 @@ section.offer:nth-of-type(even){background:#fff}
 .subpage-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
 @media (max-width:991px){
   .subpage-hero-grid{grid-template-columns:1fr;gap:1.5rem}
-  .subpage-portrait{max-width:260px;justify-self:start;order:-1}
+  .subpage-portrait{max-width:260px;justify-self:center;order:-1}
 }
 
 /* Image-Section mit vertikalem Atemraum (Desktop) */
@@ -694,4 +701,135 @@ section.story.on-flieder{background:var(--flieder-soft)}
 @media (max-width:991px){
   .story-image-grid{grid-template-columns:1fr;gap:2rem}
   .story-img{max-width:340px}
+}
+
+
+/* =====================================================================
+   FINAL MOBILE OVERRIDES (≤767px)
+   State-of-the-art mobile UX — winning cascade by being last in file.
+   Handles: hero edge-to-edge, CTA stacked, nav padding, no overflow,
+   modal fullscreen, clean section rhythm.
+   ===================================================================== */
+@media (max-width:767px){
+  /* --- Page-level: kein horizontaler Overflow, je --- */
+  html,body{overflow-x:hidden}
+
+  /* --- Top Nav: Logo + Burger mit Atemraum am Rand --- */
+  header.nav .container.inner{
+    padding-left:1.2rem;
+    padding-right:1.2rem;
+    padding-top:.8rem;
+    padding-bottom:.8rem;
+    gap:1rem;
+  }
+
+  /* --- Hero: Bild edge-to-edge formatfüllend, quadratisch, ZUERST --- */
+  .hero{
+    min-height:0;
+    max-height:none;
+    padding:0 0 1rem;
+    display:block;
+    overflow:visible;
+    position:relative;
+    z-index:1;
+    background:var(--flieder-50);
+  }
+  .hero .container{
+    padding:0;
+    max-width:none;
+  }
+  .hero-grid{
+    display:flex;
+    flex-direction:column;
+    grid-template-columns:none;
+    gap:1.4rem;
+    align-items:stretch;
+  }
+  .hero-visual{
+    order:-1;
+    width:100%;
+    max-width:none;
+    aspect-ratio:1/1;
+    max-height:none;
+    border-radius:0;
+    margin:0;
+    justify-self:stretch;
+  }
+  .hero-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 20%;
+    display:block;
+  }
+  /* Text-Wrapper bekommt Container-Padding zurück (Bild bleibt edge-to-edge) */
+  .hero-grid > div:not(.hero-visual){
+    padding:0 1.2rem;
+  }
+
+  /* --- Hero Headline + Lead: kompakter, sauber gesetzt --- */
+  .hero h1{
+    font-size:clamp(2.6rem,10vw,3.6rem);
+    line-height:.98;
+    letter-spacing:-.035em;
+  }
+  .hero-sub{
+    margin-top:1rem;
+    font-size:.98rem;
+    line-height:1.55;
+    max-width:none;
+  }
+  .hero .eyebrow{
+    margin-bottom:.7rem;
+    font-size:.6rem;
+  }
+
+  /* --- CTAs: stacked vertikal, full-width, keine Overflow-Issues --- */
+  .hero-cta-row{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    gap:.6rem;
+    margin-top:1.4rem;
+    width:100%;
+  }
+  .hero-cta-row .btn{
+    width:100%;
+    justify-content:center;
+    padding:.95rem 1rem;
+    font-size:.7rem;
+    white-space:normal;
+    min-width:0;
+  }
+
+  /* --- Topics-Sektion: klare Trennung, kein Overlap --- */
+  section.topics{
+    position:relative;
+    z-index:0;
+    padding:2rem 0 2rem;
+    background:var(--bg);
+  }
+  .topics-eyebrow{margin-bottom:.9rem}
+  .topics-grid{gap:.5rem}
+  .tag{padding:.45rem 1rem;font-size:.66rem}
+
+  /* --- Modal: vollformatig, kein Border, randlos --- */
+  .modal-overlay{padding:0;align-items:stretch}
+  .modal-card{
+    width:100%;
+    max-width:100%;
+    border-radius:0;
+    padding:1.8rem 1.4rem 1.4rem;
+    min-height:100vh;
+    min-height:100dvh;
+    max-height:100vh;
+    max-height:100dvh;
+  }
+  .modal-close{top:.6rem;right:.6rem}
+
+  /* --- Subpage-Hero: gleicher Rhythmus wie alle anderen Sektionen --- */
+  .subpage-hero{padding:1rem 0}
+
+  /* --- Utility: Element komplett ausblenden --- */
+  .mobile-hide{display:none!important}
 }
