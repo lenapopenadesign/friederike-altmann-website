@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Site-Map · Friederike Altmann Website</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#FAFAFA;
+    --paper:#FFFFFF;
+    --ink:#1F1F1F;
+    --muted:#777777;
+    --line:#CCCCCC;
+    --line-soft:#E5E5E5;
+    --fill:#EDEDED;
+    --accent:#E8A33D;
+  }
+  html,body{background:var(--bg);color:var(--ink);font-family:-apple-system,system-ui,"Helvetica Neue",sans-serif;line-height:1.5;font-size:15px;-webkit-font-smoothing:antialiased}
+  .shell{max-width:1180px;margin:0 auto;padding:3rem 1.5rem 5rem}
+
+  header.doc-header{padding-bottom:2rem;border-bottom:1px solid var(--line);margin-bottom:3rem}
+  header.doc-header h1{font-size:1.9rem;font-weight:600;letter-spacing:-.01em;margin-bottom:.5rem}
+  header.doc-header p{color:var(--muted);max-width:62ch}
+
+  .diagram-frame{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:4rem 2.5rem;box-shadow:0 4px 16px rgba(0,0,0,.04);position:relative;overflow:hidden}
+
+  .diagram{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
+
+  /* Root node (Landing) — distinguished but not dominating */
+  .root-node{background:var(--ink);color:#fff;padding:1.6rem 1.8rem;border-radius:6px;width:100%;max-width:360px;text-align:center;position:relative;z-index:2;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+  .root-node .level{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;opacity:.6;margin-bottom:.3rem;font-weight:600}
+  .root-node .name{font-size:1.2rem;font-weight:700;letter-spacing:-.005em;margin-bottom:.3rem}
+  .root-node .file{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.7rem;opacity:.6;margin-bottom:1.2rem}
+
+  /* Section list inside any node */
+  ul.sections{list-style:none;text-align:left;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.12)}
+  ul.sections li{padding:.22rem 0;font-size:.74rem;line-height:1.3;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.85);display:flex;justify-content:space-between;align-items:center;gap:.4rem}
+  ul.sections li:first-child{border-top:0}
+  ul.sections li .anchor-tag{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.62rem;color:var(--accent);opacity:.9}
+  ul.sections li .link-tag{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.62rem;color:var(--accent);opacity:.9;white-space:nowrap}
+  ul.sections li .cta-tag{display:inline-flex;align-items:center;gap:.25rem;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);background:rgba(232,163,61,.12);padding:.12rem .4rem;border-radius:3px;white-space:nowrap}
+  .root-node ul.sections li .cta-tag{background:rgba(232,163,61,.22)}
+
+  /* Connectors */
+  .vline{width:2px;height:48px;background:var(--line);position:relative;z-index:1}
+
+  /* Global menu strip (above the diagram) */
+  .menu-strip-wrap{width:100%;max-width:760px;margin-bottom:.2rem}
+  .menu-strip-label{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:.5rem;text-align:center}
+  .menu-strip{display:flex;align-items:center;justify-content:space-between;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:.65rem .9rem;gap:1rem}
+  .menu-strip .logo{font-weight:700;font-size:.85rem;letter-spacing:.04em}
+  .menu-strip .logo span{font-weight:300;letter-spacing:.1em}
+  .menu-strip .items{display:flex;gap:1.2rem;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:600}
+  .menu-strip .cta{background:var(--accent);color:#fff;padding:.35rem .8rem;border-radius:3px;font-size:.62rem;letter-spacing:.12em;font-weight:700;display:inline-flex;align-items:center;gap:.3rem}
+  .menu-strip .cta::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;opacity:.9}
+
+  /* Modal element (below the diagram) */
+  .modal-wrap{width:100%;max-width:520px;margin-top:.2rem;position:relative;z-index:2}
+  .modal-label{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:.5rem;text-align:center}
+  .modal-box{background:var(--paper);border:2px dashed var(--accent);border-radius:8px;padding:1.2rem 1.4rem;box-shadow:0 8px 24px rgba(232,163,61,.12)}
+  .modal-box .title{font-size:.85rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.16em;margin-bottom:.7rem;text-align:center}
+  .modal-box .form-row{display:block;background:var(--fill);height:8px;border-radius:3px;margin-bottom:.5rem}
+  .modal-box .form-row.short{width:60%}
+  .modal-box .form-row.tall{height:22px}
+  .modal-box .form-button{background:var(--ink);color:#fff;text-align:center;padding:.4rem;border-radius:3px;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:.5rem}
+  .modal-triggers{margin-top:.8rem;padding-top:.6rem;border-top:1px solid var(--line-soft);font-size:.66rem;color:var(--muted);line-height:1.55}
+  .modal-triggers strong{color:var(--ink);display:block;margin-bottom:.2rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase}
+
+  .branches{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.6rem;width:100%;position:relative}
+  .branches::before{
+    content:"";
+    position:absolute;
+    top:-24px;
+    left:16.66%;
+    right:16.66%;
+    height:2px;
+    background:var(--line);
+    z-index:1;
+  }
+  .branch{display:flex;flex-direction:column;align-items:stretch;position:relative}
+  .branch::before{
+    content:"";
+    position:absolute;
+    top:-24px;
+    left:50%;
+    width:2px;
+    height:24px;
+    background:var(--line);
+    z-index:1;
+  }
+
+  /* Subpage nodes — all equal */
+  .node{background:var(--paper);border:2px solid var(--ink);padding:1.2rem 1.4rem;border-radius:6px;text-align:center;position:relative;z-index:2;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;height:100%}
+  .node:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+  .node .level{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.3rem}
+  .node .name{font-size:1.05rem;font-weight:700;letter-spacing:-.005em;margin-bottom:.3rem}
+  .node .file{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.66rem;color:var(--muted);margin-bottom:1.1rem}
+
+  .node ul.sections{border-top:1px solid var(--line-soft)}
+  .node ul.sections li{border-top:1px solid var(--line-soft);color:var(--ink);font-size:.74rem;padding:.22rem 0;line-height:1.3}
+  .node ul.sections li .anchor-tag{color:var(--accent)}
+
+  /* Legend */
+  .legend{margin-top:3rem;padding-top:2rem;border-top:1px dashed var(--line);display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;font-size:.85rem}
+  .legend-item{display:flex;gap:.7rem;align-items:flex-start}
+  .legend-swatch{width:24px;height:24px;flex-shrink:0;border-radius:3px;margin-top:.1rem}
+  .legend-swatch.root{background:var(--ink)}
+  .legend-swatch.page{background:var(--paper);border:2px solid var(--ink)}
+  .legend-swatch.anchor-sw{background:var(--paper);border:1px solid var(--line);position:relative;color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,monospace;font-weight:700;font-size:.8rem}
+  .legend-swatch.anchor-sw::before{content:"#"}
+  .legend-item strong{display:block;font-weight:700;margin-bottom:.15rem;font-size:.78rem}
+  .legend-item span{color:var(--muted);font-size:.78rem;line-height:1.45}
+
+  /* Annotations */
+  .annotations{margin-top:3rem;padding-top:2rem;border-top:1px dashed var(--line);font-size:.86rem;color:var(--muted)}
+  .annotations p{margin-bottom:.6rem;line-height:1.6}
+  .annotations strong{color:var(--ink)}
+
+  footer{padding-top:2.5rem;font-size:.75rem;color:var(--muted);text-align:center}
+
+  @media (max-width:768px){
+    .branches{grid-template-columns:1fr;gap:1.5rem}
+    .branches::before{display:none}
+    .branch::before{
+      top:-12px;
+      height:12px;
+    }
+    .vline{height:24px}
+    .legend{grid-template-columns:1fr}
+    .diagram-frame{padding:2.5rem 1.2rem}
+    .menu-strip{flex-wrap:wrap;justify-content:center;text-align:center;gap:.6rem}
+    .menu-strip .items{flex-wrap:wrap;justify-content:center;gap:.6rem}
+  }
+
+  @media print{
+    body{background:#fff}
+    .diagram-frame{box-shadow:none;border:1px solid #999}
+    .branches{break-inside:avoid;page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="doc-header">
+  <h1>Site-Architektur · Friederike Altmann Website</h1>
+  <p>Eine Landing, drei gleichwertige Unterseiten. Auf jeder Seite ist aufgelistet, welche Sektionen enthalten sind. Anker innerhalb einer Subpage sind mit <code style="color:#E8A33D">#</code>-Notation markiert.</p>
+</header>
+
+<div class="diagram-frame">
+  <div class="diagram">
+
+    <!-- Global menu strip -->
+    <div class="menu-strip-wrap">
+      <div class="menu-strip-label">Globale Navigation · auf jeder Seite</div>
+      <div class="menu-strip">
+        <span class="logo">Friederike <span>Altmann</span></span>
+        <div class="items">
+          <span>Methode</span><span>Angebot</span><span>Über mich</span><span>FAQ</span>
+        </div>
+        <span class="cta">Kennenlernen →</span>
+      </div>
+    </div>
+
+    <div class="vline" style="height:32px"></div>
+
+    <!-- Root: Landing -->
+    <div class="root-node">
+      <div class="level">Startseite</div>
+      <div class="name">Friederike Altmann</div>
+      <div class="file">Friederike-Altmann.html</div>
+      <ul class="sections">
+        <li>Hero <span class="cta-tag">→ Kennenlernenformular</span></li>
+        <li>Themen-Tags</li>
+        <li>Methode-Teaser <span class="link-tag">→ /methode</span></li>
+        <li>Angebot-Teaser <span class="link-tag">→ /angebot</span></li>
+        <li>Über mich-Teaser <span class="link-tag">→ /meine-geschichte</span></li>
+        <li>Stimmen</li>
+        <li>Ablauf (4 Schritte)</li>
+        <li>Zitat (Steve de Shazer)</li>
+        <li>FAQ <span class="anchor-tag">#faq</span></li>
+        <li>Kontakt <span class="cta-tag">→ Kennenlernenformular</span></li>
+      </ul>
+    </div>
+
+    <div class="vline"></div>
+
+    <!-- Three equal subpages -->
+    <div class="branches">
+
+      <div class="branch">
+        <div class="node">
+          <div class="level">Subpage</div>
+          <div class="name">Methode</div>
+          <div class="file">/methode</div>
+          <ul class="sections">
+            <li>Hero</li>
+            <li>Systemisch denken</li>
+            <li>Pull-Quote</li>
+            <li>Lösungsorientiert</li>
+            <li>6 Resilienz-Faktoren</li>
+            <li>Resilienz-Profil &amp; Methodenkoffer</li>
+            <li>Wissenschaftlich fundiert</li>
+            <li>Was du nicht bekommst</li>
+            <li>Was du bekommst</li>
+            <li>CTA-Block <span class="cta-tag">→ Kennenlernenformular</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="branch">
+        <div class="node">
+          <div class="level">Subpage</div>
+          <div class="name">Angebot</div>
+          <div class="file">/angebot</div>
+          <ul class="sections">
+            <li>Hero</li>
+            <li>Einzel-Coaching <span class="anchor-tag">#einzel</span> <span class="cta-tag">→ Kennenlernenformular</span></li>
+            <li>Gruppen-Coaching <span class="anchor-tag">#gruppe</span> <span class="cta-tag">→ Kennenlernenformular</span></li>
+            <li>Für Unternehmen <span class="anchor-tag">#unternehmen</span> <span class="cta-tag">→ Kennenlernenformular</span></li>
+            <li>CTA-Block <span class="cta-tag">→ Kennenlernenformular</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="branch">
+        <div class="node">
+          <div class="level">Subpage</div>
+          <div class="name">Über mich</div>
+          <div class="file">/meine-geschichte</div>
+          <ul class="sections">
+            <li>Hero</li>
+            <li>Wo ich herkomme</li>
+            <li>Der Wendepunkt</li>
+            <li>Pull-Quote</li>
+            <li>Was ich mitgenommen habe</li>
+            <li>Heute</li>
+            <li>CTA-Block <span class="cta-tag">→ Kennenlernenformular</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="vline" style="height:48px;margin-top:1.5rem;background:var(--accent);opacity:.4"></div>
+
+    <!-- Kennenlernen Modal -->
+    <div class="modal-wrap">
+      <div class="modal-label">Kennenlernenformular · auf jeder Seite verfügbar</div>
+      <div class="modal-box">
+        <div class="title">Kontaktformular</div>
+        <span class="form-row short"></span>
+        <span class="form-row short"></span>
+        <span class="form-row short"></span>
+        <span class="form-row tall"></span>
+        <div class="form-button">Anfrage senden →</div>
+        <div class="modal-triggers">
+          <strong>Geöffnet durch</strong>
+          Nav · "Kennenlernen →" auf jeder Seite<br>
+          Landing · Hero, Kontakt-Section<br>
+          Angebot · Alle drei Formate + CTA-Block<br>
+          Methode &amp; Über mich · CTA-Block am Ende
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <span class="legend-swatch root"></span>
+      <div>
+        <strong>Startseite</strong>
+        <span>Landing mit Teaser-Sections für alle Hauptthemen. FAQ und Kontakt leben am Ende dieser Seite.</span>
+      </div>
+    </div>
+    <div class="legend-item">
+      <span class="legend-swatch page"></span>
+      <div>
+        <strong>Subpage</strong>
+        <span>Eigene Seite mit ausführlichem Inhalt. Direkt aus dem Hauptmenü erreichbar.</span>
+      </div>
+    </div>
+    <div class="legend-item">
+      <span class="legend-swatch anchor-sw"></span>
+      <div>
+        <strong>Anker</strong>
+        <span>Sprungmarke innerhalb einer Seite — z.B. für direkte Links vom Angebot-Teaser auf der Landing.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annotations -->
+  <div class="annotations">
+    <p><strong>Globale Elemente.</strong> Top-Bar, Hauptnavigation, Kennenlernenformular und Footer erscheinen auf allen Seiten konsistent. Der "Kennenlernen"-Button öffnet immer das gleiche Formular.</p>
+    <p><strong><span style="background:rgba(232,163,61,.18);color:var(--accent);padding:.05rem .35rem;border-radius:3px;font-family:ui-monospace,monospace;font-size:.78rem">→ Kennenlernenformular</span></strong> markiert jede Stelle, an der ein "Kennenlernen"-Button steht und das Formular geöffnet wird. Auf den Angebot-Karten wird das Formular mit dem passenden Anfragetyp vorausgewählt.</p>
+    <p><strong><span style="color:var(--accent);font-family:ui-monospace,monospace;font-size:.78rem">→ /pfad</span></strong> kennzeichnet Teaser-Sections auf der Landing, die direkt auf eine Unterseite verlinken. Drei Teaser → drei Unterseiten.</p>
+    <p><strong>Anker.</strong> Anker (#einzel, #gruppe, #unternehmen, #faq, #contact) erlauben Deep-Links innerhalb einer Seite — z.B. vom Angebot-Teaser auf der Landing direkt zum passenden Block auf der Angebot-Subpage.</p>
+  </div>
+</div>
+
+<footer>
+  Stand v14 · Mai 2026 · Friederike Altmann Website
+</footer>
+
+</div>
+</body>
+</html>
