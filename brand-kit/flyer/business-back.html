@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>FLYER · Business · Rückseite — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#FCFBFA; --sand:#F1EDE6; --leinen:#D9D3C8;
+    --tinte:#3A3142; --safran:#E8A33D;
+    --nacht:#5F4F75; --flieder100:#EEE9F1; --flieder200:#E3DDEA; --flieder50:#F9F7FA;
+    --lilac:#BDB0CC; --hair:rgba(58,49,66,.10);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1500px; height:1058px;
+    background:var(--sand); color:var(--tinte);
+    position:relative; overflow:hidden;
+    font-feature-settings:"ss01","ss02","cv11";
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Top band — editorial header */
+  .top-band {
+    position:absolute; top:0; left:0; right:0; height:64px;
+    background:var(--tinte); color:var(--flieder200);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 56px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    font-weight:600;
+  }
+  .top-band b { color:var(--safran); font-weight:700; }
+
+  /* Logo bar below top band */
+  .logo-row {
+    position:absolute; top:96px; left:56px; right:56px;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    padding-bottom:18px; border-bottom:1px solid var(--hair);
+  }
+  .logo-row .logo-img { height:36px; }
+  .logo-row .right { text-align:right; }
+  .logo-row .right .k {
+    font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:4px;
+  }
+  .logo-row .right .v {
+    font-size:13px; color:var(--tinte); font-weight:500;
+  }
+
+  /* Section H eyebrow + thin h2 */
+  .section-eyebrow {
+    position:absolute; top:200px; left:56px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700;
+  }
+  .section-rule { display:none; }
+  h2 {
+    position:absolute; top:240px; left:56px; right:560px;
+    font-weight:200; font-size:46px; line-height:1.05;
+    letter-spacing:-.025em; color:var(--tinte);
+    max-width:18ch;
+  }
+  h2 strong { font-weight:800; color:var(--safran); letter-spacing:-.03em; }
+
+  /* Three formats — horizontal list with rules */
+  .formats {
+    position:absolute; top:400px; left:56px; right:560px;
+    border-top:1px solid var(--hair);
+  }
+  .fmt {
+    display:grid; grid-template-columns:120px 1fr; gap:24px;
+    padding:22px 0 22px;
+    border-bottom:1px solid var(--hair);
+  }
+  .fmt .num {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; padding-top:6px;
+  }
+  .fmt h3 {
+    font-size:22px; font-weight:700; color:var(--tinte);
+    letter-spacing:-.015em; margin-bottom:6px;
+  }
+  .fmt p {
+    font-size:13.5px; color:var(--tinte); opacity:.78;
+    line-height:1.5; max-width:50ch;
+  }
+
+  /* Themes band */
+  .themes-wrap {
+    position:absolute; left:56px; bottom:64px; right:560px;
+  }
+  .themes-eyebrow {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:14px;
+  }
+  .themes { display:flex; flex-wrap:wrap; gap:6px 8px; }
+  .tag {
+    border:1px solid var(--hair);
+    padding:5px 11px; border-radius:999px;
+    font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
+    font-weight:600; color:var(--tinte); opacity:.85;
+  }
+
+  /* Right column — dark contact card */
+  .contact {
+    position:absolute; top:200px; right:56px;
+    width:444px; padding:32px 32px 28px;
+    background:var(--tinte); color:#fff;
+  }
+  .contact .eyebrow {
+    font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--safran); font-weight:700;
+  }
+  .contact h3 {
+    margin-top:14px; font-size:30px; font-weight:200;
+    letter-spacing:-.02em; line-height:1.1; color:#fff;
+  }
+  .contact h3 strong { font-weight:800; color:var(--safran); }
+  .contact .div { display:none; }
+  .contact dl { margin-top:22px; }
+  .contact dl { display:grid; grid-template-columns:90px 1fr; row-gap:10px; column-gap:14px; }
+  .contact dt {
+    font-size:9.5px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--flieder200); font-weight:700; padding-top:3px;
+  }
+  .contact dd {
+    font-size:14px; color:#fff; font-weight:500; letter-spacing:-.005em;
+  }
+
+  /* QR card below contact */
+  .qr-card {
+    position:absolute; right:56px; bottom:64px;
+    width:444px; padding:22px 24px;
+    background:var(--bg); border:1px solid var(--hair);
+    display:flex; align-items:center; gap:20px;
+  }
+  .qr {
+    width:96px; height:96px; flex:none; border-radius:4px;
+    background:
+      linear-gradient(45deg, var(--tinte) 25%, transparent 25%) -2px 0,
+      linear-gradient(-45deg, var(--tinte) 25%, transparent 25%) -2px 0,
+      linear-gradient(45deg, transparent 75%, var(--tinte) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--tinte) 75%),
+      #fff;
+    background-size:14px 14px;
+    border:6px solid #fff; box-shadow:0 0 0 1px var(--hair);
+  }
+  .qr-text .k {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:6px;
+  }
+  .qr-text .v {
+    font-size:18px; font-weight:700; color:var(--tinte);
+    letter-spacing:-.015em; line-height:1.2;
+  }
+  .qr-text .v strong { color:var(--safran); font-weight:800; }
+  .qr-text .sub {
+    font-size:12px; color:var(--tinte); opacity:.6; margin-top:4px;
+    letter-spacing:-.005em;
+  }
+
+  /* Footer micro line */
+  .foot {
+    position:absolute; left:56px; bottom:26px;
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--tinte); opacity:.5; font-weight:600;
+  }
+  .foot b { color:var(--safran); opacity:1; font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="top-band">
+      <span>Resilienz · Mentale Gesundheit · Stressmanagement</span>
+      <span><b>N° 01 · Business</b></span>
+    </div>
+
+    <div class="logo-row">
+      <img class="logo-img" src="../../assets/logo.svg" alt="Friederike Altmann">
+      <div class="right">
+        <div class="k">Systemisches Coaching</div>
+        <div class="v">München &amp; online · friederikealtmann.de</div>
+      </div>
+    </div>
+
+    <div class="section-eyebrow">Angebot</div>
+    <div class="section-rule"></div>
+    <h2>Drei Formate, <strong>ein Ansatz.</strong></h2>
+
+    <div class="formats">
+      <div class="fmt">
+        <div class="num">Format 01</div>
+        <div>
+          <h3>1:1 Coaching</h3>
+          <p>Individuelle Begleitung von Mitarbeitenden und Führungs­kräften. Buchbar über das Weiterbildungs­budget — durchführbar in der Arbeitszeit. Kein zusätzlicher Stressor nach Feierabend.</p>
+        </div>
+      </div>
+      <div class="fmt">
+        <div class="num">Format 02</div>
+        <div>
+          <h3>Workshop &amp; Gruppen-Coaching</h3>
+          <p>Resilienz und Stressmanagement als gemeinsame Praxis. Halbtag, ganzer Tag oder mehrteilige Reihe — immer angepasst an die echte Arbeits­realität deines Teams.</p>
+        </div>
+      </div>
+      <div class="fmt">
+        <div class="num">Format 03</div>
+        <div>
+          <h3>Vorträge &amp; Keynotes</h3>
+          <p>Impulse für Health Days, Führungs­klausuren, Onboardings. Wissen­schaftlich fundiert, lebensnah erzählt — mit konkreten Tools zum Mitnehmen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="themes-wrap">
+      <div class="themes-eyebrow">Themen, die wir bearbeiten</div>
+      <div class="themes">
+        <span class="tag">Resilienz</span>
+        <span class="tag">Mentale Gesundheit</span>
+        <span class="tag">Stressmanagement</span>
+        <span class="tag">Burnout-Prävention</span>
+        <span class="tag">Selbstführung</span>
+        <span class="tag">Führung unter Druck</span>
+        <span class="tag">Beruf &amp; Privat</span>
+      </div>
+    </div>
+
+    <div class="contact">
+      <span class="eyebrow">Nächster Schritt</span>
+      <h3>Kostenfreies <strong>Erstgespräch.</strong></h3>
+      <div class="div"></div>
+      <dl>
+        <dt>E-Mail</dt><dd>post@friederikealtmann.de</dd>
+        <dt>Telefon</dt><dd>+49 (0)&nbsp;178 280 5138</dd>
+        <dt>Web</dt><dd>www.friederikealtmann.de</dd>
+      </dl>
+    </div>
+
+    <div class="qr-card">
+      <div class="qr"></div>
+      <div class="qr-text">
+        <div class="k">QR scannen</div>
+        <div class="v">Termin <strong>direkt</strong> buchen</div>
+        <div class="sub">15 Min · unverbindlich · online</div>
+      </div>
+    </div>
+
+    <div class="foot">Friederikealtmann.de · <b>Entspannt erfolgreich.</b></div>
+  </div>
+</body>
+</html>

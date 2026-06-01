@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Portrait — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder100:#EEE9F1; --bg:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--bg); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  /* Full-bleed portrait — bottom 65% of canvas */
+  .photo {
+    position:absolute; left:0; right:0; bottom:0;
+    height:850px;
+    background-image:url('../../assets/friederike-hero.jpg');
+    background-size:cover;
+    background-position:center 25%;
+  }
+  /* Text panel — top 35% */
+  .panel {
+    position:absolute; top:0; left:0; right:0;
+    height:500px;
+    background:var(--bg);
+  }
+  .signet {
+    position:absolute; top:80px; left:80px;
+    font-weight:800; font-size:80px; line-height:1; letter-spacing:-4px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  .eyebrow {
+    position:absolute; top:210px; left:80px;
+    font-size:32px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .headline {
+    position:absolute; left:80px; right:80px; top:300px;
+    font-size:92px; font-weight:800; letter-spacing:-3.5px;
+    line-height:1.05; color:var(--tinte);
+  }
+  .headline em { font-style:italic; color:var(--safran); }
+  /* Caption overlay at very bottom of photo */
+  .caption {
+    position:absolute; left:80px; right:80px; bottom:60px;
+    font-size:28px; font-weight:400; line-height:1.5; color:var(--bg);
+    text-shadow:0 2px 12px rgba(0,0,0,0.4);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="panel"></div>
+    <div class="photo"></div>
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="eyebrow">Hallo, ich bin Friederike.</div>
+    <div class="headline">Systemischer <em>Coach</em>.</div>
+    <div class="caption">Resilienz &amp; mentale Gesundheit · München &amp; online</div>
+  </div>
+</body>
+</html>

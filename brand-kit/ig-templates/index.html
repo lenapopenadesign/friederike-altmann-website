@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>IG Templates · Review — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder100:#EEE9F1; --bg:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#1f1c24; color:var(--bg); font-family:'Manrope', sans-serif; min-height:100vh; }
+  header {
+    padding:48px 48px 24px;
+    max-width:1600px; margin:0 auto;
+  }
+  header .eyebrow {
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--safran); font-weight:700; margin-bottom:12px;
+  }
+  header h1 {
+    font-size:42px; font-weight:800; letter-spacing:-1px; line-height:1.1;
+  }
+  header h1 em { color:var(--safran); font-style:italic; }
+  header p {
+    margin-top:14px; opacity:.7; font-size:15px; line-height:1.6; max-width:60ch;
+  }
+  .grid {
+    max-width:1600px; margin:0 auto; padding:24px 48px 64px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:48px 32px;
+  }
+  .card {
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .card .label {
+    font-size:10px; letter-spacing:.28em; text-transform:uppercase;
+    font-weight:700; color:var(--safran);
+    margin-bottom:6px;
+  }
+  .card .name {
+    font-size:18px; font-weight:700; letter-spacing:-0.3px;
+    margin-bottom:14px;
+  }
+  .card .meta {
+    font-size:11px; opacity:.5; margin-bottom:18px; letter-spacing:.05em;
+  }
+  /* Each preview wraps the iframe and scales it down */
+  .preview {
+    border-radius:8px; overflow:hidden;
+    box-shadow:0 12px 40px rgba(0,0,0,0.35);
+    background:#000;
+    position:relative;
+  }
+  /* 4:5 IG post = 1080×1350.  Scale to fit a ~360 wide card. */
+  .preview.post {
+    width:360px; height:450px;
+  }
+  .preview.post iframe {
+    width:1080px; height:1350px; border:0;
+    transform:scale(0.333333);
+    transform-origin:top left;
+  }
+  /* 9:16 story = 1080×1920. Scale to ~280 wide × 498 tall. */
+  .preview.story {
+    width:280px; height:498px;
+  }
+  .preview.story iframe {
+    width:1080px; height:1920px; border:0;
+    transform:scale(0.259);
+    transform-origin:top left;
+  }
+  /* Open-in-new link */
+  .card a.open {
+    margin-top:14px;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
+    color:var(--bg); opacity:.6;
+    text-decoration:none; padding-bottom:2px;
+    border-bottom:1px solid currentColor;
+    transition:opacity .15s;
+  }
+  .card a.open:hover { opacity:1; }
+  footer {
+    text-align:center; padding:24px 48px 48px;
+    font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+    opacity:.35; font-weight:700;
+  }
+  @media (max-width:1280px) {
+    .grid { grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:760px) {
+    .grid { grid-template-columns:1fr; }
+    header { padding:32px 24px 16px; }
+    .grid { padding:16px 24px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Brand Kit · IG Templates</div>
+  <h1>Templates <em>zur Abnahme.</em></h1>
+  <p>Manrope · Brand-Farben · FA-Signet · runde Ecken. Jedes Template ist eine in sich geschlossene HTML-Datei — bereit für Screenshot oder für den späteren Setup in Canva.</p>
+</header>
+
+<section style="max-width:1600px; margin:0 auto; padding:24px 48px 8px;">
+  <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:8px;">
+    <span style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--safran); font-weight:700;">Editorial Iterationen</span>
+    <span style="font-size:13px; opacity:.55;">Cream-Hintergrund · ExtraLight + ExtraBold Manrope · Cormorant-Akzente · mehr Atemraum</span>
+  </div>
+</section>
+
+<div class="grid">
+  <div class="card">
+    <div class="label">v2 · Iteration</div>
+    <div class="name">Stat — Editorial</div>
+    <div class="meta">1080 × 1350 · Cream</div>
+    <div class="preview post"><iframe src="post-1-stat-v2.html"></iframe></div>
+    <a class="open" href="post-1-stat-v2.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">v2 · Iteration</div>
+    <div class="name">Tipp — Editorial</div>
+    <div class="meta">1080 × 1350 · Cream</div>
+    <div class="preview post"><iframe src="post-2-tipp-v2.html"></iframe></div>
+    <a class="open" href="post-2-tipp-v2.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">v2 · Iteration</div>
+    <div class="name">Zitat — Editorial</div>
+    <div class="meta">1080 × 1350 · Cream</div>
+    <div class="preview post"><iframe src="post-3-zitat-v2.html"></iframe></div>
+    <a class="open" href="post-3-zitat-v2.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">v2 · Iteration</div>
+    <div class="name">Portrait — Editorial</div>
+    <div class="meta">1080 × 1350 · Cream + Foto</div>
+    <div class="preview post"><iframe src="post-6-portrait-v2.html"></iframe></div>
+    <a class="open" href="post-6-portrait-v2.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+</div>
+
+<section style="max-width:1600px; margin:48px auto 0; padding:24px 48px 8px;">
+  <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:8px;">
+    <span style="font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--safran); font-weight:700;">Version 1</span>
+    <span style="font-size:13px; opacity:.55;">Ursprüngliche Templates · ohne gelbe Linien</span>
+  </div>
+</section>
+
+<div class="grid">
+  <div class="card">
+    <div class="label">01 · Education</div>
+    <div class="name">Stat-Card</div>
+    <div class="meta">1080 × 1350 · Dark</div>
+    <div class="preview post"><iframe src="post-1-stat.html"></iframe></div>
+    <a class="open" href="post-1-stat.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">02 · Education</div>
+    <div class="name">Tipp</div>
+    <div class="meta">1080 × 1350 · Light</div>
+    <div class="preview post"><iframe src="post-2-tipp.html"></iframe></div>
+    <a class="open" href="post-2-tipp.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">03 · Encouragement</div>
+    <div class="name">Zitat</div>
+    <div class="meta">1080 × 1350 · Flieder</div>
+    <div class="preview post"><iframe src="post-3-zitat.html"></iframe></div>
+    <a class="open" href="post-3-zitat.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">04 · Entertainment</div>
+    <div class="name">Mama-Alltag</div>
+    <div class="meta">1080 × 1350 · Sand + Foto</div>
+    <div class="preview post"><iframe src="post-4-mama.html"></iframe></div>
+    <a class="open" href="post-4-mama.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">05 · Carousel</div>
+    <div class="name">Cover</div>
+    <div class="meta">1080 × 1350 · Dark · Bold</div>
+    <div class="preview post"><iframe src="post-5-carousel-cover.html"></iframe></div>
+    <a class="open" href="post-5-carousel-cover.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">06 · About</div>
+    <div class="name">Portrait</div>
+    <div class="meta">1080 × 1350 · Foto + Text</div>
+    <div class="preview post"><iframe src="post-6-portrait.html"></iframe></div>
+    <a class="open" href="post-6-portrait.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">07 · B2B</div>
+    <div class="name">Workshop</div>
+    <div class="meta">1080 × 1350 · Foto + Dark</div>
+    <div class="preview post"><iframe src="post-7-workshop.html"></iframe></div>
+    <a class="open" href="post-7-workshop.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">08 · B2C</div>
+    <div class="name">Gruppe</div>
+    <div class="meta">1080 × 1350 · Foto + Sand</div>
+    <div class="preview post"><iframe src="post-8-gruppe.html"></iframe></div>
+    <a class="open" href="post-8-gruppe.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+
+  <div class="card">
+    <div class="label">09 · Story</div>
+    <div class="name">Frage</div>
+    <div class="meta">1080 × 1920 · Flieder</div>
+    <div class="preview story"><iframe src="story-1-frage.html"></iframe></div>
+    <a class="open" href="story-1-frage.html" target="_blank">Im Tab öffnen →</a>
+  </div>
+</div>
+
+<footer>Friederike Altmann · Brand Kit · IG Templates · v1</footer>
+
+</body>
+</html>

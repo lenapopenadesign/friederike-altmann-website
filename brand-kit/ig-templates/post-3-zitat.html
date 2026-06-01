@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Zitat — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder50:#F9F7FA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--flieder50); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  .signet {
+    position:absolute; top:80px; left:80px;
+    font-weight:800; font-size:80px; line-height:1; letter-spacing:-4px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  .eyebrow {
+    position:absolute; top:210px; left:80px;
+    font-size:32px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .quotemark {
+    position:absolute; top:330px; left:60px;
+    font-family:'Georgia', serif; font-size:420px; color:var(--safran);
+    line-height:0.5; font-weight:400;
+  }
+  .quote {
+    position:absolute; left:160px; right:80px; top:580px;
+    font-size:92px; font-weight:800; font-style:italic;
+    letter-spacing:-3px; line-height:1.15; color:var(--tinte);
+  }
+  .quote em {
+    font-style:italic; font-weight:800; color:var(--safran);
+  }
+  .attrib {
+    position:absolute; left:160px; top:1040px;
+    font-size:30px; font-weight:700; letter-spacing:6px;
+    color:var(--tinte); text-transform:uppercase;
+  }
+  .attrib-sub {
+    position:absolute; left:160px; top:1090px;
+    font-size:30px; font-weight:400; font-style:italic; color:var(--nacht);
+  }
+  .footer {
+    position:absolute; left:80px; bottom:80px;
+    font-size:26px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="eyebrow">Ein Kernsatz</div>
+    <div class="quotemark">&ldquo;</div>
+    <div class="quote">Resilienz ist <em>trainierbar</em> — und kein Schicksal.</div>
+    <div class="attrib">Friederike Altmann</div>
+    <div class="attrib-sub">Kernsatz meiner Arbeit</div>
+    <div class="footer">Friederikealtmann.de</div>
+  </div>
+</body>
+</html>

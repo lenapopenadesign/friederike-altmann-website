@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Portrait v2 — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,400;0,700;0,800;1,200;1,700&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --cream:#F7F2EA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--cream); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  /* Portrait — narrower, centered, leaving cream margins around */
+  .photo-wrap {
+    position:absolute; top:240px; left:120px;
+    width:520px; height:780px;
+    overflow:hidden;
+    border-radius:4px;
+  }
+  .photo-wrap img {
+    width:100%; height:100%; object-fit:cover; object-position:center 20%;
+    display:block;
+  }
+  /* Header — badge + signet */
+  .header {
+    position:absolute; top:120px; left:120px; right:120px;
+    display:flex; justify-content:space-between; align-items:flex-start;
+  }
+  .badge {
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:32px; color:var(--nacht);
+  }
+  .signet {
+    font-weight:800; font-size:56px; line-height:1; letter-spacing:-3px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  /* Text column on right of photo */
+  .text {
+    position:absolute; left:720px; top:280px; right:120px;
+  }
+  .text .label {
+    font-size:22px; font-weight:600; letter-spacing:8px;
+    color:var(--nacht); text-transform:uppercase; margin-bottom:24px;
+  }
+  .text .name {
+    font-size:84px; font-weight:200;
+    letter-spacing:-3px; line-height:1; color:var(--tinte);
+    margin-bottom:12px;
+  }
+  .text .name .last {
+    font-weight:800;
+  }
+  .text .role {
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:34px; color:var(--nacht);
+    line-height:1.3; margin-bottom:240px;
+  }
+  .text .lead {
+    font-size:26px; font-weight:300; line-height:1.55; color:var(--tinte);
+  }
+  .text .lead em {
+    font-weight:700; font-style:italic; color:var(--safran);
+  }
+  /* Bottom row */
+  .divider {
+    position:absolute; left:120px; right:120px; bottom:160px;
+    height:1px; background:rgba(58,49,66,0.18);
+  }
+  .city-label {
+    position:absolute; left:120px; bottom:90px;
+    font-size:20px; font-weight:600; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .web {
+    position:absolute; right:120px; bottom:90px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:28px; color:var(--tinte);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="header">
+      <div class="badge">Hallo, ich bin —</div>
+      <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    </div>
+    <div class="photo-wrap">
+      <img src="../../assets/friederike-hero.jpg" alt="Friederike Altmann">
+    </div>
+    <div class="text">
+      <div class="label">Über mich</div>
+      <div class="name">Friederike<br><span class="last">Altmann</span></div>
+      <div class="role">Systemischer Coach.<br>Resilienz &amp; mentale<br>Gesundheit.</div>
+      <div class="lead">Ich arbeite mit Menschen, die <em>spüren</em>, dass es so nicht weitergeht.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="city-label">München · Online</div>
+    <div class="web">friederikealtmann.de</div>
+  </div>
+</body>
+</html>

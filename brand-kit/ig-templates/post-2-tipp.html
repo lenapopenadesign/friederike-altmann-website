@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Tipp — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder100:#EEE9F1; --flieder200:#E3DDEA; --bg:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--bg); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  .signet {
+    position:absolute; top:80px; left:80px;
+    font-weight:800; font-size:80px; line-height:1; letter-spacing:-4px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  .eyebrow {
+    position:absolute; top:210px; left:80px;
+    font-size:32px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .headline {
+    position:absolute; left:80px; right:80px; top:310px;
+    font-size:104px; font-weight:800; letter-spacing:-4.5px;
+    line-height:1.02; color:var(--tinte);
+    max-width:920px;
+  }
+  .headline em {
+    font-style:italic; font-weight:800; color:var(--safran);
+  }
+  .subline {
+    position:absolute; left:80px; right:80px; top:830px;
+    font-size:46px; font-weight:700; color:var(--tinte);
+    letter-spacing:-0.5px;
+  }
+  .body {
+    position:absolute; left:80px; right:80px; top:970px;
+    font-size:32px; font-weight:400; line-height:1.55; color:var(--tinte);
+    max-width:920px;
+  }
+  .footer {
+    position:absolute; left:80px; bottom:80px;
+    font-size:26px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="eyebrow">Resilienz · Tipp 01</div>
+    <div class="headline">Atme <em>länger aus</em>, als du einatmest.</div>
+    <div class="subline">4 Sekunden ein. 6 Sekunden aus. 3 Atemzüge.</div>
+    <div class="body">Eine längere Ausatmung aktiviert den Parasympathikus — dein Nervensystem schaltet messbar runter. Funktioniert auch im Meeting.</div>
+    <div class="footer">Friederikealtmann.de</div>
+  </div>
+</body>
+</html>

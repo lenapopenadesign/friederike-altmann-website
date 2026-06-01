@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Mama-Alltag — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --sand:#F1EDE6; --bg:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--sand); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  .photo {
+    position:absolute; top:160px; left:80px; right:80px;
+    height:680px;
+    background:rgba(58,49,66,0.06);
+    border:2px dashed rgba(58,49,66,0.18);
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    color:rgba(58,49,66,0.4);
+    font-size:30px; font-weight:700; letter-spacing:5px;
+    text-transform:uppercase;
+  }
+  .eyebrow {
+    position:absolute; top:80px; left:80px;
+    font-size:30px; font-weight:700; letter-spacing:7px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .signet {
+    position:absolute; top:60px; right:80px;
+    font-weight:800; font-size:72px; line-height:1; letter-spacing:-3px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  .headline {
+    position:absolute; left:80px; right:80px; top:910px;
+    font-size:72px; font-weight:800; letter-spacing:-2.5px;
+    line-height:1.1; color:var(--tinte);
+  }
+  .headline em {
+    font-style:italic; font-weight:800; color:var(--safran);
+  }
+  .body {
+    position:absolute; left:80px; right:80px; top:1180px;
+    font-size:30px; font-weight:400; line-height:1.5; color:var(--tinte);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="eyebrow">Mama-Alltag · Behind the Scenes</div>
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="photo">Foto hier einsetzen</div>
+    <div class="headline"><em>5 Minuten Ruhe</em>, bevor das Haus aufwacht.</div>
+    <div class="body">Mein Resilienz-Ritual für die Woche. Kein Wundermittel — aber es macht den Unterschied.</div>
+  </div>
+</body>
+</html>

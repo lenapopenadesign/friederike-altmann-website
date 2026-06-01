@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Workshop — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,400;0,700;0,800;1,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder200:#E3DDEA; --bg:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--tinte); color:var(--bg);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  /* Full-bleed photo, top 60% */
+  .photo {
+    position:absolute; left:0; right:0; top:0;
+    height:810px;
+    background-image:url('../../assets/room-window.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+  /* Gradient overlay so signet+eyebrow stay legible on top of photo */
+  .photo::after {
+    content:''; position:absolute; left:0; top:0; right:0;
+    height:280px;
+    background:linear-gradient(180deg, rgba(58,49,66,0.55) 0%, rgba(58,49,66,0) 100%);
+  }
+  .signet {
+    position:absolute; top:80px; left:80px;
+    font-weight:800; font-size:80px; line-height:1; letter-spacing:-4px;
+    z-index:2;
+  }
+  .signet .f { color:#F1EDE6; }
+  .signet .a { color:var(--safran); }
+  .eyebrow {
+    position:absolute; top:100px; right:80px;
+    font-size:30px; font-weight:700; letter-spacing:7px;
+    color:#F1EDE6; text-transform:uppercase;
+    z-index:2;
+  }
+  /* Text block, bottom 40% */
+  .text {
+    position:absolute; left:0; right:0; bottom:0;
+    height:540px;
+    background:var(--tinte);
+    padding:90px 80px 80px;
+  }
+  .text .label {
+    font-size:30px; font-weight:700; letter-spacing:7px;
+    color:var(--safran); text-transform:uppercase; margin-bottom:30px;
+  }
+  .text .headline {
+    font-size:72px; font-weight:800; letter-spacing:-2.5px;
+    line-height:1.08; color:var(--bg); margin-bottom:32px;
+  }
+  .text .headline em { font-style:italic; color:var(--safran); }
+  .text .body {
+    font-size:30px; font-weight:400; line-height:1.5; color:var(--flieder200);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="photo"></div>
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="eyebrow">B2B · Workshop</div>
+    <div class="text">
+      <div class="label">Save the Date</div>
+      <div class="headline">Resilienz im Team — <em>ein Tag</em>, der bleibt.</div>
+      <div class="body">Halb- oder ganztägig, vor Ort oder online. Format auf dein Team abgestimmt.</div>
+    </div>
+  </div>
+</body>
+</html>

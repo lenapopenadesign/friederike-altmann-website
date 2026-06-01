@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Stat v2 — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;700;800&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder100:#EEE9F1; --flieder200:#E3DDEA; --flieder400:#BDB0CC;
+    --sand:#F1EDE6; --bg:#FCFBFA;
+    --cream:#F7F2EA; /* warmer off-white — editorial */
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--cream); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  /* Editorial header: number badge + eyebrow */
+  .header {
+    position:absolute; top:120px; left:120px; right:120px;
+    display:flex; justify-content:space-between; align-items:flex-start;
+  }
+  .no-badge {
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:32px; color:var(--nacht);
+    letter-spacing:0.5px;
+  }
+  .signet {
+    font-weight:800; font-size:56px; line-height:1; letter-spacing:-3px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  /* Editorial label */
+  .eyebrow {
+    position:absolute; top:280px; left:120px;
+    font-size:24px; font-weight:600; letter-spacing:8px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  /* Stat block — massive, anchored left */
+  .stat {
+    position:absolute; left:120px; top:410px;
+    font-size:360px; font-weight:200;     /* ExtraLight for elegance */
+    color:var(--tinte); letter-spacing:-18px; line-height:1;
+  }
+  .stat .pct {
+    font-weight:800; color:var(--safran);
+  }
+  /* Explainer — narrower column for editorial feel */
+  .explainer {
+    position:absolute; left:120px; right:380px; top:880px;
+    font-size:34px; font-weight:300; line-height:1.45; color:var(--tinte);
+  }
+  /* Hairline divider — subtle, NOT yellow */
+  .divider {
+    position:absolute; left:120px; right:120px; bottom:200px;
+    height:1px; background:rgba(58,49,66,0.18);
+  }
+  /* Source — bottom row, two columns */
+  .source-row {
+    position:absolute; left:120px; right:120px; bottom:120px;
+    display:flex; justify-content:space-between; align-items:baseline;
+  }
+  .source {
+    font-size:22px; font-weight:700; letter-spacing:6px;
+    color:var(--nacht); text-transform:uppercase;
+  }
+  .web {
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:28px; color:var(--tinte);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="header">
+      <div class="no-badge">No. 01</div>
+      <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    </div>
+    <div class="eyebrow">Stress-Report</div>
+    <div class="stat">80<span class="pct">%</span></div>
+    <div class="explainer">der Arbeitnehmer:innen in Deutschland fühlen sich gestresst.</div>
+    <div class="divider"></div>
+    <div class="source-row">
+      <div class="source">TK Stressstudie</div>
+      <div class="web">friederikealtmann.de</div>
+    </div>
+  </div>
+</body>
+</html>

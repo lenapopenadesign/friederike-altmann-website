@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>POST · Zitat v2 — Friederike Altmann</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,700;0,800;1,200;1,700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder50:#F9F7FA; --cream:#F7F2EA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1080px; height:1350px;
+    background:var(--cream); color:var(--tinte);
+    position:relative; overflow:hidden;
+    border-radius:8px;
+  }
+  /* Top-left badge */
+  .badge {
+    position:absolute; top:140px; left:120px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:32px; color:var(--nacht);
+    border:1px solid var(--nacht);
+    border-radius:999px;
+    padding:14px 36px;
+    letter-spacing:1px;
+  }
+  /* Signet — top-right */
+  .signet {
+    position:absolute; top:140px; right:120px;
+    font-weight:800; font-size:56px; line-height:1; letter-spacing:-3px;
+  }
+  .signet .f { color:var(--tinte); }
+  .signet .a { color:var(--safran); }
+  /* The quote — anchored center-left, extralight + bold mix, italic */
+  .quote {
+    position:absolute; left:120px; right:120px; top:420px;
+    font-size:104px; font-weight:200;       /* ExtraLight */
+    font-style:italic;
+    line-height:1.04; color:var(--tinte);
+    letter-spacing:-3.5px;
+  }
+  .quote em {
+    font-weight:700;                         /* Bold italic accent */
+    color:var(--safran);
+    font-style:italic;
+  }
+  .quote .anchor {
+    font-weight:800;                         /* Anchor word */
+    font-style:normal;
+    letter-spacing:-4px;
+  }
+  /* Hairline divider */
+  .divider {
+    position:absolute; left:120px; right:120px; top:1040px;
+    height:1px; background:rgba(58,49,66,0.18);
+  }
+  /* Attribution row at bottom */
+  .attrib {
+    position:absolute; left:120px; bottom:140px;
+    font-size:22px; font-weight:600; letter-spacing:7px;
+    color:var(--tinte); text-transform:uppercase;
+  }
+  .attrib-sub {
+    position:absolute; left:120px; bottom:90px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:28px; color:var(--nacht);
+  }
+  .web {
+    position:absolute; right:120px; bottom:110px;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic; font-weight:400;
+    font-size:28px; color:var(--tinte);
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="badge">Kernsatz</div>
+    <div class="signet"><span class="f">F</span><span class="a">A</span></div>
+    <div class="quote">Resilienz ist <em>trainierbar</em> — und kein <span class="anchor">Schicksal</span>.</div>
+    <div class="divider"></div>
+    <div class="attrib">Friederike Altmann</div>
+    <div class="attrib-sub">Systemischer Coach</div>
+    <div class="web">friederikealtmann.de</div>
+  </div>
+</body>
+</html>

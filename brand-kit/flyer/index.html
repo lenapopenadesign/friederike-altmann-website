@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Flyer-Übersicht — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinte:#3A3142; --safran:#E8A33D; --nacht:#5F4F75;
+    --flieder100:#EEE9F1; --flieder50:#F9F7FA; --offwhite:#FCFBFA;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#1a1a1a; font-family:'Manrope', sans-serif; color:var(--offwhite); }
+  header {
+    padding:48px 64px 24px;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:1px solid #2c2c2c;
+  }
+  header h1 {
+    font-size:28px; font-weight:800; letter-spacing:-.6px;
+  }
+  header .meta {
+    font-size:12px; font-weight:700; letter-spacing:4px;
+    color:#888; text-transform:uppercase;
+  }
+  .grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:48px;
+    padding:48px 64px 96px;
+  }
+  .pair { display:flex; flex-direction:column; gap:24px; }
+  .pair-label {
+    font-size:13px; font-weight:700; letter-spacing:4px;
+    color:var(--safran); text-transform:uppercase;
+  }
+  .pair-title {
+    font-size:22px; font-weight:800; letter-spacing:-.4px;
+    margin:6px 0 14px;
+  }
+  .pair-desc {
+    font-size:14px; font-weight:400; line-height:1.5;
+    color:#bbb; margin-bottom:16px;
+  }
+  .side-label {
+    font-size:11px; font-weight:700; letter-spacing:3px;
+    color:#888; text-transform:uppercase; margin-bottom:8px;
+  }
+  /* Thumbnail box scales the 1500×1058 iframe */
+  .thumb {
+    width:100%; aspect-ratio: 1500 / 1058;
+    background:#2a2a2a; border-radius:8px; overflow:hidden;
+    position:relative; box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  }
+  .thumb iframe {
+    border:0; width:1500px; height:1058px;
+    transform-origin: top left;
+    /* scale to container width — JS will set actual value */
+  }
+  .thumb-wrap {
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .thumb-meta {
+    font-size:11px; font-weight:400; color:#999;
+    display:flex; justify-content:space-between;
+  }
+  .thumb-meta a {
+    color:var(--safran); text-decoration:none; font-weight:700;
+  }
+  footer {
+    padding:24px 64px 48px; border-top:1px solid #2c2c2c;
+    font-size:12px; color:#777; line-height:1.7;
+  }
+  footer b { color:#ccc; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Flyer · A5 Quer · Designvorlagen</h1>
+    <div class="meta">Friederike Altmann · Resilienz-Coaching</div>
+  </header>
+
+  <div class="grid">
+    <div class="pair">
+      <div>
+        <div class="pair-label">Variante 01 · Business</div>
+        <div class="pair-title">Für Unternehmen, HR &amp; Führungs­kräfte</div>
+        <div class="pair-desc">Editorial-Layout mit Sand-Hintergrund, Raum-Foto rechts und weißer Content-Karte links. Rückseite: drei Formate als Magazin-Liste, Themen-Tags und dunkle Kontakt-Karte mit QR.</div>
+      </div>
+      <div class="thumb-wrap">
+        <div class="side-label">Vorderseite</div>
+        <div class="thumb"><iframe src="business-front.html" scrolling="no"></iframe></div>
+        <div class="thumb-meta"><span>business-front.html</span><a href="business-front.html" target="_blank">Vollbild öffnen ↗</a></div>
+      </div>
+      <div class="thumb-wrap">
+        <div class="side-label">Rückseite</div>
+        <div class="thumb"><iframe src="business-back.html" scrolling="no"></iframe></div>
+        <div class="thumb-meta"><span>business-back.html</span><a href="business-back.html" target="_blank">Vollbild öffnen ↗</a></div>
+      </div>
+    </div>
+
+    <div class="pair">
+      <div>
+        <div class="pair-label">Variante 02 · Privat</div>
+        <div class="pair-title">Für Cafés, Praxen, Spielplätze, Events</div>
+        <div class="pair-desc">Heller Editorial-Look mit Friederikes Porträt, Hero-Headline „Entspannt erfolgreich." — wie auf der Website. Rückseite: Das Einzel · Der Prozess · Die Gruppe, Methode in 3 Schritten, Praxis-Foto und Kennenlern­gespräch-CTA.</div>
+      </div>
+      <div class="thumb-wrap">
+        <div class="side-label">Vorderseite</div>
+        <div class="thumb"><iframe src="privat-front.html" scrolling="no"></iframe></div>
+        <div class="thumb-meta"><span>privat-front.html</span><a href="privat-front.html" target="_blank">Vollbild öffnen ↗</a></div>
+      </div>
+      <div class="thumb-wrap">
+        <div class="side-label">Rückseite</div>
+        <div class="thumb"><iframe src="privat-back.html" scrolling="no"></iframe></div>
+        <div class="thumb-meta"><span>privat-back.html</span><a href="privat-back.html" target="_blank">Vollbild öffnen ↗</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <b>Hinweis zum Nachbau in Figma:</b> Canvas-Größe 1500 × 1058 px entspricht A5 quer (Verhältnis 210:148). Für Druck auf reale 2480 × 1748 px (300 dpi) skalieren und 3 mm Beschnitt rundum hinzufügen.<br>
+    <b>Brand-Stack:</b> Manrope (200/400/700/800) wie auf der Website — dünne H1/H2 mit safran-bold Akzent. Farben: Sand <code>#F1EDE6</code>, Tinte <code>#3A3142</code>, Safran <code>#E8A33D</code>, Nachtflieder <code>#5F4F75</code>. Echtes Logo aus <code>assets/logo.svg</code>, Fotos aus <code>assets/</code>. Inhalte 1:1 aus <code>index.html</code>.<br>
+    <b>Inspiration:</b> Editorial-Magazin-Layouts (Card-on-Card mit Foto-Bleed, Magazin-Liste mit horizontalen Trennlinien, kleiner Saffran-Akzentblock).
+  </footer>
+
+  <script>
+    // Scale iframes to fit their container width
+    function scaleThumbs() {
+      document.querySelectorAll('.thumb').forEach(t => {
+        const iframe = t.querySelector('iframe');
+        const scale = t.offsetWidth / 1500;
+        iframe.style.transform = `scale(${scale})`;
+        iframe.style.width = '1500px';
+        iframe.style.height = '1058px';
+      });
+    }
+    window.addEventListener('load', scaleThumbs);
+    window.addEventListener('resize', scaleThumbs);
+  </script>
+</body>
+</html>

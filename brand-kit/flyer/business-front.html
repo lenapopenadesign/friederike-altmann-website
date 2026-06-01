@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>FLYER · Business · Vorderseite — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#FCFBFA; --sand:#F1EDE6; --leinen:#D9D3C8;
+    --tinte:#3A3142; --safran:#E8A33D;
+    --nacht:#5F4F75; --flieder100:#EEE9F1; --flieder200:#E3DDEA; --flieder50:#F9F7FA;
+    --lilac:#BDB0CC; --hair:rgba(58,49,66,.10);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  /* A5 landscape — 210 × 148 mm, drawn at 1500 × 1058 px */
+  .canvas {
+    width:1500px; height:1058px;
+    background:var(--sand); color:var(--tinte);
+    position:relative; overflow:hidden;
+    font-feature-settings:"ss01","ss02","cv11";
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Background photo, right half — bleeds to edge */
+  .photo {
+    position:absolute; right:0; top:0; bottom:0;
+    width:660px;
+    background:url('../../assets/room-window.jpg') center/cover no-repeat;
+  }
+  .photo::after {
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(90deg, var(--sand) 0%, rgba(241,237,230,0) 12%, rgba(241,237,230,0) 100%);
+  }
+
+  /* Sand stripe behind photo top — adds editorial header band */
+  .top-band {
+    position:absolute; top:0; left:0; right:0; height:64px;
+    background:var(--sand); z-index:3;
+    border-bottom:1px solid var(--hair);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 56px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--tinte); font-weight:600; opacity:.7;
+  }
+  .top-band b { color:var(--safran); font-weight:700; opacity:1; }
+
+  /* White content card — left 56%, overlaps the photo */
+  .card {
+    position:absolute; left:56px; top:120px;
+    width:860px; height:880px;
+    background:var(--bg);
+    box-shadow: 0 24px 60px rgba(58,49,66,.10);
+    padding:56px 64px 56px 64px;
+    z-index:4;
+    display:flex; flex-direction:column;
+  }
+  /* Logo box (top-left) */
+  .logo-box {
+    border:1px solid var(--hair);
+    padding:14px 22px;
+    display:inline-flex; align-items:center;
+    width:fit-content;
+  }
+  .logo-box img { height:38px; width:auto; display:block; }
+
+  /* Label row top-right inside card */
+  .card-meta {
+    position:absolute; top:74px; right:64px;
+    text-align:right;
+  }
+  .card-meta .label {
+    font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:6px;
+  }
+  .card-meta .val {
+    font-size:13px; color:var(--tinte); font-weight:500;
+    letter-spacing:-.005em;
+  }
+
+  /* Headline */
+  .eyebrow {
+    margin-top:48px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700;
+  }
+  .rule { display:none; }
+  .eyebrow + h1 { margin-top:24px; }
+
+  h1 {
+    font-weight:200; font-size:78px; line-height:1.0;
+    letter-spacing:-.035em; color:var(--tinte);
+    max-width:14ch;
+  }
+  h1 strong {
+    display:block; font-weight:800; color:var(--safran);
+    letter-spacing:-.045em;
+  }
+
+  .lead {
+    margin-top:30px; font-size:16px; line-height:1.55;
+    color:var(--tinte); opacity:.82; max-width:38ch; font-weight:400;
+  }
+
+  /* Bottom row of card */
+  .card-bottom {
+    margin-top:auto; padding-top:32px;
+    border-top:1px solid var(--hair);
+    display:flex; align-items:flex-end; justify-content:space-between; gap:24px;
+  }
+  .contact-mini { display:flex; flex-direction:column; gap:4px; }
+  .contact-mini .k {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700;
+  }
+  .contact-mini .v {
+    font-size:14px; color:var(--tinte); font-weight:600;
+    letter-spacing:-.005em;
+  }
+  .cta {
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--tinte); color:#fff;
+    padding:14px 22px; border-radius:6px;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
+  }
+  .cta .arr { font-weight:400; letter-spacing:0; font-size:14px; }
+
+  /* Saffran accent block bottom-right of canvas (overlays photo) */
+  .accent-block {
+    position:absolute; right:56px; bottom:64px;
+    width:240px; padding:22px 24px;
+    background:var(--safran); color:var(--tinte);
+    z-index:5;
+  }
+  .accent-block .k {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    font-weight:700; margin-bottom:8px;
+  }
+  .accent-block .v {
+    font-size:18px; font-weight:800; letter-spacing:-.02em; line-height:1.15;
+  }
+
+  /* Right photo caption */
+  .photo-cap {
+    position:absolute; right:56px; top:120px;
+    z-index:5; padding:6px 10px;
+    background:rgba(58,49,66,.7); color:#fff;
+    font-size:9px; letter-spacing:.3em; text-transform:uppercase; font-weight:600;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="photo"></div>
+
+    <div class="top-band">
+      <span>Friederike Altmann · Systemisches Coaching</span>
+      <span><b>Business</b> · München &amp; online</span>
+    </div>
+
+    <div class="photo-cap">Praxis · München</div>
+
+    <div class="card">
+      <div class="logo-box"><img src="../../assets/logo.svg" alt="Friederike Altmann"></div>
+
+      <div class="card-meta">
+        <div class="label">Edition</div>
+        <div class="val">N° 01 · Business</div>
+      </div>
+
+      <div class="eyebrow">Für Unternehmen · HR &amp; Führung</div>
+      <div class="rule"></div>
+
+      <h1>Stärkt das System.<strong>Nicht nur die Einzelne.</strong></h1>
+
+      <p class="lead">Resilienz-Coaching, Workshops und Vorträge für mentale Gesundheit am Arbeitsplatz — wissenschaftlich fundiert, systemisch gedacht. Buchbar über das Weiterbildungs­budget, durchführbar in der Arbeitszeit.</p>
+
+      <div class="card-bottom">
+        <div class="contact-mini">
+          <span class="k">Kontakt</span>
+          <span class="v">post@friederikealtmann.de</span>
+          <span class="v">+49 (0)&nbsp;178 280 5138</span>
+        </div>
+        <a class="cta">Erstgespräch <span class="arr">→</span></a>
+      </div>
+    </div>
+
+    <div class="accent-block">
+      <div class="k">Entspannt</div>
+      <div class="v">erfolgreich.</div>
+    </div>
+  </div>
+</body>
+</html>

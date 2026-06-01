@@ -577,7 +577,9 @@ section.offer:nth-of-type(even){background:#fff}
 
 
 /* ---------- Subpage hero ---------- */
-.subpage-hero{padding:2.5rem 0 4rem;position:relative;overflow:hidden;background:var(--bg)}
+.subpage-hero{padding:2.5rem 0 1.5rem;position:relative;overflow:hidden;background:var(--bg)}
+/* Erste Section nach Subpage-Hero: enger Übergang (Desktop) */
+.subpage-hero + section{padding-top:2rem}
 /* Subpage-Hero mit Portrait (z.B. meine-geschichte) */
 .subpage-hero-grid{display:grid;grid-template-columns:1.25fr .95fr;gap:4rem;align-items:center}
 .subpage-portrait{aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:var(--flieder-100);width:100%;max-width:400px;justify-self:end}
@@ -663,6 +665,24 @@ section.offer{padding:7rem 0;background:var(--bg);border-top:1px solid var(--bg-
 .offer-sketch svg{width:100%;height:100%;display:block}
 @media (max-width:767px){
   .offer-sketch{width:clamp(140px,40vw,180px);margin-top:1.6rem}
+}
+
+/* Hero-Skizze · sitzt im 2-Spalter-Subpage-Hero rechts */
+.hero-sketch{
+  width:100%;
+  max-width:340px;
+  aspect-ratio:1/1;
+  color:var(--nachtflieder);
+  justify-self:end;
+  margin:0;
+}
+.hero-sketch svg{width:100%;height:100%;display:block}
+@media (max-width:991px){
+  /* Auf Tablet/Mobile: Sketch zentriert UNTER der Copy */
+  .hero-sketch{justify-self:center;max-width:280px;margin-top:1.5rem}
+}
+@media (max-width:767px){
+  .hero-sketch{max-width:240px;margin-top:1.2rem}
 }
 .offer-detail{background:#fff;padding:2.4rem 2rem;border-radius:var(--radius);border:1px solid var(--bg-hairline);display:flex;flex-direction:column;gap:1.4rem}
 .offer-detail-block strong{display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--nachtflieder);margin-bottom:.4rem}

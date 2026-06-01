@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>FLYER · Privat · Rückseite — Friederike Altmann</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#FCFBFA; --sand:#F1EDE6; --leinen:#D9D3C8;
+    --tinte:#3A3142; --safran:#E8A33D;
+    --nacht:#5F4F75; --flieder100:#EEE9F1; --flieder200:#E3DDEA; --flieder50:#F9F7FA;
+    --lilac:#BDB0CC; --hair:rgba(58,49,66,.10);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:#222; font-family:'Manrope', sans-serif; }
+  body { display:flex; justify-content:center; padding:32px; }
+  .canvas {
+    width:1500px; height:1058px;
+    background:var(--sand); color:var(--tinte);
+    position:relative; overflow:hidden;
+    font-feature-settings:"ss01","ss02","cv11";
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Top band */
+  .top-band {
+    position:absolute; top:0; left:0; right:0; height:64px;
+    background:var(--tinte); color:var(--flieder200);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 56px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    font-weight:600;
+  }
+  .top-band b { color:var(--safran); font-weight:700; }
+
+  /* Logo row */
+  .logo-row {
+    position:absolute; top:96px; left:56px; right:56px;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    padding-bottom:18px; border-bottom:1px solid var(--hair);
+  }
+  .logo-row .logo-img { height:36px; }
+  .logo-row .right { text-align:right; }
+  .logo-row .right .k {
+    font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:4px;
+  }
+  .logo-row .right .v {
+    font-size:13px; color:var(--tinte); font-weight:500;
+  }
+
+  /* Section H */
+  .section-eyebrow {
+    position:absolute; top:200px; left:56px;
+    font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700;
+  }
+  .section-rule { display:none; }
+  h2 {
+    position:absolute; top:240px; left:56px; right:580px;
+    font-weight:200; font-size:44px; line-height:1.05;
+    letter-spacing:-.025em; color:var(--tinte);
+    max-width:20ch;
+  }
+  h2 strong { font-weight:800; color:var(--safran); letter-spacing:-.03em; }
+
+  /* Three formats — like ref image's services list */
+  .formats {
+    position:absolute; top:390px; left:56px; right:580px;
+    border-top:1px solid var(--hair);
+  }
+  .fmt {
+    display:grid; grid-template-columns:120px 1fr; gap:24px;
+    padding:20px 0;
+    border-bottom:1px solid var(--hair);
+  }
+  .fmt .num {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; padding-top:6px;
+  }
+  .fmt h3 {
+    font-size:21px; font-weight:700; color:var(--tinte);
+    letter-spacing:-.015em; margin-bottom:4px;
+  }
+  .fmt p {
+    font-size:13.5px; color:var(--tinte); opacity:.78;
+    line-height:1.5; max-width:48ch;
+  }
+
+  /* Method strip — bottom left */
+  .method-wrap {
+    position:absolute; left:56px; bottom:64px; right:580px;
+  }
+  .method-eyebrow {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; margin-bottom:14px;
+  }
+  .method {
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+    padding-top:18px; border-top:1px solid var(--hair);
+  }
+  .met .lab {
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--safran); font-weight:700; margin-bottom:6px;
+  }
+  .met h4 {
+    font-size:16px; font-weight:700; color:var(--tinte);
+    letter-spacing:-.01em; margin-bottom:4px;
+  }
+  .met p {
+    font-size:12px; color:var(--tinte); opacity:.7; line-height:1.5;
+  }
+
+  /* Right column */
+  .photo {
+    position:absolute; top:200px; right:56px;
+    width:484px; height:300px;
+    background:url('../../assets/room-chair.jpg') center/cover no-repeat;
+  }
+  .photo-cap {
+    position:absolute; right:56px; top:212px;
+    z-index:5; padding:6px 10px;
+    background:rgba(58,49,66,.7); color:#fff;
+    font-size:9px; letter-spacing:.3em; text-transform:uppercase; font-weight:600;
+  }
+
+  /* Contact card (light, sits below photo) */
+  .contact {
+    position:absolute; top:530px; right:56px;
+    width:484px; padding:28px 30px 26px;
+    background:var(--bg); border:1px solid var(--hair);
+  }
+  .contact .eyebrow {
+    font-size:10px; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700;
+  }
+  .contact h3 {
+    margin-top:12px; font-size:28px; font-weight:200;
+    letter-spacing:-.02em; line-height:1.1; color:var(--tinte);
+  }
+  .contact h3 strong { font-weight:800; color:var(--safran); }
+  .contact .sub {
+    font-size:13px; color:var(--tinte); opacity:.7;
+    margin-top:8px; line-height:1.5;
+  }
+  .contact .div { display:none; }
+  .contact dl { margin-top:22px; }
+  .contact dl { display:grid; grid-template-columns:80px 1fr; row-gap:8px; column-gap:14px; }
+  .contact dt {
+    font-size:9.5px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--nacht); font-weight:700; padding-top:3px;
+  }
+  .contact dd {
+    font-size:13px; color:var(--tinte); font-weight:500; letter-spacing:-.005em;
+  }
+
+  /* QR card */
+  .qr-card {
+    position:absolute; right:56px; bottom:64px;
+    width:484px; padding:18px 22px;
+    background:var(--tinte); color:#fff;
+    display:flex; align-items:center; gap:18px;
+  }
+  .qr {
+    width:84px; height:84px; flex:none; border-radius:3px;
+    background:
+      linear-gradient(45deg, var(--tinte) 25%, transparent 25%) -2px 0,
+      linear-gradient(-45deg, var(--tinte) 25%, transparent 25%) -2px 0,
+      linear-gradient(45deg, transparent 75%, var(--tinte) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--tinte) 75%),
+      #fff;
+    background-size:12px 12px;
+    border:5px solid #fff;
+  }
+  .qr-text .k {
+    font-size:9.5px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--flieder200); font-weight:700; margin-bottom:4px;
+  }
+  .qr-text .v {
+    font-size:16px; font-weight:700; color:#fff;
+    letter-spacing:-.015em; line-height:1.2;
+  }
+  .qr-text .v strong { color:var(--safran); font-weight:800; }
+  .qr-text .sub {
+    font-size:11px; color:var(--flieder200); opacity:.7; margin-top:3px;
+  }
+
+  /* Footer micro */
+  .foot {
+    position:absolute; left:56px; bottom:26px;
+    font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--tinte); opacity:.5; font-weight:600;
+  }
+  .foot b { color:var(--safran); opacity:1; font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="top-band">
+      <span>Resilienz · Mentale Gesundheit · Lebensübergänge</span>
+      <span><b>N° 02 · Privat</b></span>
+    </div>
+
+    <div class="logo-row">
+      <img class="logo-img" src="../../assets/logo.svg" alt="Friederike Altmann">
+      <div class="right">
+        <div class="k">Systemisches Coaching</div>
+        <div class="v">München &amp; online · friederikealtmann.de</div>
+      </div>
+    </div>
+
+    <div class="section-eyebrow">Angebot</div>
+    <div class="section-rule"></div>
+    <h2>Drei Formate, <strong>ein Ansatz.</strong></h2>
+
+    <div class="formats">
+      <div class="fmt">
+        <div class="num">Format 01</div>
+        <div>
+          <h3>Das Einzel</h3>
+          <p>Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiter­bringt. Für Klärungs­momente und konkrete Themen.</p>
+        </div>
+      </div>
+      <div class="fmt">
+        <div class="num">Format 02</div>
+        <div>
+          <h3>Der Prozess</h3>
+          <p>Ein geführter Prozess von vier bis zehn Terminen — so lange, bis echte Veränderung spürbar ist. Wissenschaftlich fundiert, systemisch gedacht.</p>
+        </div>
+      </div>
+      <div class="fmt">
+        <div class="num">Format 03</div>
+        <div>
+          <h3>Die Gruppe</h3>
+          <p>Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiter­entwicklung. In einem geschützten, klaren Rahmen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="method-wrap">
+      <div class="method-eyebrow">Methode</div>
+      <div class="method">
+        <div class="met">
+          <div class="lab">01</div>
+          <h4>Systemisch denken</h4>
+          <p>Niemand steht allein im Raum — wir nehmen das ganze Umfeld in den Blick.</p>
+        </div>
+        <div class="met">
+          <div class="lab">02</div>
+          <h4>Lösungsorientiert</h4>
+          <p>Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern.</p>
+        </div>
+        <div class="met">
+          <div class="lab">03</div>
+          <h4>Resilienz aufbauen</h4>
+          <p>Sechs Faktoren, die trainierbar sind — als persönlicher Methoden­koffer.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo"></div>
+    <div class="photo-cap">Raum · München</div>
+
+    <div class="contact">
+      <span class="eyebrow">Nächster Schritt</span>
+      <h3>Kostenfreies <strong>Kennenlern­gespräch.</strong></h3>
+      <div class="sub">15 Minuten online. Unverbindlich, offen, transparent — und ohne Druck.</div>
+      <div class="div"></div>
+      <dl>
+        <dt>E-Mail</dt><dd>post@friederikealtmann.de</dd>
+        <dt>Telefon</dt><dd>+49 (0)&nbsp;178 280 5138</dd>
+        <dt>Web</dt><dd>www.friederikealtmann.de</dd>
+      </dl>
+    </div>
+
+    <div class="qr-card">
+      <div class="qr"></div>
+      <div class="qr-text">
+        <div class="k">QR scannen</div>
+        <div class="v">Termin <strong>direkt</strong> vereinbaren</div>
+        <div class="sub">friederikealtmann.de/kennenlernen</div>
+      </div>
+    </div>
+
+    <div class="foot">Friederikealtmann.de · <b>Entspannt erfolgreich.</b></div>
+  </div>
+</body>
+</html>
