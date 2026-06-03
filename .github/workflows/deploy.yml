@@ -1,0 +1,43 @@
+name: Build and Deploy to Hetzner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # erlaubt manuelles Triggern aus der GitHub UI
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Deploy to Hetzner via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./_site/
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          protocol: ftps # SFTP/FTPS — funktioniert mit Hetzner Webhosting
+          port: 21 # Standard für FTPS Explicit auf Hetzner
+          # Was nicht hochgeladen werden soll:
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
