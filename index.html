@@ -176,9 +176,14 @@
 <section class="testimonials" id="testimonials">
   <div class="container">
     <div class="testimonials-head">
-      <span class="eyebrow">Stimmen</span>
-      <h2>Was Klient:innen <strong>mitgenommen haben.</strong> <span class="draft-badge">Draft</span></h2>
+      <div class="testimonials-head-text">
+        <span class="eyebrow">Stimmen</span>
+        <h2>Was Klient:innen <strong>mitgenommen haben.</strong> <span class="draft-badge">Draft</span></h2>
+      </div>
+      <span class="testimonial-counter" aria-hidden="true" hidden>1 / 6</span>
     </div>
+    <!-- Testimonials: bei >3 Einträgen automatisch zum Slider (via app.js) -->
+    <div class="testimonial-slider-wrap">
     <div class="testimonial-grid">
       <article class="testimonial">
         <span class="testimonial-mark">&ldquo;</span>
@@ -204,6 +209,37 @@
           <span class="testimonial-role">People Lead, Mittelstand</span>
         </div>
       </article>
+      <article class="testimonial">
+        <span class="testimonial-mark">&ldquo;</span>
+        <p>Drei Sessions, bevor mein Team in eine kritische Phase ging. Wir hatten danach klare Vereinbarungen, wie wir mit Druck umgehen — und einen Rahmen, der seitdem hält.</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">A. T.</span>
+          <span class="testimonial-role">Projektleiter · 45</span>
+        </div>
+      </article>
+      <article class="testimonial">
+        <span class="testimonial-mark">&ldquo;</span>
+        <p>Wir haben einen Resilienz-Prozess für die Führungsebene aufgesetzt. Sechs Monate später ist messbar, was sich verändert hat: weniger Eskalationen, klarere Gespräche, höhere Stabilität in Veränderungsphasen.</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">L. M.</span>
+          <span class="testimonial-role">HR Business Partner</span>
+        </div>
+      </article>
+      <article class="testimonial">
+        <span class="testimonial-mark">&ldquo;</span>
+        <p>Hatte vorher das Gefühl, mein Tempo nicht mehr steuern zu können. Friederike hat mit mir nicht das Tempo runtergeschraubt — sondern mein Energie-Management neu aufgesetzt. Spürbar anders seit zwei Monaten.</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">C. W.</span>
+          <span class="testimonial-role">Gründerin</span>
+        </div>
+      </article>
+    </div>
+    <button class="testimonial-nav-btn prev" type="button" aria-label="Vorheriges Zitat" hidden>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="testimonial-nav-btn next" type="button" aria-label="Nächstes Zitat" hidden>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
     </div>
   </div>
 </section>

@@ -1,3 +1,54 @@
+/* ---------- Testimonial Slider · aktiv ab >3 Einträgen ---------- */
+(function(){
+  var SLIDER_THRESHOLD = 3; // Slider aktiviert sich, wenn mehr Einträge da sind
+  var grid = document.querySelector('.testimonial-grid');
+  if (!grid || grid.children.length <= SLIDER_THRESHOLD) return;
+
+  grid.classList.add('is-slider');
+
+  // Arrows liegen jetzt neben dem Grid im .testimonial-slider-wrap
+  var wrap = grid.parentElement;
+  var prev = wrap.querySelector('.testimonial-nav-btn.prev');
+  var next = wrap.querySelector('.testimonial-nav-btn.next');
+  // Counter sitzt in der Testimonials-Head (separat vom slider-wrap)
+  var section = grid.closest('section');
+  var counter = section && section.querySelector('.testimonial-counter');
+  var total = grid.children.length;
+
+  if (prev) prev.hidden = false;
+  if (next) next.hidden = false;
+  if (counter) counter.hidden = false;
+
+  function getStep(){
+    var card = grid.querySelector('.testimonial');
+    return card ? card.offsetWidth + 22 : 0;
+  }
+
+  function scrollByCard(dir){
+    var step = getStep();
+    if (!step) return;
+    grid.scrollBy({left: dir * step, behavior: 'smooth'});
+  }
+
+  function updateUI(){
+    if (prev && next){
+      prev.disabled = grid.scrollLeft <= 0;
+      next.disabled = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+    }
+    if (counter){
+      var step = getStep();
+      var idx = step ? Math.round(grid.scrollLeft / step) + 1 : 1;
+      counter.textContent = idx + ' / ' + total;
+    }
+  }
+
+  if (prev) prev.addEventListener('click', function(){ scrollByCard(-1); });
+  if (next) next.addEventListener('click', function(){ scrollByCard(1); });
+  grid.addEventListener('scroll', updateUI, {passive:true});
+  window.addEventListener('resize', updateUI);
+  updateUI();
+})();
+
 /* ---------- Mobile Burger Nav ---------- */
 (function(){
   var burger = document.querySelector('.burger');
