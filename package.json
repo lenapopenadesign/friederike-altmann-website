@@ -1,0 +1,18 @@
+{
+  "name": "friederike-altmann-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Friederike Altmann · Systemisches Coaching — Eleventy + Tina CMS",
+  "scripts": {
+    "dev": "tinacms dev -c \"npx @11ty/eleventy --serve --quiet\"",
+    "build": "npx @11ty/eleventy",
+    "build:with-tina": "tinacms build && npx @11ty/eleventy",
+    "clean": "rm -rf _site admin tina/__generated__"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "tinacms": "^2.5.0",
+    "@tinacms/cli": "^1.9.0"
+  }
+}

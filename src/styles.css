@@ -803,6 +803,112 @@ section.story.on-flieder{background:var(--flieder-soft)}
   .story-grid{grid-template-columns:1fr;gap:1.6rem}
 }
 
+/* ---------- Legal (Impressum / Datenschutz) ---------- */
+section.legal{padding:4rem 0 6rem;background:var(--bg)}
+section.legal .container{max-width:760px}
+section.legal h2{font-size:1.4rem;font-weight:700;letter-spacing:-.01em;margin:2.5rem 0 .8rem;color:var(--tinte)}
+section.legal h2:first-of-type{margin-top:0}
+section.legal h3{font-size:1.05rem;font-weight:700;letter-spacing:-.005em;margin:1.4rem 0 .5rem;color:var(--tinte)}
+section.legal p{color:var(--tinte);opacity:.85;font-size:.98rem;line-height:1.6;margin-bottom:1rem;max-width:none}
+section.legal ul{list-style:none;padding:0;margin:.4rem 0 1.2rem}
+section.legal li{padding:.3rem 0;font-size:.96rem;line-height:1.55;color:var(--tinte);opacity:.85;display:flex;gap:.6rem}
+section.legal li::before{content:"—";color:var(--safran);font-weight:700;flex-shrink:0}
+section.legal a{color:var(--nachtflieder);text-decoration:underline;text-underline-offset:2px}
+section.legal a:hover{color:var(--tinte)}
+.legal-note{padding:1rem 1.2rem;background:var(--flieder-50);border-left:3px solid var(--safran);margin-bottom:2.5rem!important;font-size:.92rem}
+.legal-back{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--bg-hairline)}
+@media (max-width:767px){
+  section.legal{padding:2rem 0 3rem}
+  section.legal h2{font-size:1.2rem;margin:2rem 0 .6rem}
+}
+
+/* ---------- Photo Credit · Overlay (nur bei Hover sichtbar) ---------- */
+.photo-credit{
+  position:absolute;
+  bottom:.55rem;
+  right:.7rem;
+  z-index:3;
+  font-size:.58rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:#fff;
+  background:rgba(58,49,66,.7);
+  backdrop-filter:blur(4px);
+  padding:.3rem .55rem;
+  border-radius:3px;
+  text-decoration:none;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+}
+/* Eltern-Container triggert Hover */
+.hero-visual:hover .photo-credit,
+.about-visual:hover .photo-credit,
+.photo-credit:focus,
+.photo-credit:hover{
+  opacity:1;
+  pointer-events:auto;
+}
+.photo-credit:hover{background:rgba(58,49,66,.9);color:#fff}
+@media (max-width:767px){
+  .photo-credit{font-size:.54rem;padding:.25rem .45rem;bottom:.5rem;right:.5rem}
+  /* Auf Mobile dauerhaft, da Hover fehlt */
+  .photo-credit{opacity:.8;pointer-events:auto}
+}
+
+/* Photo Credit · Below (rundes Portrait, Smallcap unter dem Bild) */
+.subpage-portrait-wrap{
+  justify-self:end;
+  width:100%;
+  max-width:400px;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+}
+.subpage-portrait-wrap .subpage-portrait{
+  max-width:none;
+  justify-self:initial;
+  margin:0;
+}
+.photo-credit-below{
+  display:block;
+  text-align:center;
+  margin-top:.7rem;
+  font-size:.62rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--tinte);
+  opacity:0;
+  pointer-events:none;
+  text-decoration:none;
+  transition:opacity .25s ease;
+}
+/* Nur bei Hover des Wrappers oder Fokus des Links sichtbar */
+.subpage-portrait-wrap:hover .photo-credit-below,
+.photo-credit-below:focus,
+.photo-credit-below:hover{
+  opacity:.7;
+  pointer-events:auto;
+}
+.photo-credit-below:hover{opacity:1;text-decoration:underline}
+@media (max-width:767px){
+  /* Auf Mobile dauerhaft sichtbar (kein Hover) */
+  .photo-credit-below{opacity:.5;pointer-events:auto}
+}
+
+@media (max-width:991px){
+  .subpage-portrait-wrap{
+    justify-self:center;
+    max-width:280px;
+    order:-1;
+  }
+}
+@media (max-width:767px){
+  .subpage-portrait-wrap{max-width:240px}
+}
+
 /* Story mit Bild · Bild links, Text rechts */
 .story-image-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:4rem;align-items:center}
 .story-image-grid .eyebrow{margin-bottom:.6rem}

@@ -1,0 +1,18 @@
+<section class="cta">
+  <div class="container cta-grid">
+    <div>
+      <span class="eyebrow on-dark">{{ cta.eyebrow or "Bereit?" }}</span>
+      <h2>{{ cta.headline or "Lass uns" }} <strong>{{ cta.headline_accent or "klären, ob es passt." }}</strong></h2>
+      <p>{{ cta.text or "15 Minuten online, unverbindlich. Du erzählst, worum es geht — ich sage dir ehrlich, ob ich die Richtige bin." }}</p>
+      <a href="#" data-open-modal="allgemein" class="btn btn-primary" style="margin-top:2rem">{{ site.cta_label }} <span class="arrow">→</span></a>
+    </div>
+    <div class="cta-card">
+      <dl>
+        <dt>E-Mail</dt><dd>{{ site.contact.email }}</dd>
+        <dt>Telefon</dt><dd>{{ site.contact.phone }}</dd>
+        <dt>Website</dt><dd>{{ site.contact.website }}</dd>
+        <dt>Social</dt><dd>{{ site.contact.social }}</dd>
+      </dl>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "label": "Methode", "url": "/methode/" },
+    { "label": "Angebot", "url": "/angebot/" },
+    { "label": "B2B", "url": "/b2b/" },
+    { "label": "Über mich", "url": "/meine-geschichte/" },
+    { "label": "FAQ", "url": "/#faq" }
+  ]
+}

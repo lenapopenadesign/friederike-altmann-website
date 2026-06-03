@@ -1,0 +1,8 @@
+{
+  "options": [
+    { "value": "einzel", "label": "Das Einzel" },
+    { "value": "prozess", "label": "Der Prozess" },
+    { "value": "gruppe", "label": "Die Gruppe" },
+    { "value": "allgemein", "label": "Allgemeine Frage" }
+  ]
+}

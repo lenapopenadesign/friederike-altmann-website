@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<section class="subpage-hero">
+  <div class="container">
+    <span class="eyebrow">{{ eyebrow }}</span>
+    <h1>{{ title }}.</h1>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="container">
+    {{ content | safe }}
+    <p class="legal-back"><a href="/" class="about-teaser-cta">Zurück zur Startseite <span>→</span></a></p>
+  </div>
+</section>

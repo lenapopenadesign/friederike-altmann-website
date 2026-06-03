@@ -1,0 +1,11 @@
+<footer>
+  <div class="container row">
+    <a href="/" class="logo-img"><img src="/assets/logo.svg" alt="{{ site.name }}"></a>
+    <div class="links">
+      {% for link in footer.links %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    <div class="small">© {{ "now" | year }} {{ site.name }}</div>
+  </div>
+</footer>

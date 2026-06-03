@@ -15,6 +15,17 @@
 .parcel-cache/
 node_modules/
 
+# Eleventy build output
+_site/
+
+# Tina generated
+tina/__generated__/
+admin/
+
+# Environment
+.env
+.env.local
+
 # Backups
 *.bak
 

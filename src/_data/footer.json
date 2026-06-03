@@ -1,0 +1,6 @@
+{
+  "links": [
+    { "label": "Impressum", "url": "/impressum/" },
+    { "label": "Datenschutz", "url": "/datenschutz/" }
+  ]
+}

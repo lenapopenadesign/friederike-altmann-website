@@ -1,0 +1,26 @@
+<header class="nav">
+  <div class="container inner">
+    <a href="/" class="logo-img"><img src="/assets/logo.svg" alt="{{ site.name }}"></a>
+    <nav>
+      <ul>
+        {% for item in nav.items %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url or (item.url != "/" and page.url and (page.url + "").indexOf(item.url) == 0) %} class="is-active"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <a href="#" data-open-modal="allgemein" class="nav-cta">{{ site.cta_label or "Kennenlernen" }} <span class="arrow">→</span></a>
+    <button class="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="inner">
+      <ul>
+        {% for item in nav.items %}
+        <li><a href="{{ item.url }}"{% if page.url == item.url or (item.url != "/" and page.url and (page.url + "").indexOf(item.url) == 0) %} class="is-active"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <a href="#" data-open-modal="allgemein" class="btn btn-primary">{{ site.cta_label or "Kennenlernen" }} <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>

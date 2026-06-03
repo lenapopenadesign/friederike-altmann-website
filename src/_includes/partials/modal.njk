@@ -1,0 +1,41 @@
+<div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Schließen" type="button">&times;</button>
+    <div class="modal-form-wrap">
+      <h3 id="contact-modal-title">Lass uns <strong>reden.</strong></h3>
+      <p class="lead">Schreib mir kurz, worum es geht. Ich melde mich innerhalb von zwei Werktagen mit einem Terminvorschlag.</p>
+      <form id="contact-form">
+        <div class="form-field">
+          <label for="form-name">Dein Name</label>
+          <input type="text" id="form-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="form-email">E-Mail</label>
+          <input type="email" id="form-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="form-type">Worum geht's?</label>
+          <select id="form-type" name="type">
+            {% for opt in modal.options %}
+            <option value="{{ opt.value }}"{% if opt.value == "allgemein" %} selected{% endif %}>{{ opt.label }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="form-message">Deine Nachricht</label>
+          <textarea id="form-message" name="message" placeholder="Was bewegt dich gerade?" required></textarea>
+        </div>
+        <label class="form-consent">
+          <input type="checkbox" required>
+          <span>Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Details in der <a href="/datenschutz/">Datenschutzerklärung</a>.</span>
+        </label>
+        <button type="submit" class="btn btn-primary">Anfrage senden <span class="arrow">→</span></button>
+      </form>
+    </div>
+    <div class="form-success" style="display:none">
+      <div class="form-success-icon">✓</div>
+      <h3>Danke!</h3>
+      <p class="lead" style="margin-top:.8rem">Deine Nachricht ist angekommen. Ich melde mich innerhalb von zwei Werktagen.</p>
+    </div>
+  </div>
+</div>
