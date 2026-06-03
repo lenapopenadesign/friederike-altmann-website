@@ -8,11 +8,14 @@
     "dev": "tinacms dev -c \"npx @11ty/eleventy --serve --quiet\"",
     "build": "npx @11ty/eleventy",
     "build:with-tina": "tinacms build && npx @11ty/eleventy",
-    "clean": "rm -rf _site admin tina/__generated__"
+    "clean": "rm -rf _site admin tina/__generated__",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@tinacms/cli": "^1.9.0",
     "tinacms": "^2.5.0",
-    "@tinacms/cli": "^1.9.0"
+    "wrangler": "^4.97.0"
   }
 }
