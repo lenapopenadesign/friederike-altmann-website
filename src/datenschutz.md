@@ -1,56 +1,143 @@
 ---
 layout: layouts/legal.njk
 permalink: /datenschutz/
-title: Datenschutz
+title: Datenschutzerklärung
 eyebrow: Rechtliches
-subtitle: Datenschutzerklärung
+subtitle: Datenschutz nach DSGVO
 ---
 
-<p class="legal-note"><span class="draft-badge">Draft</span> Ersetze diesen Platzhalter-Text durch die finale Datenschutzerklärung.</p>
+_Stand: März 2026_
 
-## 1. Verantwortliche Stelle
+## 1. Allgemeine Hinweise
 
-Friederike Altmann
-Systemisches Coaching
-[Straße & Hausnummer]
-[PLZ Stadt]
-Deutschland
+Der Schutz Ihrer / Deiner persönlichen Daten ist mir ein wichtiges Anliegen. In dieser Datenschutzerklärung informiere ich Sie / Dich darüber, welche Daten ich auf meiner Website erhebe und wie diese verwendet werden.
 
-E-Mail: [post@friederikealtmann.de](mailto:post@friederikealtmann.de)
+## 2. Verantwortliche
 
-## 2. Erhebung und Verarbeitung personenbezogener Daten
+**Name / Firma:** Friederike Altmann Coaching
+**Anschrift:** Untere Mühlstraße 27, 80999 München
+**E-Mail:** [post@friederikealtmann.de](mailto:post@friederikealtmann.de)
+**Telefon:** +49 (0) 178 2805138
 
-Bei der Nutzung dieser Website werden technisch notwendige Daten (z.B. IP-Adresse, Browser-Typ, Zeitpunkt) automatisch erhoben. Diese werden ausschließlich zur Bereitstellung der Website verwendet und nicht mit anderen Daten zusammengeführt.
+## 3. Erhebung und Speicherung personenbezogener Daten
 
-## 3. Kontaktformular
+### a) Beim Besuch der Website
 
-Wenn Sie mir über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.
+Beim Aufrufen der Website werden automatisch folgende Daten erfasst:
+
+- IP-Adresse
+- Datum und Uhrzeit der Anfrage
+- Browsertyp und -version
+- Betriebssystem
+- Referrer-URL
+
+**Zweck:** Sicherstellung eines reibungslosen Verbindungsaufbaus und Systemsicherheit
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. f DSGVO
+
+### b) Kontaktformular / E-Mail-Kontakt
+
+Wenn Sie / Du mich per Formular oder E-Mail kontaktieren / kontaktierst, werden die folgenden Daten gespeichert:
+
+- Name
+- E-Mail-Adresse
+- Nachricht
+
+**Zweck:** Bearbeitung Ihrer / Deiner Anfrage
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. b DSGVO
 
 ## 4. Cookies
 
-Diese Website verwendet keine Tracking-Cookies. Es werden ausschließlich technisch notwendige Cookies verwendet (z.B. zur Speicherung des Modal-Zustands).
+Meine Website verwendet Cookies.
 
-## 5. Ihre Rechte
+- **Notwendige Cookies:** Diese sind erforderlich, um die Website korrekt darzustellen.
+- **Optionale Cookies** (z. B. Tracking): Werden nur mit Ihrer / Deiner Einwilligung gesetzt.
 
-Sie haben das Recht auf:
+**Rechtsgrundlage:** Art. 6 Abs. 1 lit. a DSGVO
+
+Sie / Du können / kannst Ihre / Deine Cookie-Einstellungen jederzeit ändern.
+
+## 5. Analyse-Tools (optional)
+
+Ich verwende ein Analyse-Tool zur Auswertung des Nutzerverhaltens.
+
+**Erfasste Daten:**
+
+- Besuchte Seiten
+- Verweildauer
+- Herkunft des Nutzers
+
+Die Verarbeitung erfolgt anonymisiert bzw. pseudonymisiert.
+
+## 6. Hosting
+
+Meine Website wird bei folgendem Anbieter gehostet: **Hetzner Online GmbH**, Industriestr. 25, 91710 Gunzenhausen, Deutschland.
+
+Es besteht ein Vertrag zur Auftragsverarbeitung gemäß DSGVO.
+
+## 7. Weitergabe von Daten
+
+Eine Weitergabe Ihrer / Deiner persönlichen Daten erfolgt nur:
+
+- wenn Sie / Du eingewilligt haben / hast
+- wenn dies gesetzlich erlaubt ist
+- wenn es zur Vertragserfüllung notwendig ist
+
+## 8. Speicherdauer
+
+Personenbezogene Daten werden nur so lange gespeichert, wie es für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.
+
+## 9. Ihre Rechte
+
+Sie / Du haben / hast das Recht auf:
+
 - Auskunft (Art. 15 DSGVO)
 - Berichtigung (Art. 16 DSGVO)
 - Löschung (Art. 17 DSGVO)
 - Einschränkung der Verarbeitung (Art. 18 DSGVO)
 - Datenübertragbarkeit (Art. 20 DSGVO)
-- Widerspruch (Art. 21 DSGVO)
-- Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)
+- Widerruf Ihrer Einwilligung (Art. 7 Abs. 3 DSGVO)
 
-## 6. Speicherdauer
+## 10. Beschwerderecht
 
-Ihre Daten werden so lange gespeichert, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist, längstens jedoch für die Dauer gesetzlicher Aufbewahrungsfristen.
+Sie / Du haben / hast das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.
 
-## 7. Datensicherheit
+## 11. SSL- bzw. TLS-Verschlüsselung
 
-Diese Website wird über HTTPS verschlüsselt ausgeliefert. Personenbezogene Daten werden nicht über unsichere Verbindungen übertragen.
+Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung.
 
-## 8. Änderungen dieser Datenschutzerklärung
+## 12. Änderungen dieser Datenschutzerklärung
 
-Diese Datenschutzerklärung kann gelegentlich aktualisiert werden, um Änderungen der gesetzlichen Vorgaben oder Änderungen meiner Dienste umzusetzen. Bitte prüfen Sie die Erklärung daher von Zeit zu Zeit.
+Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen.
 
-Stand: Juni 2026
+## 13. Social Media – Instagram
+
+Auf meiner Website sind Funktionen und Inhalte des Dienstes Instagram eingebunden sowie Verlinkungen zu meinem Instagram-Profil ([friederike.altmann](https://www.instagram.com/friederike.altmann/)) vorhanden.
+
+**Anbieter:** Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.
+
+### a) Verlinkung zu Instagram
+
+Auf meiner Website befinden sich Links zu meinem Profil auf Instagram (friederike.altmann). Wenn Sie / Du auf einen solchen Link klicken / klickst, werden / wirst Sie / Du auf die Seite von Instagram weitergeleitet. Dabei können personenbezogene Daten (z. B. Ihre / Deine IP-Adresse) an Instagram übermittelt werden.
+
+### b) Eingebettete Inhalte (Instagram-Feed / Vorschau)
+
+Auf meiner Website werden Inhalte von Instagram (z. B. Beitragsvorschauen) eingebunden. Diese Inhalte werden erst geladen, wenn Sie / Du Ihre / Deine Einwilligung über den Cookie-Banner erteilt haben / hast (Art. 6 Abs. 1 lit. a DSGVO).
+
+Nach Aktivierung kann es zur Verarbeitung personenbezogener Daten durch Instagram kommen, insbesondere:
+
+- IP-Adresse
+- Informationen über Ihr Nutzungsverhalten
+- ggf. Verknüpfung mit Ihrem Instagram-Konto
+
+Dabei kann eine Datenübertragung in Drittländer (z. B. USA) nicht ausgeschlossen werden.
+
+### c) Datenverarbeitung durch Instagram
+
+Ich habe keinen Einfluss auf die Datenverarbeitung durch Instagram. Diese erfolgt eigenverantwortlich durch den Anbieter.
+
+Weitere Informationen finden Sie in der Datenschutzerklärung von Instagram: [privacycenter.instagram.com](https://privacycenter.instagram.com/)
+
+### d) Rechtsgrundlagen
+
+- **Verlinkung:** Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an meiner Online-Präsenz)
+- **Eingebettete Inhalte:** Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)

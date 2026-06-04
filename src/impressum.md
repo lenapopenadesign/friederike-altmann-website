@@ -6,42 +6,38 @@ eyebrow: Rechtliches
 subtitle: Impressum
 ---
 
-## Angaben gemäß § 5 TMG
+## Friederike Altmann Coaching
 
 Friederike Altmann
-Systemisches Coaching
-[Straße & Hausnummer]
-[PLZ Stadt]
-Deutschland
+Untere Mühlstraße 27, 80999 München
 
 ## Kontakt
 
-Telefon: +49 (0) 178 280 51 38
+Telefon: +49 (0) 178 2805138
 E-Mail: [post@friederikealtmann.de](mailto:post@friederikealtmann.de)
-Website: [www.friederikealtmann.de](https://www.friederikealtmann.de)
 
 ## Umsatzsteuer-ID
 
-[Sofern vorhanden, hier eintragen]
+Gemäß § 19 UStG wird keine Umsatzsteuer erhoben und folglich auch keine Umsatzsteuer-Identifikationsnummer ausgewiesen (Kleinunternehmerstatus).
 
-## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+## Redaktionell verantwortlich
 
-Friederike Altmann, Anschrift wie oben.
-
-## Haftungsausschluss
-
-### Haftung für Inhalte
-
-Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-
-### Haftung für Links
-
-Mein Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-
-### Urheberrecht
-
-Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung der jeweiligen Autorin bzw. Erstellerin.
+Friederike Altmann
+Untere Mühlstraße 27, 80999 München
 
 ## Bildnachweise
 
-Portraits: © [Mirjam Hagen](https://mirjamhagen.com/)
+Die auf dieser Website verwendeten Bilder stammen aus folgenden Quellen:
+
+- Bilder, auf denen ich selbst abgebildet bin: erstellt von [Mirjam Hagen](https://mirjamhagen.com/)
+- Weitere verwendete Bilder (Stockbilder): bereitgestellt über die Plattform Unsplash
+
+Die Nutzung der Bilder erfolgt im Rahmen der jeweiligen Lizenzbedingungen der Anbieter:innen.
+
+## Social Media Profile
+
+Ich bin auch auf Instagram vertreten: [friederike.altmann](https://www.instagram.com/friederike.altmann/)
+
+## Verbraucherstreitbeilegung / Universalschlichtungsstelle
+
+Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
