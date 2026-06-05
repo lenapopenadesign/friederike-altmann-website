@@ -4,23 +4,22 @@ permalink: /methode/
 title: Methode
 subtitle: Systemisches & lösungsorientiertes Coaching
 ---
+{% set p = pages.methode %}
 <!-- Subpage Hero -->
 <section class="subpage-hero">
   <div class="container">
-    <span class="eyebrow">Methode</span>
-    <h1>Wissenschaftlich fundiert. <strong>Systemisch gedacht.</strong></h1>
-    <p class="lead">Mein Ansatz steht auf zwei Säulen: systemisch-lösungsorientiertem Coaching und der Resilienzforschung. Hier liest du, wie ich arbeite — und warum.</p>
+    <span class="eyebrow">{{ p.hero.eyebrow }}</span>
+    <h1>{{ p.hero.headline }} <strong>{{ p.hero.headline_accent }}</strong></h1>
+    <p class="lead">{{ p.hero.lead }}</p>
   </div>
 </section>
 
 <!-- Systemisch denken -->
 <section class="prose">
   <div class="container">
-    <span class="eyebrow">Systemisch denken</span>
-    <h2>Niemand steht <strong>allein im Raum.</strong></h2>
-    <p>Wenn etwas stockt, liegt es selten an einer Person. Beziehungen, Rollen, frühere Geschichten und aktuelle Kontexte spielen mit — manchmal sichtbar, oft unter der Oberfläche.</p>
-    <p>In jeder Sitzung schauen wir deshalb nicht nur auf dich, sondern auf das Umfeld, in dem du dich bewegst: dein Team, deine Familie, deine inneren Stimmen, deine Werte. Die Frage ist nie nur „Was tust du?", sondern auch „In welchem System tust du es — und was hält dieses System aufrecht?".</p>
-    <p>Systemisches Arbeiten heißt für mich: Komplexität würdigen, ohne sich darin zu verlieren. Den nächsten kleinen Hebel finden, der Bewegung in das Ganze bringt.</p>
+    <span class="eyebrow">{{ p.section_systemisch.eyebrow }}</span>
+    <h2>{{ p.section_systemisch.headline }} <strong>{{ p.section_systemisch.headline_accent }}</strong></h2>
+    {% for para in p.section_systemisch.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
   </div>
 </section>
 
@@ -28,19 +27,17 @@ subtitle: Systemisches & lösungsorientiertes Coaching
 <section class="pull-quote">
   <div class="pull-quote-wrap">
     <span class="pull-quote-mark">&ldquo;</span>
-    <p class="pull-quote-text">Probleme entstehen im System. Lösungen auch.</p>
-    <div class="pull-quote-cite">Grundgedanke systemischer Arbeit</div>
+    <p class="pull-quote-text">{{ p.pull_quote.text }}</p>
+    <div class="pull-quote-cite">{{ p.pull_quote.cite }}</div>
   </div>
 </section>
 
 <!-- Lösungsorientiert -->
 <section class="prose on-flieder-soft">
   <div class="container">
-    <span class="eyebrow">Lösungsorientiert arbeiten</span>
-    <h2>Von dort denken, wo <strong>Stärke schon liegt.</strong></h2>
-    <p>Die lösungsorientierte Kurztherapie nach Steve de Shazer und Insoo Kim Berg geht von einer einfachen Beobachtung aus: Niemand hat nur Probleme. Es gibt immer Momente, in denen es besser läuft — und genau diese Momente sind unsere Bausteine.</p>
-    <p>Anstatt das Problem in immer feinere Stücke zu zerlegen, fragen wir: Was funktioniert schon? Wann ist es leichter? Was machst du dann anders? Und wie können wir mehr davon möglich machen?</p>
-    <p>Das ist nicht oberflächlich — es ist effizient. Du gehst aus jeder Sitzung mit etwas, das du konkret tun, ausprobieren oder beobachten kannst. Veränderung wird greifbar, nicht abstrakt.</p>
+    <span class="eyebrow">{{ p.section_loesungsorientiert.eyebrow }}</span>
+    <h2>{{ p.section_loesungsorientiert.headline }} <strong>{{ p.section_loesungsorientiert.headline_accent }}</strong></h2>
+    {% for para in p.section_loesungsorientiert.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
   </div>
 </section>
 
@@ -48,17 +45,14 @@ subtitle: Systemisches & lösungsorientiertes Coaching
 <section class="factors">
   <div class="container">
     <div class="factors-head">
-      <span class="eyebrow">Resilienz</span>
-      <h2>Sechs Faktoren, die <strong>trainierbar sind.</strong></h2>
-      <p style="opacity:.78;margin-top:1rem;max-width:54ch">Resilienz ist keine Charaktereigenschaft, mit der man geboren wird. Sie ist eine Reihe von Haltungen und Fähigkeiten, die sich gezielt aufbauen lassen.</p>
+      <span class="eyebrow">{{ p.factors.eyebrow }}</span>
+      <h2>{{ p.factors.headline }} <strong>{{ p.factors.headline_accent }}</strong></h2>
+      <p style="opacity:.78;margin-top:1rem;max-width:54ch">{{ p.factors.lead }}</p>
     </div>
     <div class="factor-grid">
-      <div class="factor"><span class="factor-num">01</span><h3>Optimismus</h3><p>Realistischer Blick nach vorn — nicht naiv positiv, sondern lösungsfähig.</p></div>
-      <div class="factor"><span class="factor-num">02</span><h3>Akzeptanz</h3><p>Anerkennen, was ist, bevor wir verändern, was wir verändern können.</p></div>
-      <div class="factor"><span class="factor-num">03</span><h3>Lösungsorientierung</h3><p>Vom Problem zur Frage: Was wäre stattdessen wünschenswert?</p></div>
-      <div class="factor"><span class="factor-num">04</span><h3>Selbstwirksamkeit</h3><p>Das Vertrauen, dass eigenes Handeln einen Unterschied macht.</p></div>
-      <div class="factor"><span class="factor-num">05</span><h3>Verantwortung</h3><p>Den eigenen Anteil sehen — ohne sich für alles verantwortlich zu fühlen.</p></div>
-      <div class="factor"><span class="factor-num">06</span><h3>Netzwerk-Orientierung</h3><p>Beziehungen pflegen, Unterstützung annehmen, nicht alles allein tragen.</p></div>
+      {% for f in p.factors.items %}
+      <div class="factor"><span class="factor-num">{{ f.num }}</span><h3>{{ f.title }}</h3><p>{{ f.text }}</p></div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -66,20 +60,18 @@ subtitle: Systemisches & lösungsorientiertes Coaching
 <!-- Resilienz-Profil & Methodenkoffer -->
 <section class="prose on-flieder">
   <div class="container">
-    <span class="eyebrow">Dein Resilienz-Profil</span>
-    <h2>Ein persönlicher <strong>Methodenkoffer.</strong></h2>
-    <p>In den ersten Sitzungen erstellen wir gemeinsam dein persönliches Resilienz-Profil: Wo bist du schon stark, wo gibt es Spielraum, wo darfst du nachschärfen? Das ist kein Test, sondern ein Spiegel.</p>
-    <p>Aus dem Profil entsteht dein Methodenkoffer — eine kuratierte Auswahl an Werkzeugen, Übungen und Reflexionsfragen, die zu dir und deinem Alltag passen. Nichts von der Stange. Alles, was bleibt, wenn unsere Zusammenarbeit endet.</p>
+    <span class="eyebrow">{{ p.section_profil.eyebrow }}</span>
+    <h2>{{ p.section_profil.headline }} <strong>{{ p.section_profil.headline_accent }}</strong></h2>
+    {% for para in p.section_profil.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
   </div>
 </section>
 
 <!-- Wissenschaftlich fundiert -->
 <section class="prose">
   <div class="container">
-    <span class="eyebrow">Wissenschaftlich fundiert</span>
-    <h2>Forschung, <strong>nicht Bauchgefühl.</strong></h2>
-    <p>Mein Handwerkszeug stützt sich auf belastbare Forschung: Resilienzpsychologie (u.a. Werner, Ungar, Bonanno), systemische Therapie und Beratung (von Schlippe, Schweitzer), lösungsorientierte Kurztherapie (de Shazer, Berg) sowie Positive Psychologie (Seligman, Fredrickson).</p>
-    <p>Heißt: Ich kann erklären, warum eine Methode wirkt — und auch sagen, wo ihre Grenzen liegen. Coaching ist keine Behandlung. Wo Therapie das geeignetere Angebot wäre, sage ich dir das offen.</p>
+    <span class="eyebrow">{{ p.section_science.eyebrow }}</span>
+    <h2>{{ p.section_science.headline }} <strong>{{ p.section_science.headline_accent }}</strong></h2>
+    {% for para in p.section_science.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
   </div>
 </section>
 
@@ -88,25 +80,17 @@ subtitle: Systemisches & lösungsorientiertes Coaching
   <div class="container">
     <div class="compare-grid">
       <div class="compare-card minus">
-        <span class="compare-label">Was du nicht bekommst</span>
-        <h3>Schnelle Antworten von außen.</h3>
+        <span class="compare-label">{{ p.compare.minus.label }}</span>
+        <h3>{{ p.compare.minus.headline }}</h3>
         <ul>
-          <li>Pauschale Lebenstipps oder Motivationssprüche</li>
-          <li>Esoterische Erklärungsmodelle</li>
-          <li>Eine Diagnose oder eine Heilbehandlung</li>
-          <li>Endlose Sitzungsreihen ohne klares Ziel</li>
-          <li>Bewertung deiner Person, deiner Geschichte oder deiner Entscheidungen</li>
+          {% for item in p.compare.minus.items %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </div>
       <div class="compare-card plus">
-        <span class="compare-label">Was du bekommst</span>
-        <h3>Klarheit, Struktur, deine eigenen Antworten.</h3>
+        <span class="compare-label">{{ p.compare.plus.label }}</span>
+        <h3>{{ p.compare.plus.headline }}</h3>
         <ul>
-          <li>Einen geschützten Raum, in dem du wirklich nachdenken kannst</li>
-          <li>Gute Fragen, die du dir vorher nicht gestellt hast</li>
-          <li>Fundierte Methoden, die zu deinem Thema passen</li>
-          <li>Konkrete nächste Schritte nach jeder Sitzung</li>
-          <li>Einen Methodenkoffer, der bleibt — auch nach unserer Arbeit</li>
+          {% for item in p.compare.plus.items %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </div>
     </div>

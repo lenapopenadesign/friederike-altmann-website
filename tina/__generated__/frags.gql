@@ -1,3 +1,334 @@
+fragment Page_indexParts on Page_index {
+  __typename
+  subtitle
+  hero {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    cta_secondary
+    cta_secondary_url
+    image
+    image_credit_label
+    image_credit_url
+  }
+  methode_teaser {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    cta_label
+    cta_url
+    tokens {
+      __typename
+      num
+      title
+      text
+    }
+  }
+  services_teaser {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    items {
+      __typename
+      num
+      title
+      text
+      url
+    }
+  }
+  image_break_1 {
+    __typename
+    image
+    alt
+  }
+  about_teaser {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraph_1
+    paragraph_2
+    cta_label
+    cta_url
+    image
+    image_credit_label
+    image_credit_url
+  }
+  testimonials_section {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+  }
+  image_break_2 {
+    __typename
+    image
+    alt
+  }
+  process {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    steps {
+      __typename
+      num
+      title
+      text
+    }
+  }
+  quote {
+    __typename
+    text
+    author
+  }
+  faq_section {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+  }
+  contact {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    text
+  }
+}
+
+fragment Page_methodeParts on Page_methode {
+  __typename
+  subtitle
+  hero {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+  }
+  section_systemisch {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  pull_quote {
+    __typename
+    text
+    cite
+  }
+  section_loesungsorientiert {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  factors {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    items {
+      __typename
+      num
+      title
+      text
+    }
+  }
+  section_profil {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  section_science {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  compare {
+    __typename
+    minus {
+      __typename
+      label
+      headline
+      items
+    }
+    plus {
+      __typename
+      label
+      headline
+      items
+    }
+  }
+}
+
+fragment Page_angebotParts on Page_angebot {
+  __typename
+  subtitle
+  hero {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+  }
+  offers {
+    __typename
+    id
+    num
+    title_prefix
+    title
+    lead
+    format_label
+    format_items
+    investment_label
+    investment_text
+    cta_label
+    cta_modal
+  }
+  cta {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    text
+  }
+}
+
+fragment Page_b2bParts on Page_b2b {
+  __typename
+  subtitle
+  hero {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+  }
+  method {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    items {
+      __typename
+      num
+      title
+      text
+    }
+  }
+  image_break {
+    __typename
+    image
+    alt
+  }
+  services {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    items {
+      __typename
+      num
+      title
+      text
+      cta_modal
+    }
+  }
+  topics {
+    __typename
+    eyebrow
+    tags
+  }
+  cta {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    text
+  }
+}
+
+fragment Page_meine_geschichteParts on Page_meine_geschichte {
+  __typename
+  subtitle
+  hero {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    lead
+    image
+    image_credit_label
+    image_credit_url
+  }
+  section_herkunft {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  section_wendepunkt {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraphs
+  }
+  pull_quote {
+    __typename
+    text
+  }
+  section_ueberzeugungen {
+    __typename
+    image
+    image_alt
+    eyebrow
+    headline
+    headline_accent
+    convictions {
+      __typename
+      bold
+      text
+    }
+  }
+  section_heute {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    paragraph_1
+    paragraph_2_html
+    paragraph_3
+  }
+  cta {
+    __typename
+    eyebrow
+    headline
+    headline_accent
+    text
+  }
+}
+
 fragment SiteParts on Site {
   __typename
   name

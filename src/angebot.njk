@@ -3,109 +3,59 @@ layout: layouts/base.njk
 permalink: /angebot/
 title: Angebot
 subtitle: Einzel- & Gruppen-Coaching, Workshops
-cta:
-  eyebrow: "Unsicher, was passt?"
-  headline: "Lass uns"
-  headline_accent: "kurz sprechen."
-  text: "15 Minuten reichen oft, um zu klären, welches Format das Richtige ist — oder ob es ein anderes braucht."
 ---
+{% set p = pages.angebot %}
+{% set cta = p.cta %}
 <!-- Subpage Hero -->
 <section class="subpage-hero">
   <div class="container">
-    <span class="eyebrow">Angebot</span>
-    <h1>Drei Formate, <strong>ein Ansatz.</strong></h1>
-    <p class="lead">Alle Formate beginnen mit einem kostenlosen 15-Minuten-Gespräch. Danach entscheiden wir gemeinsam, ob und wie wir weitermachen.</p>
+    <span class="eyebrow">{{ p.hero.eyebrow }}</span>
+    <h1>{{ p.hero.headline }} <strong>{{ p.hero.headline_accent }}</strong></h1>
+    <p class="lead">{{ p.hero.lead }}</p>
   </div>
 </section>
 
-<!-- Das Einzel -->
-<section class="offer" id="einzel">
+{% for offer in p.offers %}
+<section class="offer" id="{{ offer.id }}">
   <div class="container offer-grid">
     <div class="offer-meta">
-      <span class="offer-num">Format 01</span>
-      <h2>Das <strong>Einzel</strong></h2>
-      <p>Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt.</p>
+      <span class="offer-num">{{ offer.num }}</span>
+      <h2>{{ offer.title_prefix }} <strong>{{ offer.title }}</strong></h2>
+      <p>{{ offer.lead }}</p>
       <div class="offer-sketch" aria-hidden="true">
+        {% if loop.index0 == 0 %}
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <path d="M 38 16 C 22 22, 14 40, 18 58 C 22 76, 42 86, 60 80 C 80 74, 86 52, 78 34 C 70 16, 52 12, 38 16 Z"/>
           <circle cx="52" cy="48" r="3.4" fill="currentColor" stroke="none"/>
         </svg>
-      </div>
-    </div>
-    <div class="offer-detail">
-      <div class="offer-detail-block">
-        <strong>Format</strong>
-        <ul>
-          <li>Einzelsessions, individuell buchbar</li>
-          <li>60 Minuten pro Sitzung inkl. schriftliches Follow-up</li>
-          <li>In München oder online</li>
-        </ul>
-      </div>
-      <div class="offer-detail-block"><strong>Investition</strong><p>Preis auf Anfrage.</p></div>
-      <a href="#" data-open-modal="einzel" class="btn btn-primary">Kennenlernen <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Der Prozess -->
-<section class="offer" id="prozess">
-  <div class="container offer-grid">
-    <div class="offer-meta">
-      <span class="offer-num">Format 02</span>
-      <h2>Der <strong>Prozess</strong></h2>
-      <p>Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist.</p>
-      <div class="offer-sketch" aria-hidden="true">
+        {% elif loop.index0 == 1 %}
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <path d="M 14 78 C 26 76, 30 50, 48 46 C 66 42, 72 64, 86 52"/>
           <circle cx="14" cy="78" r="3.2" fill="currentColor" stroke="none"/>
           <circle cx="48" cy="46" r="2.2" fill="currentColor" stroke="none"/>
           <circle cx="86" cy="52" r="3.2" fill="currentColor" stroke="none"/>
         </svg>
-      </div>
-    </div>
-    <div class="offer-detail">
-      <div class="offer-detail-block">
-        <strong>Format</strong>
-        <ul>
-          <li>4, 6 oder 10 Sessions — je nach Thema und Bedarf erweiterbar</li>
-          <li>60–120 Minuten pro Sitzung inkl. schriftliches Follow-up</li>
-          <li>In München oder online</li>
-        </ul>
-      </div>
-      <div class="offer-detail-block"><strong>Investition</strong><p>Preis auf Anfrage — mit Mengenrabatt.</p></div>
-      <a href="#" data-open-modal="prozess" class="btn btn-primary">Kennenlernen <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Die Gruppe -->
-<section class="offer" id="gruppe">
-  <div class="container offer-grid">
-    <div class="offer-meta">
-      <span class="offer-num">Format 03</span>
-      <h2>Die <strong>Gruppe</strong></h2>
-      <p>Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung.</p>
-      <div class="offer-sketch" aria-hidden="true">
+        {% else %}
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <path d="M 26 18 C 14 22, 12 38, 22 46 C 34 54, 46 40, 40 24 C 38 18, 32 16, 26 18 Z"/>
           <path d="M 64 14 C 54 18, 50 32, 60 38 C 72 44, 80 28, 72 18 C 70 14, 66 13, 64 14 Z"/>
           <path d="M 42 56 C 28 60, 28 80, 46 84 C 64 86, 72 70, 60 58 C 54 52, 46 54, 42 56 Z"/>
         </svg>
+        {% endif %}
       </div>
     </div>
     <div class="offer-detail">
       <div class="offer-detail-block">
-        <strong>Format</strong>
+        <strong>{{ offer.format_label }}</strong>
         <ul>
-          <li>3 bis 8 Personen</li>
-          <li>6 Termine in regelmäßigen Abständen inkl. Worksheets</li>
-          <li>In München</li>
+          {% for item in offer.format_items %}<li>{{ item }}</li>{% endfor %}
         </ul>
       </div>
-      <div class="offer-detail-block"><strong>Investition</strong><p>Preis auf Anfrage.</p></div>
-      <a href="#" data-open-modal="gruppe" class="btn btn-primary">Kennenlernen <span class="arrow">→</span></a>
+      <div class="offer-detail-block"><strong>{{ offer.investment_label }}</strong><p>{{ offer.investment_text }}</p></div>
+      <a href="#" data-open-modal="{{ offer.cta_modal }}" class="btn btn-primary">{{ offer.cta_label }} <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
+{% endfor %}
 
 {% include "partials/cta-block.njk" %}

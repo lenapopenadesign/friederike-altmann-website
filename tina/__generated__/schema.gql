@@ -54,6 +54,16 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
+  page_index(relativePath: String): Page_index!
+  page_indexConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Page_indexFilter): Page_indexConnection!
+  page_methode(relativePath: String): Page_methode!
+  page_methodeConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Page_methodeFilter): Page_methodeConnection!
+  page_angebot(relativePath: String): Page_angebot!
+  page_angebotConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Page_angebotFilter): Page_angebotConnection!
+  page_b2b(relativePath: String): Page_b2b!
+  page_b2bConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Page_b2bFilter): Page_b2bConnection!
+  page_meine_geschichte(relativePath: String): Page_meine_geschichte!
+  page_meine_geschichteConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: Page_meine_geschichteFilter): Page_meine_geschichteConnection!
   site(relativePath: String): Site!
   siteConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SiteFilter): SiteConnection!
   testimonials(relativePath: String): Testimonials!
@@ -71,6 +81,11 @@ type Query {
 }
 
 input DocumentFilter {
+  page_index: Page_indexFilter
+  page_methode: Page_methodeFilter
+  page_angebot: Page_angebotFilter
+  page_b2b: Page_b2bFilter
+  page_meine_geschichte: Page_meine_geschichteFilter
   site: SiteFilter
   testimonials: TestimonialsFilter
   faq: FaqFilter
@@ -103,7 +118,831 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Site | Testimonials | Faq | Topics | Nav | Footer | Pages | Folder
+union DocumentNode = Page_index | Page_methode | Page_angebot | Page_b2b | Page_meine_geschichte | Site | Testimonials | Faq | Topics | Nav | Footer | Pages | Folder
+
+type Page_indexHero {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  cta_secondary: String
+  cta_secondary_url: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+type Page_indexMethode_teaserTokens {
+  num: String
+  title: String
+  text: String
+}
+
+type Page_indexMethode_teaser {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  cta_label: String
+  cta_url: String
+  tokens: [Page_indexMethode_teaserTokens]
+}
+
+type Page_indexServices_teaserItems {
+  num: String
+  title: String
+  text: String
+  url: String
+}
+
+type Page_indexServices_teaser {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_indexServices_teaserItems]
+}
+
+type Page_indexImage_break_1 {
+  image: String
+  alt: String
+}
+
+type Page_indexAbout_teaser {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraph_1: String
+  paragraph_2: String
+  cta_label: String
+  cta_url: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+type Page_indexTestimonials_section {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+}
+
+type Page_indexImage_break_2 {
+  image: String
+  alt: String
+}
+
+type Page_indexProcessSteps {
+  num: String
+  title: String
+  text: String
+}
+
+type Page_indexProcess {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  steps: [Page_indexProcessSteps]
+}
+
+type Page_indexQuote {
+  text: String
+  author: String
+}
+
+type Page_indexFaq_section {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+type Page_indexContact {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+type Page_index implements Node & Document {
+  subtitle: String
+  hero: Page_indexHero
+  methode_teaser: Page_indexMethode_teaser
+  services_teaser: Page_indexServices_teaser
+  image_break_1: Page_indexImage_break_1
+  about_teaser: Page_indexAbout_teaser
+  testimonials_section: Page_indexTestimonials_section
+  image_break_2: Page_indexImage_break_2
+  process: Page_indexProcess
+  quote: Page_indexQuote
+  faq_section: Page_indexFaq_section
+  contact: Page_indexContact
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input StringFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input Page_indexHeroFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  cta_secondary: StringFilter
+  cta_secondary_url: StringFilter
+  image: ImageFilter
+  image_credit_label: StringFilter
+  image_credit_url: StringFilter
+}
+
+input Page_indexMethode_teaserTokensFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+}
+
+input Page_indexMethode_teaserFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  cta_label: StringFilter
+  cta_url: StringFilter
+  tokens: Page_indexMethode_teaserTokensFilter
+}
+
+input Page_indexServices_teaserItemsFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+  url: StringFilter
+}
+
+input Page_indexServices_teaserFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  items: Page_indexServices_teaserItemsFilter
+}
+
+input Page_indexImage_break_1Filter {
+  image: ImageFilter
+  alt: StringFilter
+}
+
+input Page_indexAbout_teaserFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraph_1: StringFilter
+  paragraph_2: StringFilter
+  cta_label: StringFilter
+  cta_url: StringFilter
+  image: ImageFilter
+  image_credit_label: StringFilter
+  image_credit_url: StringFilter
+}
+
+input Page_indexTestimonials_sectionFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+}
+
+input Page_indexImage_break_2Filter {
+  image: ImageFilter
+  alt: StringFilter
+}
+
+input Page_indexProcessStepsFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+}
+
+input Page_indexProcessFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  steps: Page_indexProcessStepsFilter
+}
+
+input Page_indexQuoteFilter {
+  text: StringFilter
+  author: StringFilter
+}
+
+input Page_indexFaq_sectionFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+}
+
+input Page_indexContactFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  text: StringFilter
+}
+
+input Page_indexFilter {
+  subtitle: StringFilter
+  hero: Page_indexHeroFilter
+  methode_teaser: Page_indexMethode_teaserFilter
+  services_teaser: Page_indexServices_teaserFilter
+  image_break_1: Page_indexImage_break_1Filter
+  about_teaser: Page_indexAbout_teaserFilter
+  testimonials_section: Page_indexTestimonials_sectionFilter
+  image_break_2: Page_indexImage_break_2Filter
+  process: Page_indexProcessFilter
+  quote: Page_indexQuoteFilter
+  faq_section: Page_indexFaq_sectionFilter
+  contact: Page_indexContactFilter
+}
+
+type Page_indexConnectionEdges {
+  cursor: String!
+  node: Page_index
+}
+
+type Page_indexConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Page_indexConnectionEdges]
+}
+
+type Page_methodeHero {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+type Page_methodeSection_systemisch {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_methodePull_quote {
+  text: String
+  cite: String
+}
+
+type Page_methodeSection_loesungsorientiert {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_methodeFactorsItems {
+  num: String
+  title: String
+  text: String
+}
+
+type Page_methodeFactors {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_methodeFactorsItems]
+}
+
+type Page_methodeSection_profil {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_methodeSection_science {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_methodeCompareMinus {
+  label: String
+  headline: String
+  items: [String]
+}
+
+type Page_methodeComparePlus {
+  label: String
+  headline: String
+  items: [String]
+}
+
+type Page_methodeCompare {
+  minus: Page_methodeCompareMinus
+  plus: Page_methodeComparePlus
+}
+
+type Page_methode implements Node & Document {
+  subtitle: String
+  hero: Page_methodeHero
+  section_systemisch: Page_methodeSection_systemisch
+  pull_quote: Page_methodePull_quote
+  section_loesungsorientiert: Page_methodeSection_loesungsorientiert
+  factors: Page_methodeFactors
+  section_profil: Page_methodeSection_profil
+  section_science: Page_methodeSection_science
+  compare: Page_methodeCompare
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Page_methodeHeroFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+}
+
+input Page_methodeSection_systemischFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_methodePull_quoteFilter {
+  text: StringFilter
+  cite: StringFilter
+}
+
+input Page_methodeSection_loesungsorientiertFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_methodeFactorsItemsFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+}
+
+input Page_methodeFactorsFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  items: Page_methodeFactorsItemsFilter
+}
+
+input Page_methodeSection_profilFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_methodeSection_scienceFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_methodeCompareMinusFilter {
+  label: StringFilter
+  headline: StringFilter
+  items: StringFilter
+}
+
+input Page_methodeComparePlusFilter {
+  label: StringFilter
+  headline: StringFilter
+  items: StringFilter
+}
+
+input Page_methodeCompareFilter {
+  minus: Page_methodeCompareMinusFilter
+  plus: Page_methodeComparePlusFilter
+}
+
+input Page_methodeFilter {
+  subtitle: StringFilter
+  hero: Page_methodeHeroFilter
+  section_systemisch: Page_methodeSection_systemischFilter
+  pull_quote: Page_methodePull_quoteFilter
+  section_loesungsorientiert: Page_methodeSection_loesungsorientiertFilter
+  factors: Page_methodeFactorsFilter
+  section_profil: Page_methodeSection_profilFilter
+  section_science: Page_methodeSection_scienceFilter
+  compare: Page_methodeCompareFilter
+}
+
+type Page_methodeConnectionEdges {
+  cursor: String!
+  node: Page_methode
+}
+
+type Page_methodeConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Page_methodeConnectionEdges]
+}
+
+type Page_angebotHero {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+type Page_angebotOffers {
+  id: String
+  num: String
+  title_prefix: String
+  title: String
+  lead: String
+  format_label: String
+  format_items: [String]
+  investment_label: String
+  investment_text: String
+  cta_label: String
+  cta_modal: String
+}
+
+type Page_angebotCta {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+type Page_angebot implements Node & Document {
+  subtitle: String
+  hero: Page_angebotHero
+  offers: [Page_angebotOffers]
+  cta: Page_angebotCta
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Page_angebotHeroFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+}
+
+input Page_angebotOffersFilter {
+  id: StringFilter
+  num: StringFilter
+  title_prefix: StringFilter
+  title: StringFilter
+  lead: StringFilter
+  format_label: StringFilter
+  format_items: StringFilter
+  investment_label: StringFilter
+  investment_text: StringFilter
+  cta_label: StringFilter
+  cta_modal: StringFilter
+}
+
+input Page_angebotCtaFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  text: StringFilter
+}
+
+input Page_angebotFilter {
+  subtitle: StringFilter
+  hero: Page_angebotHeroFilter
+  offers: Page_angebotOffersFilter
+  cta: Page_angebotCtaFilter
+}
+
+type Page_angebotConnectionEdges {
+  cursor: String!
+  node: Page_angebot
+}
+
+type Page_angebotConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Page_angebotConnectionEdges]
+}
+
+type Page_b2bHero {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+type Page_b2bMethodItems {
+  num: String
+  title: String
+  text: String
+}
+
+type Page_b2bMethod {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_b2bMethodItems]
+}
+
+type Page_b2bImage_break {
+  image: String
+  alt: String
+}
+
+type Page_b2bServicesItems {
+  num: String
+  title: String
+  text: String
+  cta_modal: String
+}
+
+type Page_b2bServices {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_b2bServicesItems]
+}
+
+type Page_b2bTopics {
+  eyebrow: String
+  tags: [String]
+}
+
+type Page_b2bCta {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+type Page_b2b implements Node & Document {
+  subtitle: String
+  hero: Page_b2bHero
+  method: Page_b2bMethod
+  image_break: Page_b2bImage_break
+  services: Page_b2bServices
+  topics: Page_b2bTopics
+  cta: Page_b2bCta
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Page_b2bHeroFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+}
+
+input Page_b2bMethodItemsFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+}
+
+input Page_b2bMethodFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  items: Page_b2bMethodItemsFilter
+}
+
+input Page_b2bImage_breakFilter {
+  image: ImageFilter
+  alt: StringFilter
+}
+
+input Page_b2bServicesItemsFilter {
+  num: StringFilter
+  title: StringFilter
+  text: StringFilter
+  cta_modal: StringFilter
+}
+
+input Page_b2bServicesFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  items: Page_b2bServicesItemsFilter
+}
+
+input Page_b2bTopicsFilter {
+  eyebrow: StringFilter
+  tags: StringFilter
+}
+
+input Page_b2bCtaFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  text: StringFilter
+}
+
+input Page_b2bFilter {
+  subtitle: StringFilter
+  hero: Page_b2bHeroFilter
+  method: Page_b2bMethodFilter
+  image_break: Page_b2bImage_breakFilter
+  services: Page_b2bServicesFilter
+  topics: Page_b2bTopicsFilter
+  cta: Page_b2bCtaFilter
+}
+
+type Page_b2bConnectionEdges {
+  cursor: String!
+  node: Page_b2b
+}
+
+type Page_b2bConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Page_b2bConnectionEdges]
+}
+
+type Page_meine_geschichteHero {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+type Page_meine_geschichteSection_herkunft {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_meine_geschichteSection_wendepunkt {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+type Page_meine_geschichtePull_quote {
+  text: String
+}
+
+type Page_meine_geschichteSection_ueberzeugungenConvictions {
+  bold: String
+  text: String
+}
+
+type Page_meine_geschichteSection_ueberzeugungen {
+  image: String
+  image_alt: String
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  convictions: [Page_meine_geschichteSection_ueberzeugungenConvictions]
+}
+
+type Page_meine_geschichteSection_heute {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraph_1: String
+  paragraph_2_html: String
+  paragraph_3: String
+}
+
+type Page_meine_geschichteCta {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+type Page_meine_geschichte implements Node & Document {
+  subtitle: String
+  hero: Page_meine_geschichteHero
+  section_herkunft: Page_meine_geschichteSection_herkunft
+  section_wendepunkt: Page_meine_geschichteSection_wendepunkt
+  pull_quote: Page_meine_geschichtePull_quote
+  section_ueberzeugungen: Page_meine_geschichteSection_ueberzeugungen
+  section_heute: Page_meine_geschichteSection_heute
+  cta: Page_meine_geschichteCta
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input Page_meine_geschichteHeroFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  lead: StringFilter
+  image: ImageFilter
+  image_credit_label: StringFilter
+  image_credit_url: StringFilter
+}
+
+input Page_meine_geschichteSection_herkunftFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_meine_geschichteSection_wendepunktFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraphs: StringFilter
+}
+
+input Page_meine_geschichtePull_quoteFilter {
+  text: StringFilter
+}
+
+input Page_meine_geschichteSection_ueberzeugungenConvictionsFilter {
+  bold: StringFilter
+  text: StringFilter
+}
+
+input Page_meine_geschichteSection_ueberzeugungenFilter {
+  image: ImageFilter
+  image_alt: StringFilter
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  convictions: Page_meine_geschichteSection_ueberzeugungenConvictionsFilter
+}
+
+input Page_meine_geschichteSection_heuteFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  paragraph_1: StringFilter
+  paragraph_2_html: StringFilter
+  paragraph_3: StringFilter
+}
+
+input Page_meine_geschichteCtaFilter {
+  eyebrow: StringFilter
+  headline: StringFilter
+  headline_accent: StringFilter
+  text: StringFilter
+}
+
+input Page_meine_geschichteFilter {
+  subtitle: StringFilter
+  hero: Page_meine_geschichteHeroFilter
+  section_herkunft: Page_meine_geschichteSection_herkunftFilter
+  section_wendepunkt: Page_meine_geschichteSection_wendepunktFilter
+  pull_quote: Page_meine_geschichtePull_quoteFilter
+  section_ueberzeugungen: Page_meine_geschichteSection_ueberzeugungenFilter
+  section_heute: Page_meine_geschichteSection_heuteFilter
+  cta: Page_meine_geschichteCtaFilter
+}
+
+type Page_meine_geschichteConnectionEdges {
+  cursor: String!
+  node: Page_meine_geschichte
+}
+
+type Page_meine_geschichteConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [Page_meine_geschichteConnectionEdges]
+}
 
 type SiteContact {
   email: String
@@ -121,13 +960,6 @@ type Site implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
-}
-
-input StringFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
 }
 
 input SiteContactFilter {
@@ -350,6 +1182,16 @@ type Mutation {
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createFolder(collection: String, relativePath: String!): DocumentNode!
+  updatePage_index(relativePath: String!, params: Page_indexMutation!): Page_index!
+  createPage_index(relativePath: String!, params: Page_indexMutation!): Page_index!
+  updatePage_methode(relativePath: String!, params: Page_methodeMutation!): Page_methode!
+  createPage_methode(relativePath: String!, params: Page_methodeMutation!): Page_methode!
+  updatePage_angebot(relativePath: String!, params: Page_angebotMutation!): Page_angebot!
+  createPage_angebot(relativePath: String!, params: Page_angebotMutation!): Page_angebot!
+  updatePage_b2b(relativePath: String!, params: Page_b2bMutation!): Page_b2b!
+  createPage_b2b(relativePath: String!, params: Page_b2bMutation!): Page_b2b!
+  updatePage_meine_geschichte(relativePath: String!, params: Page_meine_geschichteMutation!): Page_meine_geschichte!
+  createPage_meine_geschichte(relativePath: String!, params: Page_meine_geschichteMutation!): Page_meine_geschichte!
   updateSite(relativePath: String!, params: SiteMutation!): Site!
   createSite(relativePath: String!, params: SiteMutation!): Site!
   updateTestimonials(relativePath: String!, params: TestimonialsMutation!): Testimonials!
@@ -367,6 +1209,11 @@ type Mutation {
 }
 
 input DocumentUpdateMutation {
+  page_index: Page_indexMutation
+  page_methode: Page_methodeMutation
+  page_angebot: Page_angebotMutation
+  page_b2b: Page_b2bMutation
+  page_meine_geschichte: Page_meine_geschichteMutation
   site: SiteMutation
   testimonials: TestimonialsMutation
   faq: FaqMutation
@@ -378,6 +1225,11 @@ input DocumentUpdateMutation {
 }
 
 input DocumentMutation {
+  page_index: Page_indexMutation
+  page_methode: Page_methodeMutation
+  page_angebot: Page_angebotMutation
+  page_b2b: Page_b2bMutation
+  page_meine_geschichte: Page_meine_geschichteMutation
   site: SiteMutation
   testimonials: TestimonialsMutation
   faq: FaqMutation
@@ -385,6 +1237,376 @@ input DocumentMutation {
   nav: NavMutation
   footer: FooterMutation
   pages: PagesMutation
+}
+
+input Page_indexHeroMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  cta_secondary: String
+  cta_secondary_url: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+input Page_indexMethode_teaserTokensMutation {
+  num: String
+  title: String
+  text: String
+}
+
+input Page_indexMethode_teaserMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  cta_label: String
+  cta_url: String
+  tokens: [Page_indexMethode_teaserTokensMutation]
+}
+
+input Page_indexServices_teaserItemsMutation {
+  num: String
+  title: String
+  text: String
+  url: String
+}
+
+input Page_indexServices_teaserMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_indexServices_teaserItemsMutation]
+}
+
+input Page_indexImage_break_1Mutation {
+  image: String
+  alt: String
+}
+
+input Page_indexAbout_teaserMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraph_1: String
+  paragraph_2: String
+  cta_label: String
+  cta_url: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+input Page_indexTestimonials_sectionMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+}
+
+input Page_indexImage_break_2Mutation {
+  image: String
+  alt: String
+}
+
+input Page_indexProcessStepsMutation {
+  num: String
+  title: String
+  text: String
+}
+
+input Page_indexProcessMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  steps: [Page_indexProcessStepsMutation]
+}
+
+input Page_indexQuoteMutation {
+  text: String
+  author: String
+}
+
+input Page_indexFaq_sectionMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+input Page_indexContactMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+input Page_indexMutation {
+  subtitle: String
+  hero: Page_indexHeroMutation
+  methode_teaser: Page_indexMethode_teaserMutation
+  services_teaser: Page_indexServices_teaserMutation
+  image_break_1: Page_indexImage_break_1Mutation
+  about_teaser: Page_indexAbout_teaserMutation
+  testimonials_section: Page_indexTestimonials_sectionMutation
+  image_break_2: Page_indexImage_break_2Mutation
+  process: Page_indexProcessMutation
+  quote: Page_indexQuoteMutation
+  faq_section: Page_indexFaq_sectionMutation
+  contact: Page_indexContactMutation
+}
+
+input Page_methodeHeroMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+input Page_methodeSection_systemischMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_methodePull_quoteMutation {
+  text: String
+  cite: String
+}
+
+input Page_methodeSection_loesungsorientiertMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_methodeFactorsItemsMutation {
+  num: String
+  title: String
+  text: String
+}
+
+input Page_methodeFactorsMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_methodeFactorsItemsMutation]
+}
+
+input Page_methodeSection_profilMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_methodeSection_scienceMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_methodeCompareMinusMutation {
+  label: String
+  headline: String
+  items: [String]
+}
+
+input Page_methodeComparePlusMutation {
+  label: String
+  headline: String
+  items: [String]
+}
+
+input Page_methodeCompareMutation {
+  minus: Page_methodeCompareMinusMutation
+  plus: Page_methodeComparePlusMutation
+}
+
+input Page_methodeMutation {
+  subtitle: String
+  hero: Page_methodeHeroMutation
+  section_systemisch: Page_methodeSection_systemischMutation
+  pull_quote: Page_methodePull_quoteMutation
+  section_loesungsorientiert: Page_methodeSection_loesungsorientiertMutation
+  factors: Page_methodeFactorsMutation
+  section_profil: Page_methodeSection_profilMutation
+  section_science: Page_methodeSection_scienceMutation
+  compare: Page_methodeCompareMutation
+}
+
+input Page_angebotHeroMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+input Page_angebotOffersMutation {
+  id: String
+  num: String
+  title_prefix: String
+  title: String
+  lead: String
+  format_label: String
+  format_items: [String]
+  investment_label: String
+  investment_text: String
+  cta_label: String
+  cta_modal: String
+}
+
+input Page_angebotCtaMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+input Page_angebotMutation {
+  subtitle: String
+  hero: Page_angebotHeroMutation
+  offers: [Page_angebotOffersMutation]
+  cta: Page_angebotCtaMutation
+}
+
+input Page_b2bHeroMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+}
+
+input Page_b2bMethodItemsMutation {
+  num: String
+  title: String
+  text: String
+}
+
+input Page_b2bMethodMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_b2bMethodItemsMutation]
+}
+
+input Page_b2bImage_breakMutation {
+  image: String
+  alt: String
+}
+
+input Page_b2bServicesItemsMutation {
+  num: String
+  title: String
+  text: String
+  cta_modal: String
+}
+
+input Page_b2bServicesMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  items: [Page_b2bServicesItemsMutation]
+}
+
+input Page_b2bTopicsMutation {
+  eyebrow: String
+  tags: [String]
+}
+
+input Page_b2bCtaMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+input Page_b2bMutation {
+  subtitle: String
+  hero: Page_b2bHeroMutation
+  method: Page_b2bMethodMutation
+  image_break: Page_b2bImage_breakMutation
+  services: Page_b2bServicesMutation
+  topics: Page_b2bTopicsMutation
+  cta: Page_b2bCtaMutation
+}
+
+input Page_meine_geschichteHeroMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  lead: String
+  image: String
+  image_credit_label: String
+  image_credit_url: String
+}
+
+input Page_meine_geschichteSection_herkunftMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_meine_geschichteSection_wendepunktMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraphs: [String]
+}
+
+input Page_meine_geschichtePull_quoteMutation {
+  text: String
+}
+
+input Page_meine_geschichteSection_ueberzeugungenConvictionsMutation {
+  bold: String
+  text: String
+}
+
+input Page_meine_geschichteSection_ueberzeugungenMutation {
+  image: String
+  image_alt: String
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  convictions: [Page_meine_geschichteSection_ueberzeugungenConvictionsMutation]
+}
+
+input Page_meine_geschichteSection_heuteMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  paragraph_1: String
+  paragraph_2_html: String
+  paragraph_3: String
+}
+
+input Page_meine_geschichteCtaMutation {
+  eyebrow: String
+  headline: String
+  headline_accent: String
+  text: String
+}
+
+input Page_meine_geschichteMutation {
+  subtitle: String
+  hero: Page_meine_geschichteHeroMutation
+  section_herkunft: Page_meine_geschichteSection_herkunftMutation
+  section_wendepunkt: Page_meine_geschichteSection_wendepunktMutation
+  pull_quote: Page_meine_geschichtePull_quoteMutation
+  section_ueberzeugungen: Page_meine_geschichteSection_ueberzeugungenMutation
+  section_heute: Page_meine_geschichteSection_heuteMutation
+  cta: Page_meine_geschichteCtaMutation
 }
 
 input SiteContactMutation {

@@ -1,0 +1,68 @@
+{
+  "subtitle": "Einzel- & Gruppen-Coaching, Workshops",
+  "hero": {
+    "eyebrow": "Angebot",
+    "headline": "Drei Formate,",
+    "headline_accent": "ein Ansatz.",
+    "lead": "Alle Formate beginnen mit einem kostenlosen 15-Minuten-Gespräch. Danach entscheiden wir gemeinsam, ob und wie wir weitermachen."
+  },
+  "offers": [
+    {
+      "id": "einzel",
+      "num": "Format 01",
+      "title_prefix": "Das",
+      "title": "Einzel",
+      "lead": "Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt.",
+      "format_label": "Format",
+      "format_items": [
+        "Einzelsessions, individuell buchbar",
+        "60 Minuten pro Sitzung inkl. schriftliches Follow-up",
+        "In München oder online"
+      ],
+      "investment_label": "Investition",
+      "investment_text": "Preis auf Anfrage.",
+      "cta_label": "Kennenlernen",
+      "cta_modal": "einzel"
+    },
+    {
+      "id": "prozess",
+      "num": "Format 02",
+      "title_prefix": "Der",
+      "title": "Prozess",
+      "lead": "Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist.",
+      "format_label": "Format",
+      "format_items": [
+        "4, 6 oder 10 Sessions — je nach Thema und Bedarf erweiterbar",
+        "60–120 Minuten pro Sitzung inkl. schriftliches Follow-up",
+        "In München oder online"
+      ],
+      "investment_label": "Investition",
+      "investment_text": "Preis auf Anfrage — mit Mengenrabatt.",
+      "cta_label": "Kennenlernen",
+      "cta_modal": "prozess"
+    },
+    {
+      "id": "gruppe",
+      "num": "Format 03",
+      "title_prefix": "Die",
+      "title": "Gruppe",
+      "lead": "Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung.",
+      "format_label": "Format",
+      "format_items": [
+        "3 bis 8 Personen",
+        "6 Termine in regelmäßigen Abständen inkl. Worksheets",
+        "In München"
+      ],
+      "investment_label": "Investition",
+      "investment_text": "Preis auf Anfrage.",
+      "cta_label": "Kennenlernen",
+      "cta_modal": "gruppe"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Unsicher, was passt?",
+    "headline": "Lass uns",
+    "headline_accent": "kurz sprechen.",
+    "text": "15 Minuten reichen oft, um zu klären, welches Format das Richtige ist — oder ob es ein anderes braucht."
+  }
+}

@@ -3,25 +3,22 @@ layout: layouts/base.njk
 permalink: /meine-geschichte/
 title: Über mich
 subtitle: Meine Geschichte
-cta:
-  eyebrow: "Lass uns reden"
-  headline: "15 Minuten"
-  headline_accent: "reichen für den Anfang."
-  text: "Online, unverbindlich, ohne Druck. Du erzählst, worum es geht — ich höre zu."
 ---
+{% set p = pages.meine_geschichte %}
+{% set cta = p.cta %}
 <!-- Subpage Hero -->
 <section class="subpage-hero">
   <div class="container subpage-hero-grid">
     <div>
-      <span class="eyebrow">Über mich</span>
-      <h1>Meine <strong>Geschichte.</strong></h1>
-      <p class="lead">Warum ich heute Menschen begleite — und warum ich das mit der Haltung tue, die ich habe. Kein Lebenslauf, eher ein Weg.</p>
+      <span class="eyebrow">{{ p.hero.eyebrow }}</span>
+      <h1>{{ p.hero.headline }} <strong>{{ p.hero.headline_accent }}</strong></h1>
+      <p class="lead">{{ p.hero.lead }}</p>
     </div>
     <div class="subpage-portrait-wrap">
       <div class="subpage-portrait">
-        <img src="/assets/ueber-mich.jpg" alt="{{ site.name }} · Portrait · © Mirjam Hagen">
+        <img src="{{ p.hero.image }}" alt="{{ site.name }} · Portrait · {{ p.hero.image_credit_label }}">
       </div>
-      <a class="photo-credit-below" href="https://mirjamhagen.com/" target="_blank" rel="noopener">© Mirjam Hagen</a>
+      <a class="photo-credit-below" href="{{ p.hero.image_credit_url }}" target="_blank" rel="noopener">{{ p.hero.image_credit_label }}</a>
     </div>
   </div>
 </section>
@@ -30,12 +27,11 @@ cta:
 <section class="story">
   <div class="container story-grid">
     <div>
-      <span class="eyebrow">Wo ich herkomme</span>
-      <h2>Zehn Jahre <strong>Industrie.</strong></h2>
+      <span class="eyebrow">{{ p.section_herkunft.eyebrow }}</span>
+      <h2>{{ p.section_herkunft.headline }} <strong>{{ p.section_herkunft.headline_accent }}</strong></h2>
     </div>
     <div>
-      <p>Mein erstes Berufsleben war geradlinig: Wirtschaftsstudium, schneller Einstieg in einen Konzern, Verantwortung, internationale Projekte, gute Position. Auf dem Papier stimmte alles.</p>
-      <p>Ich war gut in dem, was ich tat, und lange dachte ich, das sei genug. Bis ich merkte, dass „gut funktionieren" und „mit sich im Reinen sein" zwei sehr verschiedene Dinge sind.</p>
+      {% for para in p.section_herkunft.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
     </div>
   </div>
 </section>
@@ -44,13 +40,11 @@ cta:
 <section class="story on-sand">
   <div class="container story-grid">
     <div>
-      <span class="eyebrow">Der Wendepunkt</span>
-      <h2>Eine eigene <strong>Krise.</strong></h2>
+      <span class="eyebrow">{{ p.section_wendepunkt.eyebrow }}</span>
+      <h2>{{ p.section_wendepunkt.headline }} <strong>{{ p.section_wendepunkt.headline_accent }}</strong></h2>
     </div>
     <div>
-      <p>Es kam, wie es kommen musste — nur eben für mich völlig unerwartet. Eine Phase, in der ich morgens nicht mehr aufstehen wollte, ohne zu wissen, warum. Mein System hat reagiert, bevor mein Kopf verstand, was los war.</p>
-      <p>Was ich damals dachte: Ich muss mich nur zusammenreißen. Was ich heute weiß: Es war ein klares Signal, dass etwas im System nicht stimmte. Nicht mit mir als Person — sondern mit der Art, wie ich lebte.</p>
-      <p>Ich habe in dieser Zeit Hilfe gesucht und gefunden. Erst Therapie. Dann Coaching. Dann eine systemische Ausbildung, weil ich verstehen wollte, was da eigentlich passiert war.</p>
+      {% for para in p.section_wendepunkt.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
     </div>
   </div>
 </section>
@@ -59,7 +53,7 @@ cta:
 <section class="pull-quote">
   <div class="pull-quote-wrap">
     <span class="pull-quote-mark">&ldquo;</span>
-    <p class="pull-quote-text">Das, was mich aus der Krise geführt hat, ist heute die Arbeit, die ich tue.</p>
+    <p class="pull-quote-text">{{ p.pull_quote.text }}</p>
     <div class="pull-quote-cite">{{ site.name }}</div>
   </div>
 </section>
@@ -68,14 +62,14 @@ cta:
 <section class="story has-image">
   <div class="container story-image-grid">
     <div class="story-img">
-      <img src="/assets/room-chair.jpg" alt="Praxis-Raum · Sessel">
+      <img src="{{ p.section_ueberzeugungen.image }}" alt="{{ p.section_ueberzeugungen.image_alt }}">
     </div>
     <div>
-      <span class="eyebrow">Was ich mitgenommen habe</span>
-      <h2>Drei <strong>Überzeugungen.</strong></h2>
-      <p><strong>Veränderung muss sich nicht schwer anfühlen.</strong> Wenn der richtige Hebel gefunden ist, bewegt sich viel mit wenig Kraft. Die meiste Energie geht für die falschen Hebel drauf.</p>
-      <p><strong>Niemand steht allein im Raum.</strong> Jede Krise und jede Stärke hat einen Kontext. Wer nur auf die Person schaut, übersieht die Hälfte der Geschichte.</p>
-      <p><strong>Es gibt immer eine nächste Tür.</strong> Auch wenn sie unsichtbar erscheint. Mein Job ist, die Tür sichtbar zu machen — nicht, dich hindurchzuschieben.</p>
+      <span class="eyebrow">{{ p.section_ueberzeugungen.eyebrow }}</span>
+      <h2>{{ p.section_ueberzeugungen.headline }} <strong>{{ p.section_ueberzeugungen.headline_accent }}</strong></h2>
+      {% for c in p.section_ueberzeugungen.convictions %}
+      <p><strong>{{ c.bold }}</strong> {{ c.text }}</p>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -84,13 +78,13 @@ cta:
 <section class="story on-flieder">
   <div class="container story-grid">
     <div>
-      <span class="eyebrow">Heute</span>
-      <h2>Coach, <strong>München.</strong></h2>
+      <span class="eyebrow">{{ p.section_heute.eyebrow }}</span>
+      <h2>{{ p.section_heute.headline }} <strong>{{ p.section_heute.headline_accent }}</strong></h2>
     </div>
     <div>
-      <p>Heute begleite ich Menschen, die — wie ich damals — spüren, dass etwas nicht stimmt, aber nicht wissen, wo sie anfangen sollen. Privat. Beruflich. In Übergängen. In Erschöpfung. Vor großen Entscheidungen.</p>
-      <p>Ich arbeite in München und online, mit Einzelpersonen, kleinen Gruppen und Teams. Mein Ansatz ist systemisch, lösungsorientiert und wissenschaftlich fundiert — mehr dazu auf der <a href="/methode/" style="text-decoration:underline">Methode-Seite</a>.</p>
-      <p>Wenn dich das anspricht: Lass uns reden.</p>
+      <p>{{ p.section_heute.paragraph_1 }}</p>
+      <p>{{ p.section_heute.paragraph_2_html | safe }}</p>
+      <p>{{ p.section_heute.paragraph_3 }}</p>
     </div>
   </div>
 </section>

@@ -2,111 +2,23 @@
 layout: layouts/base.njk
 permalink: /
 subtitle: Systemisches Coaching für Resilienz & Mentale Gesundheit
-hero:
-  eyebrow: "Systemisches Coaching · München & online"
-  headline: "Entspannt"
-  headline_accent: "erfolgreich."
-  lead: "Veränderung muss sich nicht schwer anfühlen. Ich begleite dich — beruflich wie privat — bis du deinen nächsten Schritt klar vor dir siehst."
-  cta_secondary: "Mehr über das Angebot"
-  cta_secondary_url: "/angebot/"
-  image: "/assets/friederike-hero.jpg"
-  image_credit_url: "https://mirjamhagen.com/"
-  image_credit_label: "© Mirjam Hagen"
-methode_teaser:
-  eyebrow: "Methode"
-  headline: "Wissenschaftlich fundiert."
-  headline_accent: "Systemisch gedacht."
-  lead: "Mein Ansatz steht auf zwei Säulen: systemisch-lösungsorientiertes Coaching und Resilienzforschung. Wir schauen nicht nur auf dich, sondern auf das ganze Bild — Beziehungen, Kontexte, Geschichte."
-  cta_label: "Mehr zur Methode"
-  cta_url: "/methode/"
-  tokens:
-    - num: "01"
-      title: "Systemisch denken"
-      text: "Niemand steht allein im Raum. Wir nehmen das ganze Umfeld in den Blick."
-    - num: "02"
-      title: "Lösungsorientiert arbeiten"
-      text: "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern."
-    - num: "03"
-      title: "Resilienz aufbauen"
-      text: "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer."
-services_teaser:
-  eyebrow: "Angebot"
-  headline: "Drei Formate,"
-  headline_accent: "ein Ansatz."
-  lead: "Alle Formate beginnen mit einem kostenlosen 15-Minuten-Gespräch. Danach entscheiden wir gemeinsam, ob und wie wir weitermachen."
-  items:
-    - num: "Format 01"
-      title: "Das Einzel"
-      text: "Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt."
-      url: "/angebot/#einzel"
-    - num: "Format 02"
-      title: "Der Prozess"
-      text: "Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist."
-      url: "/angebot/#prozess"
-    - num: "Format 03"
-      title: "Die Gruppe"
-      text: "Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung."
-      url: "/angebot/#gruppe"
-about_teaser:
-  eyebrow: "Über mich"
-  headline: "Ich schaue auf das große Ganze —"
-  headline_accent: "weil Leichtigkeit kein Zufall ist."
-  paragraph_1: "Ich arbeite systemisch, wissenschaftlich fundiert und ganz auf dich ausgerichtet. Viele meiner Klient:innen kommen zu mir, wenn der Alltag zu schwer geworden ist — überfordert, im Dauerstress, ohne klaren Ausweg. Gemeinsam schauen wir nicht nur auf dich allein — sondern auch auf dein Umfeld: deine Beziehungen, dein Team, deine Geschichte. Ich stelle Fragen, du findest deine Antworten. Ich bringe wissenschaftlich fundierte Methoden mit, du entscheidest, was passt. Und zusammen gestalten wir deinen nächsten Schritt — hin zu mehr Leichtigkeit in deinem Leben."
-  paragraph_2: "Ausbildung als Resilienz- und Systemische Coach, M. Sc. von der TU Berlin, 10+ Jahre Erfahrung in verschiedenen globalen Unternehmen u. a. als Sustainability Managerin, Mama einer kleinen Tochter. Ich arbeite in München und online."
-  cta_label: "Meine ganze Geschichte"
-  cta_url: "/meine-geschichte/"
-  image: "/assets/friederike-about.png"
-testimonials_section:
-  eyebrow: "Stimmen"
-  headline: "Was Klient:innen"
-  headline_accent: "mitgenommen haben."
-process:
-  eyebrow: "Ablauf"
-  headline: "So arbeiten wir"
-  headline_accent: "zusammen."
-  lead: "Ein klarer, zugleich offener Rahmen — damit der Inhalt Raum bekommt."
-  steps:
-    - num: "Schritt 01"
-      title: "Kennenlernen"
-      text: "15 Minuten online. Unverbindlich, offen, transparent und ohne Druck."
-    - num: "Schritt 02"
-      title: "Auftragsklärung"
-      text: "In der ersten Sitzung (und kurz am Anfang jeder weiteren Sitzung) schärfen wir, worum es wirklich geht."
-    - num: "Schritt 03"
-      title: "Arbeitsphase"
-      text: "Wir betrachten Muster, Ressourcen, Systeme. Gute Fragen, fundierte Methoden, keine Floskeln."
-    - num: "Schritt 04"
-      title: "Abschluss"
-      text: "Wir sichern, was sich verändert hat — und definieren deine(n) nächsten Schritt(e)."
-quote:
-  text: "Problem talk creates problems and solution talk creates solutions."
-  author: "Steve de Shazer · Erfinder der lösungsorientierten Kurztherapie"
-faq_section:
-  eyebrow: "FAQ"
-  headline: "Was du"
-  headline_accent: "vorher wissen möchtest."
-  lead: "Hier die häufigsten Fragen — wenn deine nicht dabei ist, schreib mir einfach."
-contact:
-  eyebrow: "Kontakt"
-  headline: "Ich freue mich"
-  headline_accent: "von Dir zu hören!"
-  text: "Schreib mir gerne hier über das Kontaktformular oder per Mail, wenn Du ein Coaching buchen möchtest oder Fragen dazu hast."
 ---
+{% set p = pages.index %}
 <!-- Hero -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow">{{ hero.eyebrow }}</span>
-      <h1>{{ hero.headline }} <strong>{{ hero.headline_accent }}</strong></h1>
-      <p class="hero-sub">{{ hero.lead }}</p>
+      <span class="eyebrow">{{ p.hero.eyebrow }}</span>
+      <h1>{{ p.hero.headline }} <strong>{{ p.hero.headline_accent }}</strong></h1>
+      <p class="hero-sub">{{ p.hero.lead }}</p>
       <div class="hero-cta-row">
         <a href="#" data-open-modal="allgemein" class="btn btn-primary">{{ site.cta_label }} <span class="arrow">→</span></a>
-        <a href="{{ hero.cta_secondary_url }}" class="btn btn-ghost">{{ hero.cta_secondary }}</a>
+        <a href="{{ p.hero.cta_secondary_url }}" class="btn btn-ghost">{{ p.hero.cta_secondary }}</a>
       </div>
     </div>
     <div class="hero-visual">
-      <img src="{{ hero.image }}" alt="{{ site.name }} · {{ hero.image_credit_label }}" onerror="this.style.display='none'">
-      <a class="photo-credit" href="{{ hero.image_credit_url }}" target="_blank" rel="noopener">{{ hero.image_credit_label }}</a>
+      <img src="{{ p.hero.image }}" alt="{{ site.name }} · {{ p.hero.image_credit_label }}" onerror="this.style.display='none'">
+      <a class="photo-credit" href="{{ p.hero.image_credit_url }}" target="_blank" rel="noopener">{{ p.hero.image_credit_label }}</a>
     </div>
   </div>
 </section>
@@ -125,13 +37,13 @@ contact:
 <section class="methode-teaser" id="methode">
   <div class="container methode-teaser-grid">
     <div>
-      <span class="eyebrow">{{ methode_teaser.eyebrow }}</span>
-      <h2>{{ methode_teaser.headline }} <strong>{{ methode_teaser.headline_accent }}</strong></h2>
-      <p>{{ methode_teaser.lead }}</p>
-      <a href="{{ methode_teaser.cta_url }}" class="about-teaser-cta">{{ methode_teaser.cta_label }} <span>→</span></a>
+      <span class="eyebrow">{{ p.methode_teaser.eyebrow }}</span>
+      <h2>{{ p.methode_teaser.headline }} <strong>{{ p.methode_teaser.headline_accent }}</strong></h2>
+      <p>{{ p.methode_teaser.lead }}</p>
+      <a href="{{ p.methode_teaser.cta_url }}" class="about-teaser-cta">{{ p.methode_teaser.cta_label }} <span>→</span></a>
     </div>
     <div class="methode-tokens">
-      {% for token in methode_teaser.tokens %}
+      {% for token in p.methode_teaser.tokens %}
       <div class="method-token">
         <span class="method-token-num">{{ token.num }}</span>
         <div class="method-token-content">
@@ -148,12 +60,12 @@ contact:
 <section class="services" id="services">
   <div class="container">
     <div class="services-head">
-      <span class="eyebrow">{{ services_teaser.eyebrow }}</span>
-      <h2>{{ services_teaser.headline }} <strong>{{ services_teaser.headline_accent }}</strong></h2>
-      <p class="lead">{{ services_teaser.lead }}</p>
+      <span class="eyebrow">{{ p.services_teaser.eyebrow }}</span>
+      <h2>{{ p.services_teaser.headline }} <strong>{{ p.services_teaser.headline_accent }}</strong></h2>
+      <p class="lead">{{ p.services_teaser.lead }}</p>
     </div>
     <div class="service-grid">
-      {% for item in services_teaser.items %}
+      {% for item in p.services_teaser.items %}
       <article class="service service-teaser">
         <span class="service-num">{{ item.num }}</span>
         <h3>{{ item.title }}</h3>
@@ -168,7 +80,7 @@ contact:
 <!-- Image break · Gruppen-Atmosphäre (auf Mobile ausgeblendet) -->
 <section class="image-section mobile-hide">
   <div class="container">
-    <img src="/assets/group-table.jpg" alt="Gruppen-Coaching · Atmosphäre am Tisch" style="display:block;width:100%;height:auto;border-radius:4px">
+    <img src="{{ p.image_break_1.image }}" alt="{{ p.image_break_1.alt }}" style="display:block;width:100%;height:auto;border-radius:4px">
   </div>
 </section>
 
@@ -176,17 +88,17 @@ contact:
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-visual">
-      <img src="{{ about_teaser.image }}" alt="{{ site.name }} · Portrait · © Mirjam Hagen" onerror="this.parentElement.querySelector('.about-visual-label').style.display='inline-block';this.style.display='none'">
+      <img src="{{ p.about_teaser.image }}" alt="{{ site.name }} · Portrait · {{ p.about_teaser.image_credit_label }}" onerror="this.parentElement.querySelector('.about-visual-label').style.display='inline-block';this.style.display='none'">
       <span class="about-visual-label" style="display:none">Portrait · Business-Shooting</span>
-      <a class="photo-credit" href="https://mirjamhagen.com/" target="_blank" rel="noopener">© Mirjam Hagen</a>
+      <a class="photo-credit" href="{{ p.about_teaser.image_credit_url }}" target="_blank" rel="noopener">{{ p.about_teaser.image_credit_label }}</a>
     </div>
     <div>
-      <span class="eyebrow">{{ about_teaser.eyebrow }}</span>
-      <h2>{{ about_teaser.headline }} <strong>{{ about_teaser.headline_accent }}</strong></h2>
+      <span class="eyebrow">{{ p.about_teaser.eyebrow }}</span>
+      <h2>{{ p.about_teaser.headline }} <strong>{{ p.about_teaser.headline_accent }}</strong></h2>
       <span class="rule"></span>
-      <p>{{ about_teaser.paragraph_1 }}</p>
-      <p style="margin-top:1.1rem;font-size:.94rem;opacity:.75">{{ about_teaser.paragraph_2 }}</p>
-      <a href="{{ about_teaser.cta_url }}" class="about-teaser-cta">{{ about_teaser.cta_label }} <span>→</span></a>
+      <p>{{ p.about_teaser.paragraph_1 }}</p>
+      <p style="margin-top:1.1rem;font-size:.94rem;opacity:.75">{{ p.about_teaser.paragraph_2 }}</p>
+      <a href="{{ p.about_teaser.cta_url }}" class="about-teaser-cta">{{ p.about_teaser.cta_label }} <span>→</span></a>
     </div>
   </div>
 </section>
@@ -196,8 +108,8 @@ contact:
   <div class="container">
     <div class="testimonials-head">
       <div class="testimonials-head-text">
-        <span class="eyebrow">{{ testimonials_section.eyebrow }}</span>
-        <h2>{{ testimonials_section.headline }} <strong>{{ testimonials_section.headline_accent }}</strong></h2>
+        <span class="eyebrow">{{ p.testimonials_section.eyebrow }}</span>
+        <h2>{{ p.testimonials_section.headline }} <strong>{{ p.testimonials_section.headline_accent }}</strong></h2>
       </div>
       <span class="testimonial-counter" aria-hidden="true" hidden>1 / {{ testimonials.items | length }}</span>
     </div>
@@ -227,7 +139,7 @@ contact:
 <!-- Image break · Praxis-Raum -->
 <section class="image-section">
   <div class="container">
-    <img src="/assets/room-window.jpg" alt="Atmosphäre · Fenster mit Eukalyptus" style="display:block;width:100%;height:540px;object-fit:cover;border-radius:4px">
+    <img src="{{ p.image_break_2.image }}" alt="{{ p.image_break_2.alt }}" style="display:block;width:100%;height:540px;object-fit:cover;border-radius:4px">
   </div>
 </section>
 
@@ -235,12 +147,12 @@ contact:
 <section class="process" id="process">
   <div class="container">
     <div class="process-head">
-      <span class="eyebrow">{{ process.eyebrow }}</span>
-      <h2>{{ process.headline }} <strong>{{ process.headline_accent }}</strong></h2>
-      <p style="opacity:.8;margin-top:.8rem">{{ process.lead }}</p>
+      <span class="eyebrow">{{ p.process.eyebrow }}</span>
+      <h2>{{ p.process.headline }} <strong>{{ p.process.headline_accent }}</strong></h2>
+      <p style="opacity:.8;margin-top:.8rem">{{ p.process.lead }}</p>
     </div>
     <div class="steps">
-      {% for step in process.steps %}
+      {% for step in p.process.steps %}
       <div class="step">
         <span class="step-num">{{ step.num }}</span>
         <h3>{{ step.title }}</h3>
@@ -254,8 +166,8 @@ contact:
 <!-- Zitat -->
 <section class="quote">
   <div class="container quote-wrap">
-    <blockquote>&ldquo;{{ quote.text }}&rdquo;</blockquote>
-    <div class="cite">{{ quote.author }}</div>
+    <blockquote>&ldquo;{{ p.quote.text }}&rdquo;</blockquote>
+    <div class="cite">{{ p.quote.author }}</div>
   </div>
 </section>
 
@@ -263,9 +175,9 @@ contact:
 <section class="faq" id="faq">
   <div class="container faq-grid">
     <div>
-      <span class="eyebrow">{{ faq_section.eyebrow }}</span>
-      <h2>{{ faq_section.headline }} <strong>{{ faq_section.headline_accent }}</strong></h2>
-      <p class="faq-lead">{{ faq_section.lead }}</p>
+      <span class="eyebrow">{{ p.faq_section.eyebrow }}</span>
+      <h2>{{ p.faq_section.headline }} <strong>{{ p.faq_section.headline_accent }}</strong></h2>
+      <p class="faq-lead">{{ p.faq_section.lead }}</p>
     </div>
     <div class="faq-items">
       {% for item in faq.items %}
@@ -282,9 +194,9 @@ contact:
 <section class="cta" id="contact">
   <div class="container cta-grid">
     <div>
-      <span class="eyebrow on-dark">{{ contact.eyebrow }}</span>
-      <h2>{{ contact.headline }} <strong>{{ contact.headline_accent }}</strong></h2>
-      <p>{{ contact.text }}</p>
+      <span class="eyebrow on-dark">{{ p.contact.eyebrow }}</span>
+      <h2>{{ p.contact.headline }} <strong>{{ p.contact.headline_accent }}</strong></h2>
+      <p>{{ p.contact.text }}</p>
       <a href="#" data-open-modal="allgemein" class="btn btn-primary" style="margin-top:2rem">{{ site.cta_label }} <span class="arrow">→</span></a>
     </div>
     <div class="cta-card">

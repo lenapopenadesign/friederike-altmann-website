@@ -1,3 +1,278 @@
+query page_index($relativePath: String!) {
+  page_index(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Page_indexParts
+  }
+}
+
+query page_indexConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Page_indexFilter) {
+  page_indexConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Page_indexParts
+      }
+    }
+  }
+}
+
+query page_methode($relativePath: String!) {
+  page_methode(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Page_methodeParts
+  }
+}
+
+query page_methodeConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Page_methodeFilter) {
+  page_methodeConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Page_methodeParts
+      }
+    }
+  }
+}
+
+query page_angebot($relativePath: String!) {
+  page_angebot(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Page_angebotParts
+  }
+}
+
+query page_angebotConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Page_angebotFilter) {
+  page_angebotConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Page_angebotParts
+      }
+    }
+  }
+}
+
+query page_b2b($relativePath: String!) {
+  page_b2b(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Page_b2bParts
+  }
+}
+
+query page_b2bConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Page_b2bFilter) {
+  page_b2bConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Page_b2bParts
+      }
+    }
+  }
+}
+
+query page_meine_geschichte($relativePath: String!) {
+  page_meine_geschichte(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...Page_meine_geschichteParts
+  }
+}
+
+query page_meine_geschichteConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: Page_meine_geschichteFilter) {
+  page_meine_geschichteConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...Page_meine_geschichteParts
+      }
+    }
+  }
+}
+
 query site($relativePath: String!) {
   site(relativePath: $relativePath) {
     ... on Document {

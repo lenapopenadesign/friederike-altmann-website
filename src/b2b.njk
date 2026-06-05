@@ -3,19 +3,16 @@ layout: layouts/base.njk
 permalink: /b2b/
 title: B2B
 subtitle: Resilienz-Coaching für Unternehmen, Workshops & Vorträge
-cta:
-  eyebrow: "Nächster Schritt"
-  headline: "Kostenfreies"
-  headline_accent: "Erstgespräch."
-  text: "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch."
 ---
+{% set p = pages.b2b %}
+{% set cta = p.cta %}
 <!-- Subpage Hero · 2-Spalter mit Sketch rechts -->
 <section class="subpage-hero">
   <div class="container subpage-hero-grid">
     <div>
-      <span class="eyebrow">Für Unternehmen · HR &amp; Führung</span>
-      <h1>Stärkt das System. <strong>Nicht nur die Einzelne.</strong></h1>
-      <p class="lead">Resilienz-Coaching, Workshops und Vorträge für mentale Gesundheit am Arbeitsplatz — wissenschaftlich fundiert, systemisch gedacht. Buchbar über das Weiterbildungsbudget, durchführbar in der Arbeitszeit.</p>
+      <span class="eyebrow">{{ p.hero.eyebrow }}</span>
+      <h1>{{ p.hero.headline }} <strong>{{ p.hero.headline_accent }}</strong></h1>
+      <p class="lead">{{ p.hero.lead }}</p>
     </div>
     <div class="hero-sketch" aria-hidden="true">
       <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -31,56 +28,46 @@ cta:
   </div>
 </section>
 
-<!-- Methode · Resilienz trainieren -->
+<!-- Methode -->
 <section class="factors">
   <div class="container">
     <div class="factors-head">
-      <span class="eyebrow">Methode</span>
-      <h2>Resilienz <strong>trainieren.</strong></h2>
-      <p style="opacity:.78;margin-top:1rem;max-width:54ch">Mentale Stärke ist kein Charaktermerkmal — sie ist trainierbar. Mein Ansatz steht auf drei Säulen, die ineinandergreifen.</p>
+      <span class="eyebrow">{{ p.method.eyebrow }}</span>
+      <h2>{{ p.method.headline }} <strong>{{ p.method.headline_accent }}</strong></h2>
+      <p style="opacity:.78;margin-top:1rem;max-width:54ch">{{ p.method.lead }}</p>
     </div>
     <div class="factor-grid">
-      <div class="factor"><span class="factor-num">01</span><h3>Systemisch denken</h3><p>Niemand steht allein im Raum — wir nehmen das ganze Umfeld in den Blick: Team, Rollen, Kontexte, Kultur.</p></div>
-      <div class="factor"><span class="factor-num">02</span><h3>Lösungsorientiert</h3><p>Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern, sondern Bewegung möglich machen.</p></div>
-      <div class="factor"><span class="factor-num">03</span><h3>Resilienz aufbauen</h3><p>Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer und gemeinsame Team-Sprache.</p></div>
+      {% for item in p.method.items %}
+      <div class="factor"><span class="factor-num">{{ item.num }}</span><h3>{{ item.title }}</h3><p>{{ item.text }}</p></div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- Image break · Team-Atmosphäre -->
+<!-- Image break -->
 <section class="image-section">
   <div class="container">
-    <img src="/assets/group-table.jpg" alt="Workshop · Team am Tisch" style="display:block;width:100%;height:auto;border-radius:4px">
+    <img src="{{ p.image_break.image }}" alt="{{ p.image_break.alt }}" style="display:block;width:100%;height:auto;border-radius:4px">
   </div>
 </section>
 
-<!-- Angebot · 3 Formate -->
+<!-- Angebot -->
 <section class="services">
   <div class="container">
     <div class="services-head">
-      <span class="eyebrow">Angebot</span>
-      <h2>Drei Formate, <strong>ein Ansatz.</strong></h2>
-      <p class="lead">Alle Formate starten mit einem kostenfreien Erstgespräch. Danach klären wir Bedarf, Rahmen und Format — passgenau zu eurer Arbeitsrealität.</p>
+      <span class="eyebrow">{{ p.services.eyebrow }}</span>
+      <h2>{{ p.services.headline }} <strong>{{ p.services.headline_accent }}</strong></h2>
+      <p class="lead">{{ p.services.lead }}</p>
     </div>
     <div class="service-grid">
+      {% for s in p.services.items %}
       <article class="service service-teaser">
-        <span class="service-num">Format 01</span>
-        <h3>1:1 Coaching</h3>
-        <p class="service-lead">Individuelle Begleitung von Mitarbeitenden und Führungskräften. Buchbar über das Weiterbildungsbudget — durchführbar in der Arbeitszeit. Kein zusätzlicher Stressor nach Feierabend.</p>
-        <a href="#" data-open-modal="prozess" class="about-teaser-cta">Anfragen <span>→</span></a>
+        <span class="service-num">{{ s.num }}</span>
+        <h3>{{ s.title }}</h3>
+        <p class="service-lead">{{ s.text }}</p>
+        <a href="#" data-open-modal="{{ s.cta_modal }}" class="about-teaser-cta">Anfragen <span>→</span></a>
       </article>
-      <article class="service service-teaser">
-        <span class="service-num">Format 02</span>
-        <h3>Workshop &amp; Gruppen-Coaching</h3>
-        <p class="service-lead">Resilienz und Stressmanagement als gemeinsame Praxis. Halbtag, ganzer Tag oder mehrteilige Reihe — immer angepasst an die echte Arbeitsrealität deines Teams.</p>
-        <a href="#" data-open-modal="gruppe" class="about-teaser-cta">Anfragen <span>→</span></a>
-      </article>
-      <article class="service service-teaser">
-        <span class="service-num">Format 03</span>
-        <h3>Vorträge &amp; Keynotes</h3>
-        <p class="service-lead">Impulse für Health Days, Führungsklausuren, Onboardings. Wissenschaftlich fundiert, lebensnah erzählt — mit konkreten Tools zum Mitnehmen.</p>
-        <a href="#" data-open-modal="allgemein" class="about-teaser-cta">Anfragen <span>→</span></a>
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -88,15 +75,9 @@ cta:
 <!-- Themen -->
 <section class="topics">
   <div class="container">
-    <span class="topics-eyebrow">Themen, die wir bearbeiten</span>
+    <span class="topics-eyebrow">{{ p.topics.eyebrow }}</span>
     <div class="topics-grid">
-      <span class="tag">Resilienz</span>
-      <span class="tag">Mentale Gesundheit</span>
-      <span class="tag">Stressmanagement</span>
-      <span class="tag">Burnout-Prävention</span>
-      <span class="tag">Selbstführung</span>
-      <span class="tag">Führung unter Druck</span>
-      <span class="tag">Beruf &amp; Privat</span>
+      {% for tag in p.topics.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </div>
   </div>
 </section>

@@ -1,0 +1,60 @@
+{
+  "subtitle": "Meine Geschichte",
+  "hero": {
+    "eyebrow": "Über mich",
+    "headline": "Meine",
+    "headline_accent": "Geschichte.",
+    "lead": "Warum ich heute Menschen begleite — und warum ich das mit der Haltung tue, die ich habe. Kein Lebenslauf, eher ein Weg.",
+    "image": "/assets/ueber-mich.jpg",
+    "image_credit_url": "https://mirjamhagen.com/",
+    "image_credit_label": "© Mirjam Hagen"
+  },
+  "section_herkunft": {
+    "eyebrow": "Wo ich herkomme",
+    "headline": "Zehn Jahre",
+    "headline_accent": "Industrie.",
+    "paragraphs": [
+      "Mein erstes Berufsleben war geradlinig: Wirtschaftsstudium, schneller Einstieg in einen Konzern, Verantwortung, internationale Projekte, gute Position. Auf dem Papier stimmte alles.",
+      "Ich war gut in dem, was ich tat, und lange dachte ich, das sei genug. Bis ich merkte, dass „gut funktionieren\" und „mit sich im Reinen sein\" zwei sehr verschiedene Dinge sind."
+    ]
+  },
+  "section_wendepunkt": {
+    "eyebrow": "Der Wendepunkt",
+    "headline": "Eine eigene",
+    "headline_accent": "Krise.",
+    "paragraphs": [
+      "Es kam, wie es kommen musste — nur eben für mich völlig unerwartet. Eine Phase, in der ich morgens nicht mehr aufstehen wollte, ohne zu wissen, warum. Mein System hat reagiert, bevor mein Kopf verstand, was los war.",
+      "Was ich damals dachte: Ich muss mich nur zusammenreißen. Was ich heute weiß: Es war ein klares Signal, dass etwas im System nicht stimmte. Nicht mit mir als Person — sondern mit der Art, wie ich lebte.",
+      "Ich habe in dieser Zeit Hilfe gesucht und gefunden. Erst Therapie. Dann Coaching. Dann eine systemische Ausbildung, weil ich verstehen wollte, was da eigentlich passiert war."
+    ]
+  },
+  "pull_quote": {
+    "text": "Das, was mich aus der Krise geführt hat, ist heute die Arbeit, die ich tue."
+  },
+  "section_ueberzeugungen": {
+    "image": "/assets/room-chair.jpg",
+    "image_alt": "Praxis-Raum · Sessel",
+    "eyebrow": "Was ich mitgenommen habe",
+    "headline": "Drei",
+    "headline_accent": "Überzeugungen.",
+    "convictions": [
+      { "bold": "Veränderung muss sich nicht schwer anfühlen.", "text": "Wenn der richtige Hebel gefunden ist, bewegt sich viel mit wenig Kraft. Die meiste Energie geht für die falschen Hebel drauf." },
+      { "bold": "Niemand steht allein im Raum.", "text": "Jede Krise und jede Stärke hat einen Kontext. Wer nur auf die Person schaut, übersieht die Hälfte der Geschichte." },
+      { "bold": "Es gibt immer eine nächste Tür.", "text": "Auch wenn sie unsichtbar erscheint. Mein Job ist, die Tür sichtbar zu machen — nicht, dich hindurchzuschieben." }
+    ]
+  },
+  "section_heute": {
+    "eyebrow": "Heute",
+    "headline": "Coach,",
+    "headline_accent": "München.",
+    "paragraph_1": "Heute begleite ich Menschen, die — wie ich damals — spüren, dass etwas nicht stimmt, aber nicht wissen, wo sie anfangen sollen. Privat. Beruflich. In Übergängen. In Erschöpfung. Vor großen Entscheidungen.",
+    "paragraph_2_html": "Ich arbeite in München und online, mit Einzelpersonen, kleinen Gruppen und Teams. Mein Ansatz ist systemisch, lösungsorientiert und wissenschaftlich fundiert — mehr dazu auf der <a href=\"/methode/\" style=\"text-decoration:underline\">Methode-Seite</a>.",
+    "paragraph_3": "Wenn dich das anspricht: Lass uns reden."
+  },
+  "cta": {
+    "eyebrow": "Lass uns reden",
+    "headline": "15 Minuten",
+    "headline_accent": "reichen für den Anfang.",
+    "text": "Online, unverbindlich, ohne Druck. Du erzählst, worum es geht — ich höre zu."
+  }
+}

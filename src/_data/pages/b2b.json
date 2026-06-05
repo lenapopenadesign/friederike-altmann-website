@@ -1,0 +1,68 @@
+{
+  "subtitle": "Resilienz-Coaching für Unternehmen, Workshops & Vorträge",
+  "hero": {
+    "eyebrow": "Für Unternehmen · HR & Führung",
+    "headline": "Stärkt das System.",
+    "headline_accent": "Nicht nur die Einzelne.",
+    "lead": "Resilienz-Coaching, Workshops und Vorträge für mentale Gesundheit am Arbeitsplatz — wissenschaftlich fundiert, systemisch gedacht. Buchbar über das Weiterbildungsbudget, durchführbar in der Arbeitszeit."
+  },
+  "method": {
+    "eyebrow": "Methode",
+    "headline": "Resilienz",
+    "headline_accent": "trainieren.",
+    "lead": "Mentale Stärke ist kein Charaktermerkmal — sie ist trainierbar. Mein Ansatz steht auf drei Säulen, die ineinandergreifen.",
+    "items": [
+      { "num": "01", "title": "Systemisch denken", "text": "Niemand steht allein im Raum — wir nehmen das ganze Umfeld in den Blick: Team, Rollen, Kontexte, Kultur." },
+      { "num": "02", "title": "Lösungsorientiert", "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern, sondern Bewegung möglich machen." },
+      { "num": "03", "title": "Resilienz aufbauen", "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer und gemeinsame Team-Sprache." }
+    ]
+  },
+  "image_break": {
+    "image": "/assets/group-table.jpg",
+    "alt": "Workshop · Team am Tisch"
+  },
+  "services": {
+    "eyebrow": "Angebot",
+    "headline": "Drei Formate,",
+    "headline_accent": "ein Ansatz.",
+    "lead": "Alle Formate starten mit einem kostenfreien Erstgespräch. Danach klären wir Bedarf, Rahmen und Format — passgenau zu eurer Arbeitsrealität.",
+    "items": [
+      {
+        "num": "Format 01",
+        "title": "1:1 Coaching",
+        "text": "Individuelle Begleitung von Mitarbeitenden und Führungskräften. Buchbar über das Weiterbildungsbudget — durchführbar in der Arbeitszeit. Kein zusätzlicher Stressor nach Feierabend.",
+        "cta_modal": "prozess"
+      },
+      {
+        "num": "Format 02",
+        "title": "Workshop & Gruppen-Coaching",
+        "text": "Resilienz und Stressmanagement als gemeinsame Praxis. Halbtag, ganzer Tag oder mehrteilige Reihe — immer angepasst an die echte Arbeitsrealität deines Teams.",
+        "cta_modal": "gruppe"
+      },
+      {
+        "num": "Format 03",
+        "title": "Vorträge & Keynotes",
+        "text": "Impulse für Health Days, Führungsklausuren, Onboardings. Wissenschaftlich fundiert, lebensnah erzählt — mit konkreten Tools zum Mitnehmen.",
+        "cta_modal": "allgemein"
+      }
+    ]
+  },
+  "topics": {
+    "eyebrow": "Themen, die wir bearbeiten",
+    "tags": [
+      "Resilienz",
+      "Mentale Gesundheit",
+      "Stressmanagement",
+      "Burnout-Prävention",
+      "Selbstführung",
+      "Führung unter Druck",
+      "Beruf & Privat"
+    ]
+  },
+  "cta": {
+    "eyebrow": "Nächster Schritt",
+    "headline": "Kostenfreies",
+    "headline_accent": "Erstgespräch.",
+    "text": "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch."
+  }
+}

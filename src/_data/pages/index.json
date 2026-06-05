@@ -1,0 +1,91 @@
+{
+  "subtitle": "Systemisches Coaching für Resilienz & Mentale Gesundheit",
+  "hero": {
+    "eyebrow": "Systemisches Coaching · München & online",
+    "headline": "Entspannt",
+    "headline_accent": "erfolgreich.",
+    "lead": "Veränderung muss sich nicht schwer anfühlen. Ich begleite dich — beruflich wie privat — bis du deinen nächsten Schritt klar vor dir siehst.",
+    "cta_secondary": "Mehr über das Angebot",
+    "cta_secondary_url": "/angebot/",
+    "image": "/assets/friederike-hero.jpg",
+    "image_credit_url": "https://mirjamhagen.com/",
+    "image_credit_label": "© Mirjam Hagen"
+  },
+  "methode_teaser": {
+    "eyebrow": "Methode",
+    "headline": "Wissenschaftlich fundiert.",
+    "headline_accent": "Systemisch gedacht.",
+    "lead": "Mein Ansatz steht auf zwei Säulen: systemisch-lösungsorientiertes Coaching und Resilienzforschung. Wir schauen nicht nur auf dich, sondern auf das ganze Bild — Beziehungen, Kontexte, Geschichte.",
+    "cta_label": "Mehr zur Methode",
+    "cta_url": "/methode/",
+    "tokens": [
+      { "num": "01", "title": "Systemisch denken", "text": "Niemand steht allein im Raum. Wir nehmen das ganze Umfeld in den Blick." },
+      { "num": "02", "title": "Lösungsorientiert arbeiten", "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern." },
+      { "num": "03", "title": "Resilienz aufbauen", "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer." }
+    ]
+  },
+  "services_teaser": {
+    "eyebrow": "Angebot",
+    "headline": "Drei Formate,",
+    "headline_accent": "ein Ansatz.",
+    "lead": "Alle Formate beginnen mit einem kostenlosen 15-Minuten-Gespräch. Danach entscheiden wir gemeinsam, ob und wie wir weitermachen.",
+    "items": [
+      { "num": "Format 01", "title": "Das Einzel", "text": "Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt.", "url": "/angebot/#einzel" },
+      { "num": "Format 02", "title": "Der Prozess", "text": "Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist.", "url": "/angebot/#prozess" },
+      { "num": "Format 03", "title": "Die Gruppe", "text": "Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung.", "url": "/angebot/#gruppe" }
+    ]
+  },
+  "image_break_1": {
+    "image": "/assets/group-table.jpg",
+    "alt": "Gruppen-Coaching · Atmosphäre am Tisch"
+  },
+  "about_teaser": {
+    "eyebrow": "Über mich",
+    "headline": "Ich schaue auf das große Ganze —",
+    "headline_accent": "weil Leichtigkeit kein Zufall ist.",
+    "paragraph_1": "Ich arbeite systemisch, wissenschaftlich fundiert und ganz auf dich ausgerichtet. Viele meiner Klient:innen kommen zu mir, wenn der Alltag zu schwer geworden ist — überfordert, im Dauerstress, ohne klaren Ausweg. Gemeinsam schauen wir nicht nur auf dich allein — sondern auch auf dein Umfeld: deine Beziehungen, dein Team, deine Geschichte. Ich stelle Fragen, du findest deine Antworten. Ich bringe wissenschaftlich fundierte Methoden mit, du entscheidest, was passt. Und zusammen gestalten wir deinen nächsten Schritt — hin zu mehr Leichtigkeit in deinem Leben.",
+    "paragraph_2": "Ausbildung als Resilienz- und Systemische Coach, M. Sc. von der TU Berlin, 10+ Jahre Erfahrung in verschiedenen globalen Unternehmen u. a. als Sustainability Managerin, Mama einer kleinen Tochter. Ich arbeite in München und online.",
+    "cta_label": "Meine ganze Geschichte",
+    "cta_url": "/meine-geschichte/",
+    "image": "/assets/friederike-about.png",
+    "image_credit_url": "https://mirjamhagen.com/",
+    "image_credit_label": "© Mirjam Hagen"
+  },
+  "testimonials_section": {
+    "eyebrow": "Stimmen",
+    "headline": "Was Klient:innen",
+    "headline_accent": "mitgenommen haben."
+  },
+  "image_break_2": {
+    "image": "/assets/room-window.jpg",
+    "alt": "Atmosphäre · Fenster mit Eukalyptus"
+  },
+  "process": {
+    "eyebrow": "Ablauf",
+    "headline": "So arbeiten wir",
+    "headline_accent": "zusammen.",
+    "lead": "Ein klarer, zugleich offener Rahmen — damit der Inhalt Raum bekommt.",
+    "steps": [
+      { "num": "Schritt 01", "title": "Kennenlernen", "text": "15 Minuten online. Unverbindlich, offen, transparent und ohne Druck." },
+      { "num": "Schritt 02", "title": "Auftragsklärung", "text": "In der ersten Sitzung (und kurz am Anfang jeder weiteren Sitzung) schärfen wir, worum es wirklich geht." },
+      { "num": "Schritt 03", "title": "Arbeitsphase", "text": "Wir betrachten Muster, Ressourcen, Systeme. Gute Fragen, fundierte Methoden, keine Floskeln." },
+      { "num": "Schritt 04", "title": "Abschluss", "text": "Wir sichern, was sich verändert hat — und definieren deine(n) nächsten Schritt(e)." }
+    ]
+  },
+  "quote": {
+    "text": "Problem talk creates problems and solution talk creates solutions.",
+    "author": "Steve de Shazer · Erfinder der lösungsorientierten Kurztherapie"
+  },
+  "faq_section": {
+    "eyebrow": "FAQ",
+    "headline": "Was du",
+    "headline_accent": "vorher wissen möchtest.",
+    "lead": "Hier die häufigsten Fragen — wenn deine nicht dabei ist, schreib mir einfach."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "headline": "Ich freue mich",
+    "headline_accent": "von Dir zu hören!",
+    "text": "Schreib mir gerne hier über das Kontaktformular oder per Mail, wenn Du ein Coaching buchen möchtest oder Fragen dazu hast."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "subtitle": "Systemisches & lösungsorientiertes Coaching",
+  "hero": {
+    "eyebrow": "Methode",
+    "headline": "Wissenschaftlich fundiert.",
+    "headline_accent": "Systemisch gedacht.",
+    "lead": "Mein Ansatz steht auf zwei Säulen: systemisch-lösungsorientiertem Coaching und der Resilienzforschung. Hier liest du, wie ich arbeite — und warum."
+  },
+  "section_systemisch": {
+    "eyebrow": "Systemisch denken",
+    "headline": "Niemand steht",
+    "headline_accent": "allein im Raum.",
+    "paragraphs": [
+      "Wenn etwas stockt, liegt es selten an einer Person. Beziehungen, Rollen, frühere Geschichten und aktuelle Kontexte spielen mit — manchmal sichtbar, oft unter der Oberfläche.",
+      "In jeder Sitzung schauen wir deshalb nicht nur auf dich, sondern auf das Umfeld, in dem du dich bewegst: dein Team, deine Familie, deine inneren Stimmen, deine Werte. Die Frage ist nie nur „Was tust du?\", sondern auch „In welchem System tust du es — und was hält dieses System aufrecht?\".",
+      "Systemisches Arbeiten heißt für mich: Komplexität würdigen, ohne sich darin zu verlieren. Den nächsten kleinen Hebel finden, der Bewegung in das Ganze bringt."
+    ]
+  },
+  "pull_quote": {
+    "text": "Probleme entstehen im System. Lösungen auch.",
+    "cite": "Grundgedanke systemischer Arbeit"
+  },
+  "section_loesungsorientiert": {
+    "eyebrow": "Lösungsorientiert arbeiten",
+    "headline": "Von dort denken, wo",
+    "headline_accent": "Stärke schon liegt.",
+    "paragraphs": [
+      "Die lösungsorientierte Kurztherapie nach Steve de Shazer und Insoo Kim Berg geht von einer einfachen Beobachtung aus: Niemand hat nur Probleme. Es gibt immer Momente, in denen es besser läuft — und genau diese Momente sind unsere Bausteine.",
+      "Anstatt das Problem in immer feinere Stücke zu zerlegen, fragen wir: Was funktioniert schon? Wann ist es leichter? Was machst du dann anders? Und wie können wir mehr davon möglich machen?",
+      "Das ist nicht oberflächlich — es ist effizient. Du gehst aus jeder Sitzung mit etwas, das du konkret tun, ausprobieren oder beobachten kannst. Veränderung wird greifbar, nicht abstrakt."
+    ]
+  },
+  "factors": {
+    "eyebrow": "Resilienz",
+    "headline": "Sechs Faktoren, die",
+    "headline_accent": "trainierbar sind.",
+    "lead": "Resilienz ist keine Charaktereigenschaft, mit der man geboren wird. Sie ist eine Reihe von Haltungen und Fähigkeiten, die sich gezielt aufbauen lassen.",
+    "items": [
+      { "num": "01", "title": "Optimismus", "text": "Realistischer Blick nach vorn — nicht naiv positiv, sondern lösungsfähig." },
+      { "num": "02", "title": "Akzeptanz", "text": "Anerkennen, was ist, bevor wir verändern, was wir verändern können." },
+      { "num": "03", "title": "Lösungsorientierung", "text": "Vom Problem zur Frage: Was wäre stattdessen wünschenswert?" },
+      { "num": "04", "title": "Selbstwirksamkeit", "text": "Das Vertrauen, dass eigenes Handeln einen Unterschied macht." },
+      { "num": "05", "title": "Verantwortung", "text": "Den eigenen Anteil sehen — ohne sich für alles verantwortlich zu fühlen." },
+      { "num": "06", "title": "Netzwerk-Orientierung", "text": "Beziehungen pflegen, Unterstützung annehmen, nicht alles allein tragen." }
+    ]
+  },
+  "section_profil": {
+    "eyebrow": "Dein Resilienz-Profil",
+    "headline": "Ein persönlicher",
+    "headline_accent": "Methodenkoffer.",
+    "paragraphs": [
+      "In den ersten Sitzungen erstellen wir gemeinsam dein persönliches Resilienz-Profil: Wo bist du schon stark, wo gibt es Spielraum, wo darfst du nachschärfen? Das ist kein Test, sondern ein Spiegel.",
+      "Aus dem Profil entsteht dein Methodenkoffer — eine kuratierte Auswahl an Werkzeugen, Übungen und Reflexionsfragen, die zu dir und deinem Alltag passen. Nichts von der Stange. Alles, was bleibt, wenn unsere Zusammenarbeit endet."
+    ]
+  },
+  "section_science": {
+    "eyebrow": "Wissenschaftlich fundiert",
+    "headline": "Forschung,",
+    "headline_accent": "nicht Bauchgefühl.",
+    "paragraphs": [
+      "Mein Handwerkszeug stützt sich auf belastbare Forschung: Resilienzpsychologie (u.a. Werner, Ungar, Bonanno), systemische Therapie und Beratung (von Schlippe, Schweitzer), lösungsorientierte Kurztherapie (de Shazer, Berg) sowie Positive Psychologie (Seligman, Fredrickson).",
+      "Heißt: Ich kann erklären, warum eine Methode wirkt — und auch sagen, wo ihre Grenzen liegen. Coaching ist keine Behandlung. Wo Therapie das geeignetere Angebot wäre, sage ich dir das offen."
+    ]
+  },
+  "compare": {
+    "minus": {
+      "label": "Was du nicht bekommst",
+      "headline": "Schnelle Antworten von außen.",
+      "items": [
+        "Pauschale Lebenstipps oder Motivationssprüche",
+        "Esoterische Erklärungsmodelle",
+        "Eine Diagnose oder eine Heilbehandlung",
+        "Endlose Sitzungsreihen ohne klares Ziel",
+        "Bewertung deiner Person, deiner Geschichte oder deiner Entscheidungen"
+      ]
+    },
+    "plus": {
+      "label": "Was du bekommst",
+      "headline": "Klarheit, Struktur, deine eigenen Antworten.",
+      "items": [
+        "Einen geschützten Raum, in dem du wirklich nachdenken kannst",
+        "Gute Fragen, die du dir vorher nicht gestellt hast",
+        "Fundierte Methoden, die zu deinem Thema passen",
+        "Konkrete nächste Schritte nach jeder Sitzung",
+        "Einen Methodenkoffer, der bleibt — auch nach unserer Arbeit"
+      ]
+    }
+  }
+}
