@@ -12,7 +12,7 @@ Friederike Altmann, Untere Mühlstraße 27, 80999 München
 
 ## Kontakt
 
-Telefon: +49 (0) 178 2805138 - 
+Telefon: +49 (0) 178 2805138 —  
 E-Mail: [post@friederikealtmann.de](mailto:post@friederikealtmann.de)
 
 ## Umsatzsteuer-ID
