@@ -12,9 +12,25 @@
   "success_headline": "Danke!",
   "success_text": "Deine Nachricht ist angekommen. Ich melde mich innerhalb von zwei Werktagen.",
   "options": [
-    { "value": "einzel", "label": "Das Einzel" },
-    { "value": "prozess", "label": "Der Prozess" },
-    { "value": "gruppe", "label": "Die Gruppe" },
-    { "value": "allgemein", "label": "Allgemeine Frage" }
+    {
+      "value": "einzel",
+      "label": "Das Einzel"
+    },
+    {
+      "value": "prozess",
+      "label": "Der Prozess"
+    },
+    {
+      "value": "gruppe",
+      "label": "Die Gruppe"
+    },
+    {
+      "value": "allgemein",
+      "label": "Allgemeine Frage"
+    },
+    {
+      "value": "b2b",
+      "label": "B2B Anfrage"
+    }
   ]
 }
