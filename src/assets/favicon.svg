@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#E3DDEA" rx="18"/>
   <text x="28" y="78" font-family="Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="800" font-size="78" fill="#3A3142" text-anchor="middle" letter-spacing="-1">F</text>
   <text x="68" y="78" font-family="Manrope, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="800" font-size="78" fill="#E8A33D" text-anchor="middle" letter-spacing="-1">A</text>
 </svg>
