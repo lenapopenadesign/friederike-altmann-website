@@ -34,19 +34,19 @@
         "num": "Format 01",
         "title": "1:1 Coaching",
         "text": "Individuelle Begleitung von Mitarbeitenden und Führungskräften. Buchbar über das Weiterbildungsbudget — durchführbar in der Arbeitszeit. Kein zusätzlicher Stressor nach Feierabend.",
-        "cta_modal": "prozess"
+        "cta_modal": "b2b"
       },
       {
         "num": "Format 02",
         "title": "Workshop & Gruppen-Coaching",
         "text": "Resilienz und Stressmanagement als gemeinsame Praxis. Halbtag, ganzer Tag oder mehrteilige Reihe — immer angepasst an die echte Arbeitsrealität deines Teams.",
-        "cta_modal": "gruppe"
+        "cta_modal": "b2b"
       },
       {
         "num": "Format 03",
         "title": "Vorträge & Keynotes",
         "text": "Impulse für Health Days, Führungsklausuren, Onboardings. Wissenschaftlich fundiert, lebensnah erzählt — mit konkreten Tools zum Mitnehmen.",
-        "cta_modal": "allgemein"
+        "cta_modal": "b2b"
       }
     ]
   },
@@ -66,6 +66,7 @@
     "eyebrow": "Nächster Schritt",
     "headline": "Kostenfreies",
     "headline_accent": "Erstgespräch.",
-    "text": "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch."
+    "text": "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch.",
+    "modal_value": "b2b"
   }
 }
