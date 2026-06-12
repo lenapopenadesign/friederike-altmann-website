@@ -3,7 +3,7 @@
   "permalink": "/b2b/",
   "subtitle": "Resilienz-Coaching für Unternehmen, Workshops & Vorträge",
   "hero": {
-    "eyebrow": "Für Unternehmen · HR & Führung",
+    "eyebrow": "Für Unternehmen · Teams · HR & Führung",
     "headline": "Stärkt das System.",
     "headline_accent": "Nicht nur die Einzelne.",
     "lead": "Resilienz-Coaching, Workshops und Vorträge für mentale Gesundheit am Arbeitsplatz — wissenschaftlich fundiert, systemisch gedacht. Buchbar über das Weiterbildungsbudget, durchführbar in der Arbeitszeit."
@@ -14,9 +14,21 @@
     "headline_accent": "trainieren.",
     "lead": "Mentale Stärke ist kein Charaktermerkmal — sie ist trainierbar. Mein Ansatz steht auf drei Säulen, die ineinandergreifen.",
     "items": [
-      { "num": "01", "title": "Systemisch denken", "text": "Niemand steht allein im Raum — wir nehmen das ganze Umfeld in den Blick: Team, Rollen, Kontexte, Kultur." },
-      { "num": "02", "title": "Lösungsorientiert", "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern, sondern Bewegung möglich machen." },
-      { "num": "03", "title": "Resilienz aufbauen", "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer und gemeinsame Team-Sprache." }
+      {
+        "num": "01",
+        "title": "Systemisch denken",
+        "text": "Niemand steht allein im Raum — wir nehmen das ganze Umfeld in den Blick: Team, Rollen, Kontexte, Kultur."
+      },
+      {
+        "num": "02",
+        "title": "Lösungsorientiert",
+        "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern, sondern Bewegung möglich machen."
+      },
+      {
+        "num": "03",
+        "title": "Resilienz aufbauen",
+        "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer und gemeinsame Team-Sprache."
+      }
     ]
   },
   "image_break": {
@@ -66,7 +78,6 @@
     "eyebrow": "Nächster Schritt",
     "headline": "Kostenfreies",
     "headline_accent": "Erstgespräch.",
-    "text": "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch.",
-    "modal_value": "b2b"
+    "text": "15 Minuten online — unverbindlich. Wir klären, was ihr braucht, und ob ich die Richtige bin. Konkret, ehrlich, ohne Verkaufspitch."
   }
 }
