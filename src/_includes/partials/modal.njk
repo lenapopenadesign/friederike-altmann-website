@@ -4,7 +4,12 @@
     <div class="modal-form-wrap">
       <h3 id="contact-modal-title">{{ modal.headline }} <strong>{{ modal.headline_accent }}</strong></h3>
       <p class="lead">{{ modal.lead }}</p>
-      <form id="contact-form">
+      <form id="contact-form" action="/contact.php" method="POST" novalidate>
+        <!-- Honeypot: für Menschen unsichtbar, Bots füllen's aus → Server ignoriert -->
+        <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+          <label>Website (bitte leer lassen)</label>
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-field">
           <label for="form-name">{{ modal.field_name }}</label>
           <input type="text" id="form-name" name="name" autocomplete="name" required>
@@ -29,6 +34,7 @@
           <input type="checkbox" required>
           <span>{{ modal.consent_html | safe }}</span>
         </label>
+        <div class="form-error" role="alert" style="display:none;margin-top:1rem;padding:.7rem 1rem;background:#fbe9e9;border-left:3px solid #c44;color:#7a2222;font-size:.9rem;border-radius:3px"></div>
         <button type="submit" class="btn btn-primary">{{ modal.submit_label }} <span class="arrow">→</span></button>
       </form>
     </div>

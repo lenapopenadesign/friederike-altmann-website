@@ -129,9 +129,54 @@
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
+  var errorBox = modal.querySelector('.form-error');
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  function showError(msg){
+    if (!errorBox) return;
+    errorBox.textContent = msg;
+    errorBox.style.display = 'block';
+  }
+  function hideError(){
+    if (!errorBox) return;
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    formWrap.style.display = 'none';
-    success.style.display = 'block';
+    hideError();
+    if (submitBtn){
+      submitBtn.disabled = true;
+      submitBtn.dataset.originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Wird gesendet…';
+    }
+
+    var formData = new FormData(form);
+
+    fetch(form.action || '/contact.php', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function(r){ return r.json().then(function(data){ return {status: r.status, data: data}; }); })
+      .then(function(res){
+        if (res.status >= 200 && res.status < 300 && res.data.ok){
+          formWrap.style.display = 'none';
+          success.style.display = 'block';
+          form.reset();
+        } else {
+          showError((res.data && res.data.error) || 'Senden fehlgeschlagen. Bitte direkt an post@friederikealtmann.de schreiben.');
+        }
+      })
+      .catch(function(){
+        showError('Verbindungsfehler. Bitte später nochmal versuchen oder direkt an post@friederikealtmann.de schreiben.');
+      })
+      .finally(function(){
+        if (submitBtn){
+          submitBtn.disabled = false;
+          if (submitBtn.dataset.originalText) submitBtn.innerHTML = submitBtn.dataset.originalText;
+        }
+      });
   });
 })();

@@ -10,6 +10,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
   eleventyConfig.addPassthroughCopy({ "src/app.js": "app.js" });
+  eleventyConfig.addPassthroughCopy({ "src/contact.php": "contact.php" });
 
   // Watch
   eleventyConfig.addWatchTarget("src/styles.css");
