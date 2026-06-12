@@ -39,14 +39,19 @@
     "lead": "Resilienz ist keine Charaktereigenschaft, mit der man geboren wird. Sie ist eine Reihe von Haltungen und Fähigkeiten, die sich gezielt aufbauen lassen.",
     "items": [
       {
+        "num": "01",
+        "title": "Selbstregulationsfähigkeit",
+        "text": "Denken, Fühlen, Körper und Verhalten stehen in ständiger Wechselwirkung. Selbstregulation ist die Fähigkeit, bewusst Einfluss auf dieses System zu nehmen."
+      },
+      {
         "num": "02",
         "title": "Optimismus",
         "text": "Realistischer Blick nach vorn — nicht naiv positiv, sondern lösungsfähig."
       },
       {
-        "num": "01",
-        "title": "Selbstregulationsfähigkeit",
-        "text": "Denken, Fühlen, Körper und Verhalten stehen in ständiger Wechselwirkung. Selbstregulation ist die Fähigkeit, bewusst Einfluss auf dieses System zu nehmen."
+        "num": "03",
+        "title": "Soziales Netz & Beziehungen",
+        "text": "Beziehungen pflegen, Unterstützung annehmen, nicht alles allein tragen."
       },
       {
         "num": "03",
@@ -62,11 +67,6 @@
         "num": "05",
         "title": "Verantwortung",
         "text": "Den eigenen Anteil sehen — ohne sich für alles verantwortlich zu fühlen."
-      },
-      {
-        "num": "06",
-        "title": "Netzwerk-Orientierung",
-        "text": "Beziehungen pflegen, Unterstützung annehmen, nicht alles allein tragen."
       }
     ]
   },
