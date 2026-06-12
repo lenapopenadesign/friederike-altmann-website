@@ -11,8 +11,8 @@
     "cta_secondary_url": "/angebot/",
     "image": "/assets/friederike-hero.jpg",
     "image_position": "center center",
-    "image_credit_url": "https://mirjamhagen.com/",
-    "image_credit_label": "© Mirjam Hagen"
+    "image_credit_label": "© Mirjam Hagen",
+    "image_credit_url": "https://mirjamhagen.com/"
   },
   "methode_teaser": {
     "eyebrow": "Methode",
@@ -22,9 +22,21 @@
     "cta_label": "Mehr zur Methode",
     "cta_url": "/methode/",
     "tokens": [
-      { "num": "01", "title": "Systemisch denken", "text": "Niemand steht allein im Raum. Wir nehmen das ganze Umfeld in den Blick." },
-      { "num": "02", "title": "Lösungsorientiert arbeiten", "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern." },
-      { "num": "03", "title": "Resilienz aufbauen", "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer." }
+      {
+        "num": "01",
+        "title": "Systemisch denken",
+        "text": "Niemand steht allein im Raum. Wir nehmen das ganze Umfeld in den Blick."
+      },
+      {
+        "num": "02",
+        "title": "Lösungsorientiert arbeiten",
+        "text": "Davon aus denken, wo Stärke schon liegt — nicht das Problem zergliedern."
+      },
+      {
+        "num": "03",
+        "title": "Resilienz aufbauen",
+        "text": "Sechs Faktoren, die trainierbar sind — als persönlicher Methodenkoffer."
+      }
     ]
   },
   "services_teaser": {
@@ -33,9 +45,24 @@
     "headline_accent": "ein Ansatz.",
     "lead": "Alle Formate beginnen mit einem kostenlosen 15-Minuten-Gespräch. Danach entscheiden wir gemeinsam, ob und wie wir weitermachen.",
     "items": [
-      { "num": "Format 01", "title": "Das Einzel", "text": "Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt.", "url": "/angebot/#einzel" },
-      { "num": "Format 02", "title": "Der Prozess", "text": "Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist.", "url": "/angebot/#prozess" },
-      { "num": "Format 03", "title": "Die Gruppe", "text": "Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung.", "url": "/angebot/#gruppe" }
+      {
+        "num": "Format 01",
+        "title": "Das Einzel",
+        "text": "Eine Stunde, die nur dir gehört — und dich beruflich wie privat weiterbringt.",
+        "url": "/angebot/#einzel"
+      },
+      {
+        "num": "Format 02",
+        "title": "Der Prozess",
+        "text": "Ein geführter Prozess — so lange, bis echte Veränderung spürbar ist und nachhaltig bleibt.",
+        "url": "/angebot/#prozess"
+      },
+      {
+        "num": "Format 03",
+        "title": "Die Gruppe",
+        "text": "Gemeinsam wachsen — durch Austausch, Reflexion und persönliche Weiterentwicklung.",
+        "url": "/angebot/#gruppe"
+      }
     ]
   },
   "image_break_1": {
@@ -53,8 +80,8 @@
     "cta_url": "/meine-geschichte/",
     "image": "/assets/friederike-about.png",
     "image_position": "center center",
-    "image_credit_url": "https://mirjamhagen.com/",
-    "image_credit_label": "© Mirjam Hagen"
+    "image_credit_label": "© Mirjam Hagen",
+    "image_credit_url": "https://mirjamhagen.com/"
   },
   "testimonials_section": {
     "eyebrow": "Stimmen",
@@ -72,10 +99,26 @@
     "headline_accent": "zusammen.",
     "lead": "Ein klarer, zugleich offener Rahmen — damit der Inhalt Raum bekommt.",
     "steps": [
-      { "num": "Schritt 01", "title": "Kennenlernen", "text": "15 Minuten online. Unverbindlich, offen, transparent und ohne Druck." },
-      { "num": "Schritt 02", "title": "Auftragsklärung", "text": "In der ersten Sitzung (und kurz am Anfang jeder weiteren Sitzung) schärfen wir, worum es wirklich geht." },
-      { "num": "Schritt 03", "title": "Arbeitsphase", "text": "Wir betrachten Muster, Ressourcen, Systeme. Gute Fragen, fundierte Methoden, keine Floskeln." },
-      { "num": "Schritt 04", "title": "Abschluss", "text": "Wir sichern, was sich verändert hat — und definieren deine(n) nächsten Schritt(e)." }
+      {
+        "num": "Schritt 01",
+        "title": "Kennenlernen",
+        "text": "15 Minuten online. Unverbindlich, offen, transparent und ohne Druck."
+      },
+      {
+        "num": "Schritt 02",
+        "title": "Auftragsklärung",
+        "text": "In der ersten Sitzung (und kurz am Anfang jeder weiteren Sitzung) schärfen wir, worum es wirklich geht."
+      },
+      {
+        "num": "Schritt 03",
+        "title": "Arbeitsphase",
+        "text": "Wir betrachten Muster, Ressourcen, Systeme. Gute Fragen, fundierte Methoden, keine Floskeln."
+      },
+      {
+        "num": "Schritt 04",
+        "title": "Abschluss",
+        "text": "Wir sichern, was sich verändert hat — und definieren deine(n) nächsten Schritt(e)."
+      }
     ]
   },
   "quote": {
